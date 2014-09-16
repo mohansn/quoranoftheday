@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Sarah-Chalek/answers/Fine-Art', 'http://www.quora.com/Sarah-Chalek/answers/Adobe-Photoshop', 'http://www.quora.com/Sarah-Chalek/answers/New-York-City', 'http://www.quora.com/Sarah-Chalek/answers/Food', 'http://www.quora.com/Sarah-Chalek/answers/French-language', 'http://www.quora.com/Sarah-Chalek/answers/Design', 'http://www.quora.com/Sarah-Chalek/answers/Digital-Art', 'http://www.quora.com/Sarah-Chalek/answers/Books', 'http://www.quora.com/Sarah-Chalek/answers/CGI-computer-generated-effects-in-movies', 'http://www.quora.com/Sarah-Chalek/answers/3D-Animation', 'http://www.quora.com/Sarah-Chalek/answers/Movies', 'http://www.quora.com/Sarah-Chalek/answers/Writing', 'http://www.quora.com/Sarah-Chalek/answers/Artwork', 'http://www.quora.com/Sarah-Chalek/answers/Television', 'http://www.quora.com/Sarah-Chalek/answers/Technology', 'http://www.quora.com/Sarah-Chalek/answers/Baking', 'http://www.quora.com/Sarah-Chalek/answers/Book-Recommendations', 'http://www.quora.com/Sarah-Chalek/answers/Movie-Production-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Fine Art', 28], ['Adobe Photoshop', 27], ['New York City', 22], ['Food', 21], ['French (language)', 20], ['Design', 16], ['Digital Art', 12], ['Books', 10], ['CGI (computer-generated effects in movies)', 10], ['3D Animation', 10], ['Movies', 8], ['Writing', 8], ['Artwork', 8], ['Television', 7], ['Technology', 6], ['Baking', 5], ['Book Recommendations', 5], ['Movie Production', 5]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Sarah-Chalek/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

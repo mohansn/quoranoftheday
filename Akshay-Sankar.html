@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Television', 'http://www.quora.com/Akshay-Sankar/answers/Creative-Writing', 'http://www.quora.com/Akshay-Sankar/answers/Game-of-Thrones-TV-series', 'http://www.quora.com/Akshay-Sankar/answers/Books', 'http://www.quora.com/Akshay-Sankar/answers/Humor', 'http://www.quora.com/Akshay-Sankar/answers/Life', 'http://www.quora.com/Akshay-Sankar/answers/Television-Series', 'http://www.quora.com/Akshay-Sankar/answers/Video-Games', 'http://www.quora.com/Akshay-Sankar/answers/Movies', 'http://www.quora.com/Akshay-Sankar/answers/Tolkiens-Middle-Earth-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Fiction', 'http://www.quora.com/Akshay-Sankar/answers/Writing', 'http://www.quora.com/Akshay-Sankar/answers/People', 'http://www.quora.com/Akshay-Sankar/answers/PC-Gaming', 'http://www.quora.com/Akshay-Sankar/answers/Sarcasm', 'http://www.quora.com/Akshay-Sankar/answers/Reading-1', 'http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-movie-series'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['The Lord of the Rings (books, movies and creative franchise)', 6], ['Television', 5], ['Creative Writing', 5], ['Game of Thrones (TV series)', 5], ['Books', 4], ['Humor', 4], ['Life', 4], ['Television Series', 4], ['Video Games', 4], ['Movies', 3], ["Tolkien's Middle Earth (books, movies and creative franchise)", 3], ['Fiction', 2], ['Writing', 2], ['People', 2], ['PC Gaming', 2], ['Sarcasm', 2], ['Reading', 2], ['The Lord of the Rings (movie series)', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Akshay-Sankar/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

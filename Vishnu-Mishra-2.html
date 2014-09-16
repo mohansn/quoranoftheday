@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Vishnu-Mishra-2/answers/Survey-Questions', 'http://www.quora.com/Vishnu-Mishra-2/answers/Life', 'http://www.quora.com/Vishnu-Mishra-2/answers/Dating-and-Relationships-1', 'http://www.quora.com/Vishnu-Mishra-2/answers/India', 'http://www.quora.com/Vishnu-Mishra-2/answers/Best-of-X', 'http://www.quora.com/Vishnu-Mishra-2/answers/Movies', 'http://www.quora.com/Vishnu-Mishra-2/answers/Psychology', 'http://www.quora.com/Vishnu-Mishra-2/answers/Life-Lessons', 'http://www.quora.com/Vishnu-Mishra-2/answers/Life-Advice', 'http://www.quora.com/Vishnu-Mishra-2/answers/Philosophy', 'http://www.quora.com/Vishnu-Mishra-2/answers/Quora', 'http://www.quora.com/Vishnu-Mishra-2/answers/Jokes', 'http://www.quora.com/Vishnu-Mishra-2/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Vishnu-Mishra-2/answers/Quora-Community', 'http://www.quora.com/Vishnu-Mishra-2/answers/Self-Improvement', 'http://www.quora.com/Vishnu-Mishra-2/answers/Hinduism', 'http://www.quora.com/Vishnu-Mishra-2/answers/Human-Behavior', 'http://www.quora.com/Vishnu-Mishra-2/answers/Interpersonal-Interaction'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 100], ['Life', 84], ['Dating and Relationships', 42], ['India', 39], ['Best of X', 30], ['Movies', 24], ['Psychology', 24], ['Life Lessons', 22], ['Life Advice', 20], ['Philosophy', 18], ['Quora', 16], ['Jokes', 16], ['Philosophy of Everyday Life', 16], ['Quora Community', 16], ['Self-Improvement', 15], ['Hinduism', 15], ['Human Behavior', 14], ['Interpersonal Interaction', 13]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Vishnu-Mishra-2/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Adam-Sterling/answers/Dating-and-Relationships-1', 'http://www.quora.com/Adam-Sterling/answers/Life', 'http://www.quora.com/Adam-Sterling/answers/Marketing', 'http://www.quora.com/Adam-Sterling/answers/Interpersonal-Interaction', 'http://www.quora.com/Adam-Sterling/answers/Cooking', 'http://www.quora.com/Adam-Sterling/answers/Food', 'http://www.quora.com/Adam-Sterling/answers/Advertising-and-Advertisements', 'http://www.quora.com/Adam-Sterling/answers/Exercise', 'http://www.quora.com/Adam-Sterling/answers/Health', 'http://www.quora.com/Adam-Sterling/answers/Philosophy'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 19], ['Life', 11], ['Marketing', 7], ['Interpersonal Interaction', 6], ['Cooking', 3], ['Food', 2], ['Advertising and Advertisements', 2], ['Exercise', 2], ['Health', 1], ['Philosophy', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Adam-Sterling/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Ryan-Fox-Squire/answers/Neuroscience-1', 'http://www.quora.com/Ryan-Fox-Squire/answers/Psychology', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Science', 'http://www.quora.com/Ryan-Fox-Squire/answers/Startups', 'http://www.quora.com/Ryan-Fox-Squire/answers/Big-Data', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analysis', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Mining', 'http://www.quora.com/Ryan-Fox-Squire/answers/Cognitive-Neuroscience', 'http://www.quora.com/Ryan-Fox-Squire/answers/Statistics-academic-discipline', 'http://www.quora.com/Ryan-Fox-Squire/answers/Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Machine-Learning', 'http://www.quora.com/Ryan-Fox-Squire/answers/Mathematics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Psychiatry', 'http://www.quora.com/Ryan-Fox-Squire/answers/Web-Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Visualization', 'http://www.quora.com/Ryan-Fox-Squire/answers/Team-Building'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Neuroscience', 16], ['Psychology', 10], ['Data Science', 6], ['Startups', 5], ['Big Data', 5], ['Data Analysis', 5], ['Data Mining', 5], ['Cognitive Neuroscience', 5], ['Statistics (academic discipline)', 4], ['Analytics', 4], ['Data Analytics', 4], ['Machine Learning', 2], ['Mathematics', 2], ['Psychiatry', 2], ['Web Analytics', 2], ['Data', 2], ['Data Visualization', 2], ['Team Building', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Ryan-Fox-Squire/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

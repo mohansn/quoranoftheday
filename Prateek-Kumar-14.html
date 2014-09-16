@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Prateek-Kumar-14/answers/Politics', 'http://www.quora.com/Prateek-Kumar-14/answers/International-Relations-3', 'http://www.quora.com/Prateek-Kumar-14/answers/Computer-Science', 'http://www.quora.com/Prateek-Kumar-14/answers/Economics', 'http://www.quora.com/Prateek-Kumar-14/answers/Questions-That-Contain-Assumptions', 'http://www.quora.com/Prateek-Kumar-14/answers/China', 'http://www.quora.com/Prateek-Kumar-14/answers/Religion', 'http://www.quora.com/Prateek-Kumar-14/answers/History', 'http://www.quora.com/Prateek-Kumar-14/answers/The-United-States-of-America', 'http://www.quora.com/Prateek-Kumar-14/answers/Computer-Programming', 'http://www.quora.com/Prateek-Kumar-14/answers/Pakistan', 'http://www.quora.com/Prateek-Kumar-14/answers/Military-History-and-Wars-1', 'http://www.quora.com/Prateek-Kumar-14/answers/U-S-Politics', 'http://www.quora.com/Prateek-Kumar-14/answers/World-History', 'http://www.quora.com/Prateek-Kumar-14/answers/International-Economics', 'http://www.quora.com/Prateek-Kumar-14/answers/Computers', 'http://www.quora.com/Prateek-Kumar-14/answers/Warfare', 'http://www.quora.com/Prateek-Kumar-14/answers/Mathematics'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Politics', 41], ['International Relations', 35], ['Computer Science', 23], ['Economics', 23], ['Questions That Contain Assumptions', 20], ['China', 19], ['Religion', 17], ['History', 16], ['The United States of America', 16], ['Computer Programming', 15], ['Pakistan', 15], ['Military History and Wars', 12], ['U.S. Politics', 11], ['World History', 10], ['International Economics', 10], ['Computers', 10], ['Warfare', 10], ['Mathematics', 9]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Prateek-Kumar-14/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

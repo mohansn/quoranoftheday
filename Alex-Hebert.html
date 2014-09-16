@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Alex-Hebert/answers/Photography', 'http://www.quora.com/Alex-Hebert/answers/iPhone', 'http://www.quora.com/Alex-Hebert/answers/Photographers', 'http://www.quora.com/Alex-Hebert/answers/Internet-Startups', 'http://www.quora.com/Alex-Hebert/answers/Startups', 'http://www.quora.com/Alex-Hebert/answers/Business', 'http://www.quora.com/Alex-Hebert/answers/Business-Development', 'http://www.quora.com/Alex-Hebert/answers/Hiring', 'http://www.quora.com/Alex-Hebert/answers/Startup-Business-Models', 'http://www.quora.com/Alex-Hebert/answers/Mountain-Biking', 'http://www.quora.com/Alex-Hebert/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Alex-Hebert/answers/Web-Marketing', 'http://www.quora.com/Alex-Hebert/answers/Startup-Ideas', 'http://www.quora.com/Alex-Hebert/answers/Beastie-Boys'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Photography', 5], ['iPhone', 2], ['Photographers', 2], ['Internet Startups', 2], ['Startups', 1], ['Business', 1], ['Business Development', 1], ['Hiring', 1], ['Startup Business Models', 1], ['Mountain Biking', 1], ['Startup Advice and Strategy', 1], ['Web Marketing', 1], ['Startup Ideas', 1], ['Beastie Boys', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Alex-Hebert/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

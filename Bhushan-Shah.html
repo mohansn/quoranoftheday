@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Bhushan-Shah/answers/Football-Soccer-2', 'http://www.quora.com/Bhushan-Shah/answers/Mathematics', 'http://www.quora.com/Bhushan-Shah/answers/FC-Barcelona', 'http://www.quora.com/Bhushan-Shah/answers/Science', 'http://www.quora.com/Bhushan-Shah/answers/English-language', 'http://www.quora.com/Bhushan-Shah/answers/Quora', 'http://www.quora.com/Bhushan-Shah/answers/Bollywood', 'http://www.quora.com/Bhushan-Shah/answers/Twitter-1', 'http://www.quora.com/Bhushan-Shah/answers/Computer-Science', 'http://www.quora.com/Bhushan-Shah/answers/Lionel-Messi-football-player', 'http://www.quora.com/Bhushan-Shah/answers/Microsoft', 'http://www.quora.com/Bhushan-Shah/answers/Google-Chrome', 'http://www.quora.com/Bhushan-Shah/answers/Mumbai-Maharashtra-India-2', 'http://www.quora.com/Bhushan-Shah/answers/Specific-Social-Networks-online', 'http://www.quora.com/Bhushan-Shah/answers/Atheism', 'http://www.quora.com/Bhushan-Shah/answers/Sachin-Tendulkar', 'http://www.quora.com/Bhushan-Shah/answers/Microsoft-Windows', 'http://www.quora.com/Bhushan-Shah/answers/Education-in-India-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Football (Soccer)', 15], ['Mathematics', 8], ['FC Barcelona', 4], ['Science', 3], ['English (language)', 3], ['Quora', 2], ['Bollywood', 2], ['Twitter', 2], ['Computer Science', 2], ['Lionel Messi (football player)', 2], ['Microsoft', 1], ['Google Chrome', 1], ['Mumbai, Maharashtra, India', 1], ['Specific Social Networks (online)', 1], ['Atheism', 1], ['Sachin Tendulkar', 1], ['Microsoft Windows', 1], ['Education in India', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Bhushan-Shah/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

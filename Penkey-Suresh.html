@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Penkey-Suresh/answers/Philosophy', 'http://www.quora.com/Penkey-Suresh/answers/Psychology', 'http://www.quora.com/Penkey-Suresh/answers/Animals', 'http://www.quora.com/Penkey-Suresh/answers/U-S-Politics', 'http://www.quora.com/Penkey-Suresh/answers/History', 'http://www.quora.com/Penkey-Suresh/answers/Life-Advice', 'http://www.quora.com/Penkey-Suresh/answers/Science', 'http://www.quora.com/Penkey-Suresh/answers/Food', 'http://www.quora.com/Penkey-Suresh/answers/Manners-and-Etiquette'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Philosophy', 5], ['Psychology', 5], ['Animals', 4], ['U.S. Politics', 4], ['History', 3], ['Life Advice', 3], ['Science', 2], ['Food', 2], ['Manners and Etiquette', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Penkey-Suresh/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

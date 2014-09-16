@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Cyndi-Perlman-Fink/answers/Life', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Psychology', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Quora-Community', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Quora', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Life-Lessons', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Women', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Human-Behavior', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Death-and-Dying-1', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Philosophy', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Quora-product', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Senior-Citizens', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Friendship', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Top-Writers-Quora-feature', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/What-Does-It-Feel-Like-to-X', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Happiness', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Social-Advice', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Manners-and-Etiquette', 'http://www.quora.com/Cyndi-Perlman-Fink/answers/Wisdom'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 248], ['Psychology', 131], ['Quora Community', 130], ['Quora', 90], ['Life Lessons', 89], ['Women', 44], ['Human Behavior', 42], ['Death and Dying', 35], ['Philosophy', 34], ['Quora (product)', 33], ['Senior Citizens', 28], ['Friendship', 25], ['Top Writers (Quora feature)', 25], ['What Does It Feel Like to X?', 20], ['Happiness', 19], ['Social Advice', 17], ['Manners and Etiquette', 16], ['Wisdom', 16]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Cyndi-Perlman-Fink/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

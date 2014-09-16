@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Mat-Kyne/answers/Parenting', 'http://www.quora.com/Mat-Kyne/answers/Children', 'http://www.quora.com/Mat-Kyne/answers/Education', 'http://www.quora.com/Mat-Kyne/answers/Medicine-and-Healthcare', 'http://www.quora.com/Mat-Kyne/answers/Dating-and-Relationships-1', 'http://www.quora.com/Mat-Kyne/answers/Psychology', 'http://www.quora.com/Mat-Kyne/answers/Higher-Education', 'http://www.quora.com/Mat-Kyne/answers/Writing', 'http://www.quora.com/Mat-Kyne/answers/Physics', 'http://www.quora.com/Mat-Kyne/answers/Technology', 'http://www.quora.com/Mat-Kyne/answers/Men', 'http://www.quora.com/Mat-Kyne/answers/Science', 'http://www.quora.com/Mat-Kyne/answers/Engineering-1', 'http://www.quora.com/Mat-Kyne/answers/Social-Advice', 'http://www.quora.com/Mat-Kyne/answers/People-Skills', 'http://www.quora.com/Mat-Kyne/answers/Literary-Fiction', 'http://www.quora.com/Mat-Kyne/answers/Martial-Arts', 'http://www.quora.com/Mat-Kyne/answers/Emotions'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Parenting', 51], ['Children', 48], ['Education', 32], ['Medicine and Healthcare', 23], ['Dating and Relationships', 22], ['Psychology', 22], ['Higher Education', 19], ['Writing', 15], ['Physics', 12], ['Technology', 12], ['Men', 8], ['Science', 7], ['Engineering', 5], ['Social Advice', 3], ['People Skills', 3], ['Literary Fiction', 2], ['Martial Arts', 2], ['Emotions', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Mat-Kyne/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

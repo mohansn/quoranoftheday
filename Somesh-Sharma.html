@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Somesh-Sharma/answers/Sports', 'http://www.quora.com/Somesh-Sharma/answers/Bollywood', 'http://www.quora.com/Somesh-Sharma/answers/Cricket-sport', 'http://www.quora.com/Somesh-Sharma/answers/India', 'http://www.quora.com/Somesh-Sharma/answers/Sachin-Tendulkar', 'http://www.quora.com/Somesh-Sharma/answers/Fighting'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Sports', 3], ['Bollywood', 3], ['Cricket (sport)', 3], ['India', 1], ['Sachin Tendulkar', 1], ['Fighting', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Somesh-Sharma/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

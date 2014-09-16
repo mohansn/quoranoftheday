@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Rahul-Keerthi/answers/Football-Soccer-2', 'http://www.quora.com/Rahul-Keerthi/answers/United-Kingdom', 'http://www.quora.com/Rahul-Keerthi/answers/London', 'http://www.quora.com/Rahul-Keerthi/answers/iPhone', 'http://www.quora.com/Rahul-Keerthi/answers/Mobile-Devices', 'http://www.quora.com/Rahul-Keerthi/answers/Survey-Questions', 'http://www.quora.com/Rahul-Keerthi/answers/iPhone-Applications', 'http://www.quora.com/Rahul-Keerthi/answers/Movies', 'http://www.quora.com/Rahul-Keerthi/answers/Google', 'http://www.quora.com/Rahul-Keerthi/answers/Apple-company', 'http://www.quora.com/Rahul-Keerthi/answers/Video-Games', 'http://www.quora.com/Rahul-Keerthi/answers/Comics-narrative-art-form', 'http://www.quora.com/Rahul-Keerthi/answers/Technology', 'http://www.quora.com/Rahul-Keerthi/answers/Best-of-X', 'http://www.quora.com/Rahul-Keerthi/answers/Startups', 'http://www.quora.com/Rahul-Keerthi/answers/Books', 'http://www.quora.com/Rahul-Keerthi/answers/Telecommunications', 'http://www.quora.com/Rahul-Keerthi/answers/Hypothetical-Scenarios'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Football (Soccer)', 10], ['United Kingdom', 2], ['London', 13], ['iPhone', 8], ['Mobile Devices', 6], ['Survey Questions', 17], ['iPhone Applications', 9], ['Movies', 8], ['Google', 7], ['Apple (company)', 7], ['Video Games', 7], ['Comics (narrative art form)', 6], ['Technology', 6], ['Best of X', 6], ['Startups', 5], ['Books', 5], ['Telecommunications', 5], ['Hypothetical Scenarios', 5]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Rahul-Keerthi/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

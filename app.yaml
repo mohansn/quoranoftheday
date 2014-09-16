@@ -1,0 +1,13 @@
+application: quoran-of-the-day
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: showstats.application
+
+libraries:
+- name: webapp2
+  version: latest

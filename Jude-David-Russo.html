@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Jude-David-Russo/answers/Harvard-University', 'http://www.quora.com/Jude-David-Russo/answers/Languages', 'http://www.quora.com/Jude-David-Russo/answers/Harvard-College', 'http://www.quora.com/Jude-David-Russo/answers/History', 'http://www.quora.com/Jude-David-Russo/answers/English-language', 'http://www.quora.com/Jude-David-Russo/answers/Latin-language', 'http://www.quora.com/Jude-David-Russo/answers/Linguistics', 'http://www.quora.com/Jude-David-Russo/answers/Harvard-College-Courses', 'http://www.quora.com/Jude-David-Russo/answers/Student-Life-Undergraduate-Experience-at-Harvard', 'http://www.quora.com/Jude-David-Russo/answers/Literature', 'http://www.quora.com/Jude-David-Russo/answers/Ancient-Greece', 'http://www.quora.com/Jude-David-Russo/answers/Ancient-Rome', 'http://www.quora.com/Jude-David-Russo/answers/Ancient-History', 'http://www.quora.com/Jude-David-Russo/answers/Physics', 'http://www.quora.com/Jude-David-Russo/answers/World-History', 'http://www.quora.com/Jude-David-Russo/answers/English-as-a-Foreign-Language', 'http://www.quora.com/Jude-David-Russo/answers/Words', 'http://www.quora.com/Jude-David-Russo/answers/Etymology'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Harvard University', 10], ['Languages', 10], ['Harvard College', 9], ['History', 6], ['English (language)', 5], ['Latin (language)', 5], ['Linguistics', 5], ['Harvard College Courses', 5], ['Student Life & Undergraduate Experience at Harvard', 5], ['Literature', 4], ['Ancient Greece', 4], ['Ancient Rome', 4], ['Ancient History', 4], ['Physics', 3], ['World History', 3], ['English as a Foreign Language', 3], ['Words', 2], ['Etymology', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Jude-David-Russo/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

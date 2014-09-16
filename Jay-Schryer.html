@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Jay-Schryer/answers/Dating-and-Relationships-1', 'http://www.quora.com/Jay-Schryer/answers/Philosophy', 'http://www.quora.com/Jay-Schryer/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Jay-Schryer/answers/Fantasy-genre', 'http://www.quora.com/Jay-Schryer/answers/Mythology', 'http://www.quora.com/Jay-Schryer/answers/Spirituality', 'http://www.quora.com/Jay-Schryer/answers/Science-Fiction-genre', 'http://www.quora.com/Jay-Schryer/answers/Songs', 'http://www.quora.com/Jay-Schryer/answers/Movies', 'http://www.quora.com/Jay-Schryer/answers/Science', 'http://www.quora.com/Jay-Schryer/answers/Books', 'http://www.quora.com/Jay-Schryer/answers/Writing', 'http://www.quora.com/Jay-Schryer/answers/Self-Awareness', 'http://www.quora.com/Jay-Schryer/answers/Greek-Mythology', 'http://www.quora.com/Jay-Schryer/answers/Music', 'http://www.quora.com/Jay-Schryer/answers/Myths-and-Untruths', 'http://www.quora.com/Jay-Schryer/answers/A-Song-of-Ice-and-Fire-book-series', 'http://www.quora.com/Jay-Schryer/answers/Sex'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 22], ['Philosophy', 18], ['Philosophy of Everyday Life', 17], ['Fantasy (genre)', 8], ['Mythology', 8], ['Spirituality', 8], ['Science Fiction (genre)', 7], ['Songs', 7], ['Movies', 5], ['Science', 5], ['Books', 5], ['Writing', 5], ['Self-Awareness', 5], ['Greek Mythology', 5], ['Music', 4], ['Myths and Untruths', 3], ['A Song of Ice and Fire (book series)', 3], ['Sex', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Jay-Schryer/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

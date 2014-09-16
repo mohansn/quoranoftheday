@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Morgan-Madden/answers/Life', 'http://www.quora.com/Morgan-Madden/answers/Books', 'http://www.quora.com/Morgan-Madden/answers/Writing', 'http://www.quora.com/Morgan-Madden/answers/Literature', 'http://www.quora.com/Morgan-Madden/answers/Philosophy', 'http://www.quora.com/Morgan-Madden/answers/LGBTQ-Issues', 'http://www.quora.com/Morgan-Madden/answers/Reading-1', 'http://www.quora.com/Morgan-Madden/answers/Education', 'http://www.quora.com/Morgan-Madden/answers/Fiction', 'http://www.quora.com/Morgan-Madden/answers/Michigan-State-University'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 10], ['Books', 4], ['Writing', 3], ['Literature', 2], ['Philosophy', 2], ['LGBTQ Issues', 2], ['Reading', 2], ['Education', 1], ['Fiction', 1], ['Michigan State University', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Morgan-Madden/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
