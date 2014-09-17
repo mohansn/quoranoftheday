@@ -1,0 +1,45 @@
+
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Rohan-Nag-2/answers/Neuroscience-1', 'http://www.quora.com/Rohan-Nag-2/answers/Chemistry', 'http://www.quora.com/Rohan-Nag-2/answers/Biochemistry', 'http://www.quora.com/Rohan-Nag-2/answers/Biology-1', 'http://www.quora.com/Rohan-Nag-2/answers/The-College-and-University-Experience', 'http://www.quora.com/Rohan-Nag-2/answers/History', 'http://www.quora.com/Rohan-Nag-2/answers/Book-Recommendations', 'http://www.quora.com/Rohan-Nag-2/answers/Higher-Education', 'http://www.quora.com/Rohan-Nag-2/answers/Human-Brain', 'http://www.quora.com/Rohan-Nag-2/answers/Aztecs', 'http://www.quora.com/Rohan-Nag-2/answers/Medicine-and-Healthcare', 'http://www.quora.com/Rohan-Nag-2/answers/Organic-Chemistry', 'http://www.quora.com/Rohan-Nag-2/answers/Molecular-Biology', 'http://www.quora.com/Rohan-Nag-2/answers/Proteins-biochemistry', 'http://www.quora.com/Rohan-Nag-2/answers/Science', 'http://www.quora.com/Rohan-Nag-2/answers/Military-History-and-Wars-1', 'http://www.quora.com/Rohan-Nag-2/answers/Quiz-Bowl', 'http://www.quora.com/Rohan-Nag-2/answers/History-of-France'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Neuroscience', 10], ['Chemistry', 9], ['Biochemistry', 7], ['Biology', 6], ['The College and University Experience', 6], ['History', 5], ['Book Recommendations', 5], ['Higher Education', 5], ['Human Brain', 5], ['Aztecs', 5], ['Medicine and Healthcare', 4], ['Organic Chemistry', 4], ['Molecular Biology', 3], ['Proteins (biochemistry)', 3], ['Science', 2], ['Military History and Wars', 2], ['Quiz Bowl', 2], ['History of France', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Rohan-Nag-2/topics"> Answers by Topic</a>
+    </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
