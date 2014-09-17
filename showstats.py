@@ -1,6 +1,7 @@
 from google.appengine.api import users
 import webapp2
 import cgi
+from genhtml import get_html
 
 names = [l.rstrip("\n") for l in open('usernames.txt','r').readlines()]
 usernames = [l.rstrip("\n") for l in open('users.txt','r').readlines()]
@@ -16,7 +17,11 @@ MAIN_PAGE_HTML = """
 for name in names:
     MAIN_PAGE_HTML = MAIN_PAGE_HTML + "<option value=\"" + name + "\"> " + name + "</option>"
 
-MAIN_PAGE_HTML = MAIN_PAGE_HTML + "</select></div>" + """<div><input type="submit" value="Get Stats"></div></form> </body> </html>"""
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + "</select></div>"
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input type="radio" name="datakind" checked="checked" value="static">Static (updated on Sep 17 '14)<br>
+<input type="radio" name="datakind" value="dynamic">Dynamically updated on request <strong>Can be quite slow or fail</strong></div>"""
+
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input type="submit" value="Get Stats"></div></form> </body> </html>"""
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
@@ -25,10 +30,15 @@ class MainPage(webapp2.RequestHandler):
 class ShowStats(webapp2.RequestHandler):
     def post(self):
         name = cgi.escape(self.request.get('nameselect'))
-        statfile = open(namedict[name]+'.html', 'r')
-        if (statfile is not None):
-            self.response.write (statfile.read())
-            statfile.close ()
+        if (cgi.escape(self.request.get('datakind')) == "static"):
+            statfile = open(namedict[name]+'.html', 'r')
+            if (statfile is not None):
+                self.response.write (statfile.read())
+                statfile.close ()
+            else:
+                self.response.write ("<html><body> <h1> No data file found </h1> </body></html>")
+        else:
+            self.response.write(get_html(namedict[name]))
         
 
 
