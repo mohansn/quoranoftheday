@@ -9,6 +9,10 @@
       .title-link {
           text-decoration:none;
       }
+      .h2style {
+          text-align:center;
+          font-family:serif;
+      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +20,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Aparajita-Raychaudhury/answers/Computer-Programming', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Football-Soccer-2', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Computer-Science', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Psychology', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Programming-Languages', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Human-Behavior', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Linux', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Food', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Law', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Travel', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Reading-1', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Philosophy', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Ethics', 'http://www.quora.com/Aparajita-Raychaudhury/answers/BMS-College-of-Engineering', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Operating-Systems', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Books', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Tips-and-Hacks-for-Everyday-Life'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Computer Programming', 62], ['Football (Soccer)', 27], ['Computer Science', 26], ['Psychology', 25], ['Programming Languages', 24], ['Human Behavior', 19], ['Bengaluru, Karnataka, India', 13], ['Linux', 12], ['Food', 10], ['Law', 10], ['Travel', 9], ['Reading', 9], ['Philosophy', 8], ['Ethics', 8], ['BMS College of Engineering', 8], ['Operating Systems', 7], ['Books', 6], ['Tips and Hacks for Everyday Life', 6]]);
+          var answer_links = ['http://www.quora.com/Aparajita-Raychaudhury/answers/Computer-Programming', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Football-Soccer-2', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Computer-Science', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Psychology', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Programming-Languages', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Human-Behavior', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Linux', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Food', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Law', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Travel', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Reading-1', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Philosophy', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Ethics', 'http://www.quora.com/Aparajita-Raychaudhury/answers/BMS-College-of-Engineering', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Operating-Systems', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Books', 'http://www.quora.com/Aparajita-Raychaudhury/answers/Tips-and-Hacks-for-Everyday-Life'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Computer Programming', 62], ['Football (Soccer)', 27], ['Computer Science', 26], ['Psychology', 25], ['Programming Languages', 24], ['Human Behavior', 19], ['Linux', 12], ['Bengaluru, Karnataka, India', 12], ['Food', 10], ['Law', 10], ['Travel', 9], ['Reading', 9], ['Philosophy', 8], ['Ethics', 8], ['BMS College of Engineering', 8], ['Operating Systems', 7], ['Books', 6], ['Tips and Hacks for Everyday Life', 6]]);
 
         var options = {
           title: '',
@@ -40,6 +44,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Aparajita-Raychaudhury/topics"> Answers by Topic</a>
     </h1>
+    <h2 class="h2style">
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

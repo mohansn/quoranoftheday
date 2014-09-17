@@ -9,6 +9,10 @@
       .title-link {
           text-decoration:none;
       }
+      .h2style {
+          text-align:center;
+          font-family:serif;
+      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +20,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Christopher-Pollock-4/answers/Movie-Business-and-Industry', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Production-1', 'http://www.quora.com/Christopher-Pollock-4/answers/Personal-Finance', 'http://www.quora.com/Christopher-Pollock-4/answers/Money', 'http://www.quora.com/Christopher-Pollock-4/answers/Investing', 'http://www.quora.com/Christopher-Pollock-4/answers/Los-Angeles', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Directors', 'http://www.quora.com/Christopher-Pollock-4/answers/Nutrition', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Business-Strategy', 'http://www.quora.com/Christopher-Pollock-4/answers/People-Skills', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Living', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Production-and-Distribution', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Direction', 'http://www.quora.com/Christopher-Pollock-4/answers/Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Entrepreneurship', 'http://www.quora.com/Christopher-Pollock-4/answers/Exercise', 'http://www.quora.com/Christopher-Pollock-4/answers/Meditation'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movie Business and Industry', 17], ['Movie Production', 15], ['Personal Finance', 10], ['Money', 7], ['Investing', 4], ['Los Angeles', 4], ['Movie Directors', 3], ['Nutrition', 2], ['Healthy Eating', 2], ['Business Strategy', 2], ['People Skills', 2], ['Healthy Living', 2], ['Film Production and Distribution', 2], ['Film Direction', 2], ['Eating', 1], ['Entrepreneurship', 1], ['Exercise', 1], ['Meditation', 1]]);
+          var answer_links = ['http://www.quora.com/Christopher-Pollock-4/answers/Life', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Business-and-Industry', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Production-1', 'http://www.quora.com/Christopher-Pollock-4/answers/Personal-Finance', 'http://www.quora.com/Christopher-Pollock-4/answers/Money', 'http://www.quora.com/Christopher-Pollock-4/answers/Investing', 'http://www.quora.com/Christopher-Pollock-4/answers/Los-Angeles', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Directors', 'http://www.quora.com/Christopher-Pollock-4/answers/Nutrition', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Business-Strategy', 'http://www.quora.com/Christopher-Pollock-4/answers/People-Skills', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Living', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Production-and-Distribution', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Direction', 'http://www.quora.com/Christopher-Pollock-4/answers/Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Entrepreneurship', 'http://www.quora.com/Christopher-Pollock-4/answers/Exercise'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 17], ['Movie Business and Industry', 17], ['Movie Production', 15], ['Personal Finance', 11], ['Money', 7], ['Investing', 4], ['Los Angeles', 4], ['Movie Directors', 3], ['Nutrition', 2], ['Healthy Eating', 2], ['Business Strategy', 2], ['People Skills', 2], ['Healthy Living', 2], ['Film Production and Distribution', 2], ['Film Direction', 2], ['Eating', 1], ['Entrepreneurship', 1], ['Exercise', 1]]);
 
         var options = {
           title: '',
@@ -40,6 +44,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Christopher-Pollock-4/topics"> Answers by Topic</a>
     </h1>
+    <h2 class="h2style">
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

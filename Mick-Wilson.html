@@ -9,6 +9,10 @@
       .title-link {
           text-decoration:none;
       }
+      .h2style {
+          text-align:center;
+          font-family:serif;
+      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -17,7 +21,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Mick-Wilson/answers/Astronomy', 'http://www.quora.com/Mick-Wilson/answers/Astrophysics', 'http://www.quora.com/Mick-Wilson/answers/Theoretical-Physics', 'http://www.quora.com/Mick-Wilson/answers/Mathematics', 'http://www.quora.com/Mick-Wilson/answers/Gravity', 'http://www.quora.com/Mick-Wilson/answers/Amateur-Astronomy-1', 'http://www.quora.com/Mick-Wilson/answers/Cosmology', 'http://www.quora.com/Mick-Wilson/answers/The-Environment', 'http://www.quora.com/Mick-Wilson/answers/Special-Relativity', 'http://www.quora.com/Mick-Wilson/answers/Speed-of-Light', 'http://www.quora.com/Mick-Wilson/answers/Nairobi-Kenya-1', 'http://www.quora.com/Mick-Wilson/answers/Spacetime', 'http://www.quora.com/Mick-Wilson/answers/Safaris', 'http://www.quora.com/Mick-Wilson/answers/Space-com', 'http://www.quora.com/Mick-Wilson/answers/UNEP'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Astronomy', 34], ['Astrophysics', 22], ['Theoretical Physics', 13], ['Mathematics', 11], ['Gravity', 9], ['Amateur Astronomy', 8], ['Cosmology', 7], ['The Environment', 5], ['Special Relativity', 5], ['Speed of Light', 5], ['Nairobi, Kenya', 2], ['Spacetime', 1], ['Safaris', 1], ['Space.com', 1], ['UNEP', 1]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Astronomy', 34], ['Astrophysics', 22], ['Theoretical Physics', 13], ['Mathematics', 12], ['Gravity', 9], ['Amateur Astronomy', 8], ['Cosmology', 7], ['The Environment', 5], ['Special Relativity', 5], ['Speed of Light', 5], ['Nairobi, Kenya', 2], ['Spacetime', 1], ['Safaris', 1], ['Space.com', 1], ['UNEP', 1]]);
 
         var options = {
           title: '',
@@ -40,6 +44,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Mick-Wilson/topics"> Answers by Topic</a>
     </h1>
+    <h2 class="h2style">
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

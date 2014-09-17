@@ -9,6 +9,10 @@
       .title-link {
           text-decoration:none;
       }
+      .h2style {
+          text-align:center;
+          font-family:serif;
+      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -17,7 +21,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Shubham-Chaturvedi-2/answers/Movies', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Football-Soccer-2', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Premier-League', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Survey-Questions', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Chelsea-F-C', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Television', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/India', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/UEFA-Champions-League', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Television-Series', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Politics', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Life', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Music', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/International-Relations-3', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Philosophy', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Psychology', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Movie-Recommendations', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/Sports', 'http://www.quora.com/Shubham-Chaturvedi-2/answers/History'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 27], ['Football (Soccer)', 26], ['Premier League', 18], ['Survey Questions', 15], ['Chelsea F.C.', 8], ['Television', 7], ['India', 7], ['UEFA Champions League', 7], ['Television Series', 7], ['Politics', 5], ['Life', 5], ['Music', 4], ['International Relations', 4], ['Philosophy', 3], ['Psychology', 3], ['Movie Recommendations', 3], ['Sports', 2], ['History', 2]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 28], ['Football (Soccer)', 26], ['Premier League', 18], ['Survey Questions', 16], ['Chelsea F.C.', 8], ['Television', 7], ['India', 7], ['UEFA Champions League', 7], ['Television Series', 7], ['Politics', 5], ['Life', 5], ['Music', 4], ['International Relations', 4], ['Philosophy', 3], ['Psychology', 3], ['Movie Recommendations', 3], ['Sports', 2], ['History', 2]]);
 
         var options = {
           title: '',
@@ -40,6 +44,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Shubham-Chaturvedi-2/topics"> Answers by Topic</a>
     </h1>
+    <h2 class="h2style">
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>
