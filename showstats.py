@@ -24,6 +24,9 @@ MAIN_PAGE_HTML = """
          display:inline-block;
          float:center
        }
+       .datachoice {
+         display:none
+       }
      </style>
    </head>
     <body>
@@ -40,7 +43,7 @@ for name in names:
     MAIN_PAGE_HTML = MAIN_PAGE_HTML + "<option value=\"" + name + "\"> " + name + "</option>"
 
 MAIN_PAGE_HTML = MAIN_PAGE_HTML + "</select></div>"
-MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input type="radio" name="datakind" checked="checked" value="static">Static (updated on Sep 17 '14)<br>
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div class="datachoice"><input type="radio" name="datakind" checked="checked" value="static">Static (updated on Sep 17 '14)<br>
 <input type="radio" name="datakind" value="dynamic">Dynamically updated on request <strong>Can be quite slow or fail</strong></div>"""
 
 MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input type="submit" value="Get Stats"></div></form> </body> </html>"""
