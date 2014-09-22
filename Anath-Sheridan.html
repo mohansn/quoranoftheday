@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -21,7 +17,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Anath-Sheridan/answers/Life', 'http://www.quora.com/Anath-Sheridan/answers/Education', 'http://www.quora.com/Anath-Sheridan/answers/Higher-Education', 'http://www.quora.com/Anath-Sheridan/answers/Evolutionary-Biology', 'http://www.quora.com/Anath-Sheridan/answers/Philosophy', 'http://www.quora.com/Anath-Sheridan/answers/Religion', 'http://www.quora.com/Anath-Sheridan/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Anath-Sheridan/answers/Fine-Art', 'http://www.quora.com/Anath-Sheridan/answers/Travel', 'http://www.quora.com/Anath-Sheridan/answers/Atheism', 'http://www.quora.com/Anath-Sheridan/answers/Science', 'http://www.quora.com/Anath-Sheridan/answers/Illustration', 'http://www.quora.com/Anath-Sheridan/answers/Magic-The-Gathering', 'http://www.quora.com/Anath-Sheridan/answers/Museums', 'http://www.quora.com/Anath-Sheridan/answers/Zoology', 'http://www.quora.com/Anath-Sheridan/answers/Death-Metal', 'http://www.quora.com/Anath-Sheridan/answers/INTJ-personality-type', 'http://www.quora.com/Anath-Sheridan/answers/Taxonomy-1'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 43], ['Education', 23], ['Higher Education', 22], ['Evolutionary Biology', 19], ['Philosophy', 14], ['Religion', 11], ['Philosophy of Everyday Life', 10], ['Fine Art', 9], ['Travel', 8], ['Atheism', 8], ['Science', 7], ['Illustration', 6], ['Magic: The Gathering', 4], ['Museums', 4], ['Zoology', 3], ['Death Metal', 3], ['INTJ (personality type)', 3], ['Taxonomy', 2]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 43], ['Education', 23], ['Higher Education', 23], ['Evolutionary Biology', 19], ['Philosophy', 14], ['Religion', 11], ['Philosophy of Everyday Life', 10], ['Fine Art', 9], ['Travel', 8], ['Atheism', 8], ['Science', 7], ['Illustration', 6], ['Magic: The Gathering', 4], ['Museums', 4], ['Zoology', 3], ['Death Metal', 3], ['INTJ (personality type)', 3], ['Taxonomy', 2]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Anath-Sheridan/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Anath-Sheridan/answers/Life', 'http://www.quora.com/Anath-Sheridan/answers/Education', 'http://www.quora.com/Anath-Sheridan/answers/Higher-Education', 'http://www.quora.com/Anath-Sheridan/answers/Evolutionary-Biology', 'http://www.quora.com/Anath-Sheridan/answers/Philosophy', 'http://www.quora.com/Anath-Sheridan/answers/Religion', 'http://www.quora.com/Anath-Sheridan/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Anath-Sheridan/answers/Fine-Art', 'http://www.quora.com/Anath-Sheridan/answers/Travel', 'http://www.quora.com/Anath-Sheridan/answers/Atheism', 'http://www.quora.com/Anath-Sheridan/answers/Science', 'http://www.quora.com/Anath-Sheridan/answers/Illustration', 'http://www.quora.com/Anath-Sheridan/answers/Magic-The-Gathering', 'http://www.quora.com/Anath-Sheridan/answers/Museums', 'http://www.quora.com/Anath-Sheridan/answers/Zoology', 'http://www.quora.com/Anath-Sheridan/answers/Death-Metal', 'http://www.quora.com/Anath-Sheridan/answers/INTJ-personality-type', 'http://www.quora.com/Anath-Sheridan/answers/Taxonomy-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 43], ['Education', 23], ['Higher Education', 23], ['Evolutionary Biology', 19], ['Philosophy', 14], ['Religion', 11], ['Philosophy of Everyday Life', 10], ['Fine Art', 9], ['Travel', 8], ['Atheism', 8], ['Science', 7], ['Illustration', 6], ['Magic: The Gathering', 4], ['Museums', 4], ['Zoology', 3], ['Death Metal', 3], ['INTJ (personality type)', 3], ['Taxonomy', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Anath-Sheridan/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

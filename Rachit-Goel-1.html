@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -21,7 +17,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Rachit-Goel-1/answers/India', 'http://www.quora.com/Rachit-Goel-1/answers/Quora', 'http://www.quora.com/Rachit-Goel-1/answers/Vellore-Institute-of-Technology-Vellore', 'http://www.quora.com/Rachit-Goel-1/answers/Computer-Programming', 'http://www.quora.com/Rachit-Goel-1/answers/Dating-and-Relationships-1', 'http://www.quora.com/Rachit-Goel-1/answers/Movies', 'http://www.quora.com/Rachit-Goel-1/answers/Food', 'http://www.quora.com/Rachit-Goel-1/answers/Politics-of-India-1', 'http://www.quora.com/Rachit-Goel-1/answers/Windows-8', 'http://www.quora.com/Rachit-Goel-1/answers/Microsoft', 'http://www.quora.com/Rachit-Goel-1/answers/Computer-Science', 'http://www.quora.com/Rachit-Goel-1/answers/Money', 'http://www.quora.com/Rachit-Goel-1/answers/Life', 'http://www.quora.com/Rachit-Goel-1/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Rachit-Goel-1/answers/Television-Series', 'http://www.quora.com/Rachit-Goel-1/answers/Android-OS', 'http://www.quora.com/Rachit-Goel-1/answers/Social-Media', 'http://www.quora.com/Rachit-Goel-1/answers/Colleges-and-Universities'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 17], ['Quora', 9], ['Vellore Institute of Technology, Vellore', 7], ['Computer Programming', 5], ['Dating and Relationships', 5], ['Movies', 4], ['Food', 4], ['Politics of India', 4], ['Windows 8', 4], ['Microsoft', 3], ['Computer Science', 3], ['Money', 3], ['Life', 3], ['Bengaluru, Karnataka, India', 3], ['Television Series', 3], ['Android (OS)', 2], ['Social Media', 2], ['Colleges and Universities', 2]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 18], ['Quora', 9], ['Vellore Institute of Technology, Vellore', 7], ['Computer Programming', 5], ['Dating and Relationships', 5], ['Movies', 4], ['Food', 4], ['Politics of India', 4], ['Windows 8', 4], ['Microsoft', 3], ['Computer Science', 3], ['Money', 3], ['Life', 3], ['Bengaluru, Karnataka, India', 3], ['Television Series', 3], ['Android (OS)', 2], ['Social Media', 2], ['Colleges and Universities', 2]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Rachit-Goel-1/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Rachit-Goel-1/answers/India', 'http://www.quora.com/Rachit-Goel-1/answers/Quora', 'http://www.quora.com/Rachit-Goel-1/answers/Vellore-Institute-of-Technology-Vellore', 'http://www.quora.com/Rachit-Goel-1/answers/Computer-Programming', 'http://www.quora.com/Rachit-Goel-1/answers/Dating-and-Relationships-1', 'http://www.quora.com/Rachit-Goel-1/answers/Movies', 'http://www.quora.com/Rachit-Goel-1/answers/Food', 'http://www.quora.com/Rachit-Goel-1/answers/Politics-of-India-1', 'http://www.quora.com/Rachit-Goel-1/answers/Windows-8', 'http://www.quora.com/Rachit-Goel-1/answers/Microsoft', 'http://www.quora.com/Rachit-Goel-1/answers/Computer-Science', 'http://www.quora.com/Rachit-Goel-1/answers/Money', 'http://www.quora.com/Rachit-Goel-1/answers/Life', 'http://www.quora.com/Rachit-Goel-1/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Rachit-Goel-1/answers/Television-Series', 'http://www.quora.com/Rachit-Goel-1/answers/Android-OS', 'http://www.quora.com/Rachit-Goel-1/answers/Social-Media', 'http://www.quora.com/Rachit-Goel-1/answers/Colleges-and-Universities'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 18], ['Quora', 9], ['Vellore Institute of Technology, Vellore', 7], ['Computer Programming', 5], ['Dating and Relationships', 5], ['Movies', 4], ['Food', 4], ['Politics of India', 4], ['Windows 8', 4], ['Microsoft', 3], ['Computer Science', 3], ['Money', 3], ['Life', 3], ['Bengaluru, Karnataka, India', 3], ['Television Series', 3], ['Android (OS)', 2], ['Social Media', 2], ['Colleges and Universities', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Rachit-Goel-1/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

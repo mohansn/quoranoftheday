@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Meggie-Sutherland-Cutter/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Meggie-Sutherland-Cutter/answers/Life', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Dating-and-Relationships-1', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Psychology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Music', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Women', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Philosophy', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Human-Behavior', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Men', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Love', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Movies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Marriage', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Religion', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Sex', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Horses', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Babies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Astrology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/New-York-City', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Mental-Health'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 65], ['Dating and Relationships', 55], ['Psychology', 53], ['Music', 41], ['Women', 26], ['Philosophy', 25], ['Human Behavior', 21], ['Men', 21], ['Love', 16], ['Movies', 15], ['Marriage', 14], ['Religion', 14], ['Sex', 13], ['Horses', 7], ['Babies', 5], ['Astrology', 5], ['New York City', 4], ['Mental Health', 4]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Meggie-Sutherland-Cutter/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

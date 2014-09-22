@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Andrew-Konoff/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Andrew-Konoff/answers/Startups', 'http://www.quora.com/Andrew-Konoff/answers/Philosophy', 'http://www.quora.com/Andrew-Konoff/answers/Investing', 'http://www.quora.com/Andrew-Konoff/answers/Economics', 'http://www.quora.com/Andrew-Konoff/answers/User-Experience', 'http://www.quora.com/Andrew-Konoff/answers/Design', 'http://www.quora.com/Andrew-Konoff/answers/Dating-and-Relationships-1', 'http://www.quora.com/Andrew-Konoff/answers/User-Interfaces', 'http://www.quora.com/Andrew-Konoff/answers/Lean-Startups', 'http://www.quora.com/Andrew-Konoff/answers/Book-Recommendations', 'http://www.quora.com/Andrew-Konoff/answers/Interaction-Design', 'http://www.quora.com/Andrew-Konoff/answers/Startup-Business-Models', 'http://www.quora.com/Andrew-Konoff/answers/Philosophy-of-Science', 'http://www.quora.com/Andrew-Konoff/answers/Klout'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Startups', 5], ['Philosophy', 4], ['Investing', 3], ['Economics', 2], ['User Experience', 2], ['Design', 1], ['Dating and Relationships', 1], ['User Interfaces', 1], ['Lean Startups', 1], ['Book Recommendations', 1], ['Interaction Design', 1], ['Startup Business Models', 1], ['Philosophy of Science', 1], ['Klout', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Andrew-Konoff/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

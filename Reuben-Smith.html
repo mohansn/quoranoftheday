@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Reuben-Smith/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Reuben-Smith/answers/Python-programming-language-1', 'http://www.quora.com/Reuben-Smith/answers/Startups', 'http://www.quora.com/Reuben-Smith/answers/Computer-Programming', 'http://www.quora.com/Reuben-Smith/answers/San-Francisco', 'http://www.quora.com/Reuben-Smith/answers/JavaScript-programming-language', 'http://www.quora.com/Reuben-Smith/answers/The-Mission-San-Francisco-neighborhood', 'http://www.quora.com/Reuben-Smith/answers/PHP-programming-language-1', 'http://www.quora.com/Reuben-Smith/answers/Technology-Trends'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Python (programming language)', 1], ['Startups', 1], ['Computer Programming', 1], ['San Francisco', 1], ['JavaScript (programming language)', 1], ['The Mission (San Francisco neighborhood)', 1], ['PHP (programming language)', 1], ['Technology Trends', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Reuben-Smith/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +16,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Megan-OMalley-3/answers/Jobs-1', 'http://www.quora.com/Megan-OMalley-3/answers/Career-Advice', 'http://www.quora.com/Megan-OMalley-3/answers/Survey-Questions', u'http://www.quora.com/Megan-OMalley-3/answers/Resumes-and-CVs', 'http://www.quora.com/Megan-OMalley-3/answers/Circuses', 'http://www.quora.com/Megan-OMalley-3/answers/Music', 'http://www.quora.com/Megan-OMalley-3/answers/Job-Search', 'http://www.quora.com/Megan-OMalley-3/answers/Psychology', 'http://www.quora.com/Megan-OMalley-3/answers/Life-Lessons', 'http://www.quora.com/Megan-OMalley-3/answers/Philosophy', 'http://www.quora.com/Megan-OMalley-3/answers/Hayao-Miyazaki', 'http://www.quora.com/Megan-OMalley-3/answers/Self-Improvement', 'http://www.quora.com/Megan-OMalley-3/answers/First-Job-1', 'http://www.quora.com/Megan-OMalley-3/answers/Trombone', 'http://www.quora.com/Megan-OMalley-3/answers/Studio-Ghibli', 'http://www.quora.com/Megan-OMalley-3/answers/Gackt'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Jobs', 32], ['Career Advice', 25], ['Survey Questions', 12], ['Resumes and CVs', 9], ['Circuses', 8], ['Music', 7], ['Job Search', 7], ['Psychology', 6], ['Life Lessons', 6], ['Philosophy', 3], ['Hayao Miyazaki', 2], ['Self-Improvement', 2], ['First Job', 2], ['Trombone', 1], ['Studio Ghibli', 1], ['Gackt', 1]]);
+          var answer_links = ['http://www.quora.com/Megan-OMalley-3/answers/Jobs-1', 'http://www.quora.com/Megan-OMalley-3/answers/Career-Advice', 'http://www.quora.com/Megan-OMalley-3/answers/Survey-Questions', 'http://www.quora.com/Megan-OMalley-3/answers/R&#233;sum&#233;s-and-CVs', 'http://www.quora.com/Megan-OMalley-3/answers/Circuses', 'http://www.quora.com/Megan-OMalley-3/answers/Music', 'http://www.quora.com/Megan-OMalley-3/answers/Job-Search', 'http://www.quora.com/Megan-OMalley-3/answers/Psychology', 'http://www.quora.com/Megan-OMalley-3/answers/Life-Lessons', 'http://www.quora.com/Megan-OMalley-3/answers/Philosophy', 'http://www.quora.com/Megan-OMalley-3/answers/Self-Improvement', 'http://www.quora.com/Megan-OMalley-3/answers/Hayao-Miyazaki', 'http://www.quora.com/Megan-OMalley-3/answers/First-Job-1', 'http://www.quora.com/Megan-OMalley-3/answers/Trombone', 'http://www.quora.com/Megan-OMalley-3/answers/Studio-Ghibli', 'http://www.quora.com/Megan-OMalley-3/answers/Gackt'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Jobs', 32], ['Career Advice', 26], ['Survey Questions', 12], ['R&#233;sum&#233;s and CVs', 9], ['Circuses', 8], ['Music', 7], ['Job Search', 7], ['Psychology', 6], ['Life Lessons', 6], ['Philosophy', 3], ['Self-Improvement', 3], ['Hayao Miyazaki', 2], ['First Job', 2], ['Trombone', 1], ['Studio Ghibli', 1], ['Gackt', 1]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Megan-OMalley-3/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Megan-OMalley-3/answers/Jobs-1', 'http://www.quora.com/Megan-OMalley-3/answers/Career-Advice', 'http://www.quora.com/Megan-OMalley-3/answers/Survey-Questions', 'http://www.quora.com/Megan-OMalley-3/answers/R&#233;sum&#233;s-and-CVs', 'http://www.quora.com/Megan-OMalley-3/answers/Circuses', 'http://www.quora.com/Megan-OMalley-3/answers/Music', 'http://www.quora.com/Megan-OMalley-3/answers/Job-Search', 'http://www.quora.com/Megan-OMalley-3/answers/Psychology', 'http://www.quora.com/Megan-OMalley-3/answers/Life-Lessons', 'http://www.quora.com/Megan-OMalley-3/answers/Philosophy', 'http://www.quora.com/Megan-OMalley-3/answers/Self-Improvement', 'http://www.quora.com/Megan-OMalley-3/answers/Hayao-Miyazaki', 'http://www.quora.com/Megan-OMalley-3/answers/First-Job-1', 'http://www.quora.com/Megan-OMalley-3/answers/Trombone', 'http://www.quora.com/Megan-OMalley-3/answers/Studio-Ghibli', 'http://www.quora.com/Megan-OMalley-3/answers/Gackt'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Jobs', 32], ['Career Advice', 26], ['Survey Questions', 12], ['R&#233;sum&#233;s and CVs', 9], ['Circuses', 8], ['Music', 7], ['Job Search', 7], ['Psychology', 6], ['Life Lessons', 6], ['Philosophy', 3], ['Self-Improvement', 3], ['Hayao Miyazaki', 2], ['First Job', 2], ['Trombone', 1], ['Studio Ghibli', 1], ['Gackt', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Megan-OMalley-3/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -21,7 +17,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Paul-Frick/answers/Military', 'http://www.quora.com/Paul-Frick/answers/Christianity', 'http://www.quora.com/Paul-Frick/answers/Science', 'http://www.quora.com/Paul-Frick/answers/Books', 'http://www.quora.com/Paul-Frick/answers/World-War-II', 'http://www.quora.com/Paul-Frick/answers/U-S-Marine-Corps', 'http://www.quora.com/Paul-Frick/answers/Diplomacy-and-Diplomats', 'http://www.quora.com/Paul-Frick/answers/Technology', 'http://www.quora.com/Paul-Frick/answers/Abortion', 'http://www.quora.com/Paul-Frick/answers/Cooking', 'http://www.quora.com/Paul-Frick/answers/Science-Fiction-genre', 'http://www.quora.com/Paul-Frick/answers/Fantasy-genre', 'http://www.quora.com/Paul-Frick/answers/Food', 'http://www.quora.com/Paul-Frick/answers/The-Universe', 'http://www.quora.com/Paul-Frick/answers/Military-Strategy', 'http://www.quora.com/Paul-Frick/answers/War-in-Iraq-2003-11'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Military', 23], ['Christianity', 20], ['Science', 6], ['Books', 6], ['World War II', 6], ['U.S. Marine Corps', 6], ['Diplomacy and Diplomats', 4], ['Technology', 3], ['Abortion', 3], ['Cooking', 2], ['Science Fiction (genre)', 2], ['Fantasy (genre)', 2], ['Food', 1], ['The Universe', 1], ['Military Strategy', 1], ['War in Iraq (2003-11)', 1]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Military', 24], ['Christianity', 20], ['Science', 6], ['Books', 6], ['World War II', 6], ['U.S. Marine Corps', 6], ['Diplomacy and Diplomats', 4], ['Technology', 3], ['Abortion', 3], ['Cooking', 2], ['Science Fiction (genre)', 2], ['Fantasy (genre)', 2], ['Food', 1], ['The Universe', 1], ['Military Strategy', 1], ['War in Iraq (2003-11)', 1]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Paul-Frick/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Paul-Frick/answers/Military', 'http://www.quora.com/Paul-Frick/answers/Christianity', 'http://www.quora.com/Paul-Frick/answers/Science', 'http://www.quora.com/Paul-Frick/answers/Books', 'http://www.quora.com/Paul-Frick/answers/World-War-II', 'http://www.quora.com/Paul-Frick/answers/U-S-Marine-Corps', 'http://www.quora.com/Paul-Frick/answers/Diplomacy-and-Diplomats', 'http://www.quora.com/Paul-Frick/answers/Technology', 'http://www.quora.com/Paul-Frick/answers/Abortion', 'http://www.quora.com/Paul-Frick/answers/Cooking', 'http://www.quora.com/Paul-Frick/answers/Science-Fiction-genre', 'http://www.quora.com/Paul-Frick/answers/Fantasy-genre', 'http://www.quora.com/Paul-Frick/answers/Food', 'http://www.quora.com/Paul-Frick/answers/The-Universe', 'http://www.quora.com/Paul-Frick/answers/Military-Strategy', 'http://www.quora.com/Paul-Frick/answers/War-in-Iraq-2003-11'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Military', 24], ['Christianity', 20], ['Science', 6], ['Books', 6], ['World War II', 6], ['U.S. Marine Corps', 6], ['Diplomacy and Diplomats', 4], ['Technology', 3], ['Abortion', 3], ['Cooking', 2], ['Science Fiction (genre)', 2], ['Fantasy (genre)', 2], ['Food', 1], ['The Universe', 1], ['Military Strategy', 1], ['War in Iraq (2003-11)', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Paul-Frick/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

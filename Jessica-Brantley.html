@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -21,7 +17,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Jessica-Brantley/answers/Survey-Questions', 'http://www.quora.com/Jessica-Brantley/answers/Life', 'http://www.quora.com/Jessica-Brantley/answers/Children', 'http://www.quora.com/Jessica-Brantley/answers/Parenting', 'http://www.quora.com/Jessica-Brantley/answers/Writing', 'http://www.quora.com/Jessica-Brantley/answers/Philosophy', 'http://www.quora.com/Jessica-Brantley/answers/Psychology', 'http://www.quora.com/Jessica-Brantley/answers/Education', 'http://www.quora.com/Jessica-Brantley/answers/Best-of-X', 'http://www.quora.com/Jessica-Brantley/answers/Reading-1', 'http://www.quora.com/Jessica-Brantley/answers/Movies', 'http://www.quora.com/Jessica-Brantley/answers/Science', 'http://www.quora.com/Jessica-Brantley/answers/Food', 'http://www.quora.com/Jessica-Brantley/answers/Authors', 'http://www.quora.com/Jessica-Brantley/answers/Literature', 'http://www.quora.com/Jessica-Brantley/answers/Books', 'http://www.quora.com/Jessica-Brantley/answers/Words', 'http://www.quora.com/Jessica-Brantley/answers/Physics'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 14], ['Life', 13], ['Children', 7], ['Parenting', 6], ['Writing', 5], ['Philosophy', 3], ['Psychology', 3], ['Education', 2], ['Best of X', 2], ['Reading', 2], ['Movies', 1], ['Science', 1], ['Food', 1], ['Authors', 1], ['Literature', 1], ['Books', 1], ['Words', 1], ['Physics', 1]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 13], ['Life', 12], ['Children', 7], ['Parenting', 6], ['Writing', 5], ['Philosophy', 3], ['Psychology', 3], ['Education', 2], ['Best of X', 2], ['Reading', 2], ['Movies', 1], ['Science', 1], ['Food', 1], ['Authors', 1], ['Literature', 1], ['Books', 1], ['Words', 1], ['Physics', 1]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Jessica-Brantley/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Jessica-Brantley/answers/Survey-Questions', 'http://www.quora.com/Jessica-Brantley/answers/Life', 'http://www.quora.com/Jessica-Brantley/answers/Children', 'http://www.quora.com/Jessica-Brantley/answers/Parenting', 'http://www.quora.com/Jessica-Brantley/answers/Writing', 'http://www.quora.com/Jessica-Brantley/answers/Philosophy', 'http://www.quora.com/Jessica-Brantley/answers/Psychology', 'http://www.quora.com/Jessica-Brantley/answers/Education', 'http://www.quora.com/Jessica-Brantley/answers/Best-of-X', 'http://www.quora.com/Jessica-Brantley/answers/Reading-1', 'http://www.quora.com/Jessica-Brantley/answers/Movies', 'http://www.quora.com/Jessica-Brantley/answers/Science', 'http://www.quora.com/Jessica-Brantley/answers/Food', 'http://www.quora.com/Jessica-Brantley/answers/Authors', 'http://www.quora.com/Jessica-Brantley/answers/Literature', 'http://www.quora.com/Jessica-Brantley/answers/Books', 'http://www.quora.com/Jessica-Brantley/answers/Words', 'http://www.quora.com/Jessica-Brantley/answers/Physics'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 13], ['Life', 12], ['Children', 7], ['Parenting', 6], ['Writing', 5], ['Philosophy', 3], ['Psychology', 3], ['Education', 2], ['Best of X', 2], ['Reading', 2], ['Movies', 1], ['Science', 1], ['Food', 1], ['Authors', 1], ['Literature', 1], ['Books', 1], ['Words', 1], ['Physics', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Jessica-Brantley/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

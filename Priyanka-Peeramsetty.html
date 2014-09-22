@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +16,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Priyanka-Peeramsetty/answers/India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Indians-8', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Human-Behavior', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Self-Improvement', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Quora', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Society', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Philosophy', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Books', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Religion', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Social-Psychology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/New-Delhi', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Emotions', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Education', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Sociology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Union-Public-Service-Commission-India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Economics', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Reading-1', 'http://www.quora.com/Priyanka-Peeramsetty/answers/History'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 43], ['Indians', 37], ['Human Behavior', 26], ['Self-Improvement', 20], ['Quora', 14], ['Society', 13], ['Philosophy', 12], ['Books', 10], ['Religion', 10], ['Social Psychology', 10], ['New Delhi', 9], ['Emotions', 9], ['Education', 8], ['Sociology', 7], ['Union Public Service Commission (India)', 7], ['Economics', 6], ['Reading', 6], ['History', 5]]);
+          var answer_links = ['http://www.quora.com/Priyanka-Peeramsetty/answers/India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Indians-8', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Human-Behavior', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Self-Improvement', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Quora', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Society', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Philosophy', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Education', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Social-Psychology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Books', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Religion', 'http://www.quora.com/Priyanka-Peeramsetty/answers/New-Delhi', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Emotions', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Union-Public-Service-Commission-India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Economics', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Sociology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Reading-1', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Personality'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 45], ['Indians', 38], ['Human Behavior', 27], ['Self-Improvement', 20], ['Quora', 15], ['Society', 13], ['Philosophy', 12], ['Education', 11], ['Social Psychology', 11], ['Books', 10], ['Religion', 10], ['New Delhi', 9], ['Emotions', 9], ['Union Public Service Commission (India)', 9], ['Economics', 8], ['Sociology', 7], ['Reading', 7], ['Personality', 6]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Priyanka-Peeramsetty/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Priyanka-Peeramsetty/answers/India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Indians-8', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Human-Behavior', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Self-Improvement', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Quora', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Society', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Philosophy', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Education', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Social-Psychology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Books', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Religion', 'http://www.quora.com/Priyanka-Peeramsetty/answers/New-Delhi', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Emotions', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Union-Public-Service-Commission-India', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Economics', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Sociology', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Reading-1', 'http://www.quora.com/Priyanka-Peeramsetty/answers/Personality'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 45], ['Indians', 38], ['Human Behavior', 27], ['Self-Improvement', 21], ['Quora', 15], ['Society', 13], ['Philosophy', 12], ['Education', 11], ['Social Psychology', 11], ['Books', 10], ['Religion', 10], ['New Delhi', 9], ['Emotions', 9], ['Union Public Service Commission (India)', 9], ['Economics', 8], ['Sociology', 7], ['Reading', 7], ['Personality', 6]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Priyanka-Peeramsetty/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

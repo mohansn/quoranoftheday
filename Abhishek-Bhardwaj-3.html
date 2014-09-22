@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Abhishek-Bhardwaj-3/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Abhishek-Bhardwaj-3/answers/Computer-Programming', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Computer-Science', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Gmail', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Dreams-and-Dreaming', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Survey-Questions', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Sleep', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Psychology', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Self-Improvement', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/PayPal', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Web-Development', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Money', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Fitness', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Hinduism', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Advice', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Cognitive-Psychology', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Vedas', 'http://www.quora.com/Abhishek-Bhardwaj-3/answers/Wanting-and-Making-Money'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Computer Programming', 2], ['Computer Science', 1], ['Gmail', 2], ['Dreams and Dreaming', 14], ['Survey Questions', 10], ['Sleep', 6], ['Psychology', 2], ['Self-Improvement', 2], ['PayPal', 1], ['Web Development', 1], ['Money', 1], ['Fitness', 1], ['Hinduism', 1], ['Advice', 1], ['Cognitive Psychology', 1], ['Vedas', 1], ['Wanting and Making Money', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Abhishek-Bhardwaj-3/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

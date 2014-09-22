@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +16,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Tom-Gillis/answers/New-York-City', 'http://www.quora.com/Tom-Gillis/answers/Startups', 'http://www.quora.com/Tom-Gillis/answers/Music', 'http://www.quora.com/Tom-Gillis/answers/Computer-Programming', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-NY', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Wall-Street', u'http://www.quora.com/Tom-Gillis/answers/Cafes', 'http://www.quora.com/Tom-Gillis/answers/Manhattan-NYC-borough', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-Heights-Brooklyn-neighborhood', 'http://www.quora.com/Tom-Gillis/answers/The-Wire-TV-series', 'http://www.quora.com/Tom-Gillis/answers/Opera-performance', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Movement', 'http://www.quora.com/Tom-Gillis/answers/Hurricane-Sandy-October-2012', 'http://www.quora.com/Tom-Gillis/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Tom-Gillis/answers/TED', 'http://www.quora.com/Tom-Gillis/answers/Obama-Administration', 'http://www.quora.com/Tom-Gillis/answers/Coffee', 'http://www.quora.com/Tom-Gillis/answers/MongoDB'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['New York City', 42], ['Startups', 27], ['Music', 24], ['Computer Programming', 13], ['Brooklyn, NY', 11], ['Occupy Wall Street', 10], ['Cafes', 8], ['Manhattan (NYC borough)', 8], ['Brooklyn Heights (Brooklyn neighborhood)', 7], ['The Wire (TV series)', 6], ['Opera (performance)', 6], ['Occupy Movement', 6], ['Hurricane Sandy (October 2012)', 5], ['Startup Advice and Strategy', 4], ['TED', 4], ['Obama Administration', 4], ['Coffee', 3], ['MongoDB', 3]]);
+          var answer_links = ['http://www.quora.com/Tom-Gillis/answers/New-York-City', 'http://www.quora.com/Tom-Gillis/answers/Startups', 'http://www.quora.com/Tom-Gillis/answers/Music', 'http://www.quora.com/Tom-Gillis/answers/Computer-Programming', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-NY', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Wall-Street', 'http://www.quora.com/Tom-Gillis/answers/Caf&#233;s', 'http://www.quora.com/Tom-Gillis/answers/Manhattan-NYC-borough', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-Heights-Brooklyn-neighborhood', 'http://www.quora.com/Tom-Gillis/answers/The-Wire-TV-series', 'http://www.quora.com/Tom-Gillis/answers/Opera-performance', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Movement', 'http://www.quora.com/Tom-Gillis/answers/Hurricane-Sandy-October-2012', 'http://www.quora.com/Tom-Gillis/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Tom-Gillis/answers/TED', 'http://www.quora.com/Tom-Gillis/answers/Obama-Administration', 'http://www.quora.com/Tom-Gillis/answers/Coffee', 'http://www.quora.com/Tom-Gillis/answers/MongoDB'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['New York City', 42], ['Startups', 27], ['Music', 24], ['Computer Programming', 13], ['Brooklyn, NY', 11], ['Occupy Wall Street', 10], ['Caf&#233;s', 8], ['Manhattan (NYC borough)', 8], ['Brooklyn Heights (Brooklyn neighborhood)', 7], ['The Wire (TV series)', 6], ['Opera (performance)', 6], ['Occupy Movement', 6], ['Hurricane Sandy (October 2012)', 5], ['Startup Advice and Strategy', 4], ['TED', 4], ['Obama Administration', 4], ['Coffee', 3], ['MongoDB', 3]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Tom-Gillis/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Tom-Gillis/answers/New-York-City', 'http://www.quora.com/Tom-Gillis/answers/Startups', 'http://www.quora.com/Tom-Gillis/answers/Music', 'http://www.quora.com/Tom-Gillis/answers/Computer-Programming', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-NY', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Wall-Street', 'http://www.quora.com/Tom-Gillis/answers/Caf&#233;s', 'http://www.quora.com/Tom-Gillis/answers/Manhattan-NYC-borough', 'http://www.quora.com/Tom-Gillis/answers/Brooklyn-Heights-Brooklyn-neighborhood', 'http://www.quora.com/Tom-Gillis/answers/The-Wire-TV-series', 'http://www.quora.com/Tom-Gillis/answers/Opera-performance', 'http://www.quora.com/Tom-Gillis/answers/Occupy-Movement', 'http://www.quora.com/Tom-Gillis/answers/Hurricane-Sandy-October-2012', 'http://www.quora.com/Tom-Gillis/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Tom-Gillis/answers/TED', 'http://www.quora.com/Tom-Gillis/answers/Obama-Administration', 'http://www.quora.com/Tom-Gillis/answers/Coffee', 'http://www.quora.com/Tom-Gillis/answers/MongoDB'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['New York City', 42], ['Startups', 27], ['Music', 24], ['Computer Programming', 13], ['Brooklyn, NY', 11], ['Occupy Wall Street', 10], ['Caf&#233;s', 8], ['Manhattan (NYC borough)', 8], ['Brooklyn Heights (Brooklyn neighborhood)', 7], ['The Wire (TV series)', 6], ['Opera (performance)', 6], ['Occupy Movement', 6], ['Hurricane Sandy (October 2012)', 5], ['Startup Advice and Strategy', 4], ['TED', 4], ['Obama Administration', 4], ['Coffee', 3], ['MongoDB', 3]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Tom-Gillis/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

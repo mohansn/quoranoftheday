@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Christy-John/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Christy-John/answers/Movies', 'http://www.quora.com/Christy-John/answers/Kerala-India', 'http://www.quora.com/Christy-John/answers/Actors-and-Actresses', 'http://www.quora.com/Christy-John/answers/India', 'http://www.quora.com/Christy-John/answers/Sports', 'http://www.quora.com/Christy-John/answers/Hollywood', 'http://www.quora.com/Christy-John/answers/Football-Soccer-2', 'http://www.quora.com/Christy-John/answers/Business', 'http://www.quora.com/Christy-John/answers/Food', 'http://www.quora.com/Christy-John/answers/Books', 'http://www.quora.com/Christy-John/answers/Life', 'http://www.quora.com/Christy-John/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Christy-John/answers/Acting', 'http://www.quora.com/Christy-John/answers/Startups', 'http://www.quora.com/Christy-John/answers/Music', 'http://www.quora.com/Christy-John/answers/Jokes', 'http://www.quora.com/Christy-John/answers/Sex', 'http://www.quora.com/Christy-John/answers/Design'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 5], ['Kerala, India', 5], ['Actors and Actresses', 4], ['India', 4], ['Sports', 3], ['Hollywood', 3], ['Football (Soccer)', 3], ['Business', 2], ['Food', 2], ['Books', 2], ['Life', 2], ['Bengaluru, Karnataka, India', 2], ['Acting', 2], ['Startups', 1], ['Music', 1], ['Jokes', 1], ['Sex', 1], ['Design', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Christy-John/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

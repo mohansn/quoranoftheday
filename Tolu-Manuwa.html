@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Tolu-Manuwa/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Tolu-Manuwa/answers/Survey-Questions', 'http://www.quora.com/Tolu-Manuwa/answers/Life', 'http://www.quora.com/Tolu-Manuwa/answers/Quora-product', 'http://www.quora.com/Tolu-Manuwa/answers/Quora', 'http://www.quora.com/Tolu-Manuwa/answers/Movies', 'http://www.quora.com/Tolu-Manuwa/answers/Jokes', 'http://www.quora.com/Tolu-Manuwa/answers/Philosophy', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Body-2', 'http://www.quora.com/Tolu-Manuwa/answers/Hypothetical-Scenarios', 'http://www.quora.com/Tolu-Manuwa/answers/Humor', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Biology', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Physiology', 'http://www.quora.com/Tolu-Manuwa/answers/Best-Photographs-of-X', 'http://www.quora.com/Tolu-Manuwa/answers/Startups', 'http://www.quora.com/Tolu-Manuwa/answers/Music', 'http://www.quora.com/Tolu-Manuwa/answers/Medicine-and-Healthcare', 'http://www.quora.com/Tolu-Manuwa/answers/Design', 'http://www.quora.com/Tolu-Manuwa/answers/Poetry'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 20], ['Life', 7], ['Quora (product)', 4], ['Quora', 3], ['Movies', 3], ['Jokes', 3], ['Philosophy', 3], ['Human Body', 3], ['Hypothetical Scenarios', 3], ['Humor', 2], ['Human Biology', 2], ['Human Physiology', 2], ['Best Photographs of X', 2], ['Startups', 1], ['Music', 1], ['Medicine and Healthcare', 1], ['Design', 1], ['Poetry', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Tolu-Manuwa/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

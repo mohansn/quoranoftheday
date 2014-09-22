@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Aravind-Madenur/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Aravind-Madenur/answers/Finance', 'http://www.quora.com/Aravind-Madenur/answers/Books', 'http://www.quora.com/Aravind-Madenur/answers/Economics', 'http://www.quora.com/Aravind-Madenur/answers/Business', 'http://www.quora.com/Aravind-Madenur/answers/Personal-Finance', 'http://www.quora.com/Aravind-Madenur/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aravind-Madenur/answers/Value-Investing', 'http://www.quora.com/Aravind-Madenur/answers/Startups', 'http://www.quora.com/Aravind-Madenur/answers/Investment-Banking', 'http://www.quora.com/Aravind-Madenur/answers/Business-Strategy', 'http://www.quora.com/Aravind-Madenur/answers/Quantitative-Finance', 'http://www.quora.com/Aravind-Madenur/answers/Mathematics', 'http://www.quora.com/Aravind-Madenur/answers/Health', 'http://www.quora.com/Aravind-Madenur/answers/Technology', 'http://www.quora.com/Aravind-Madenur/answers/Data-Modeling', 'http://www.quora.com/Aravind-Madenur/answers/Nassim-Nicholas-Taleb', 'http://www.quora.com/Aravind-Madenur/answers/Bitcoin', 'http://www.quora.com/Aravind-Madenur/answers/Medicine-and-Healthcare'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Finance', 27], ['Books', 16], ['Economics', 14], ['Business', 11], ['Personal Finance', 8], ['Bengaluru, Karnataka, India', 8], ['Value Investing', 8], ['Startups', 5], ['Investment Banking', 4], ['Business Strategy', 3], ['Quantitative Finance', 3], ['Mathematics', 2], ['Health', 2], ['Technology', 2], ['Data Modeling', 2], ['Nassim Nicholas Taleb', 2], ['Bitcoin', 2], ['Medicine and Healthcare', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Aravind-Madenur/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

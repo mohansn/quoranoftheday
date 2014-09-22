@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +16,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Anamika-Kumar/answers/Survey-Questions', 'http://www.quora.com/Anamika-Kumar/answers/Life', 'http://www.quora.com/Anamika-Kumar/answers/Dating-and-Relationships-1', 'http://www.quora.com/Anamika-Kumar/answers/Love', 'http://www.quora.com/Anamika-Kumar/answers/Psychology', 'http://www.quora.com/Anamika-Kumar/answers/Human-Behavior', 'http://www.quora.com/Anamika-Kumar/answers/Movies', 'http://www.quora.com/Anamika-Kumar/answers/Travel', 'http://www.quora.com/Anamika-Kumar/answers/Food', 'http://www.quora.com/Anamika-Kumar/answers/India', 'http://www.quora.com/Anamika-Kumar/answers/Humor', 'http://www.quora.com/Anamika-Kumar/answers/Quora-Community', 'http://www.quora.com/Anamika-Kumar/answers/Marriage', 'http://www.quora.com/Anamika-Kumar/answers/Romance-love', 'http://www.quora.com/Anamika-Kumar/answers/Emotions', 'http://www.quora.com/Anamika-Kumar/answers/Women', 'http://www.quora.com/Anamika-Kumar/answers/Happiness', 'http://www.quora.com/Anamika-Kumar/answers/Dating-Advice'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 43], ['Life', 21], ['Dating and Relationships', 18], ['Love', 14], ['Psychology', 10], ['Human Behavior', 9], ['Movies', 8], ['Travel', 6], ['Food', 6], ['India', 6], ['Humor', 6], ['Quora Community', 6], ['Marriage', 5], ['Romance (love)', 4], ['Emotions', 4], ['Women', 4], ['Happiness', 4], ['Dating Advice', 4]]);
+          var answer_links = ['http://www.quora.com/Anamika-Kumar/answers/Survey-Questions', 'http://www.quora.com/Anamika-Kumar/answers/Life', 'http://www.quora.com/Anamika-Kumar/answers/Dating-and-Relationships-1', 'http://www.quora.com/Anamika-Kumar/answers/Love', 'http://www.quora.com/Anamika-Kumar/answers/Psychology', 'http://www.quora.com/Anamika-Kumar/answers/Human-Behavior', 'http://www.quora.com/Anamika-Kumar/answers/Movies', 'http://www.quora.com/Anamika-Kumar/answers/Quora-Community', 'http://www.quora.com/Anamika-Kumar/answers/Travel', 'http://www.quora.com/Anamika-Kumar/answers/Food', 'http://www.quora.com/Anamika-Kumar/answers/India', 'http://www.quora.com/Anamika-Kumar/answers/Humor', 'http://www.quora.com/Anamika-Kumar/answers/Marriage', 'http://www.quora.com/Anamika-Kumar/answers/Romance-love', 'http://www.quora.com/Anamika-Kumar/answers/Emotions', 'http://www.quora.com/Anamika-Kumar/answers/Women', 'http://www.quora.com/Anamika-Kumar/answers/Happiness', 'http://www.quora.com/Anamika-Kumar/answers/Dating-Advice'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 44], ['Life', 21], ['Dating and Relationships', 18], ['Love', 14], ['Psychology', 10], ['Human Behavior', 9], ['Movies', 8], ['Quora Community', 7], ['Travel', 6], ['Food', 6], ['India', 6], ['Humor', 6], ['Marriage', 5], ['Romance (love)', 4], ['Emotions', 4], ['Women', 4], ['Happiness', 4], ['Dating Advice', 4]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Anamika-Kumar/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Anamika-Kumar/answers/Survey-Questions', 'http://www.quora.com/Anamika-Kumar/answers/Life', 'http://www.quora.com/Anamika-Kumar/answers/Dating-and-Relationships-1', 'http://www.quora.com/Anamika-Kumar/answers/Love', 'http://www.quora.com/Anamika-Kumar/answers/Psychology', 'http://www.quora.com/Anamika-Kumar/answers/Human-Behavior', 'http://www.quora.com/Anamika-Kumar/answers/Movies', 'http://www.quora.com/Anamika-Kumar/answers/Quora-Community', 'http://www.quora.com/Anamika-Kumar/answers/Travel', 'http://www.quora.com/Anamika-Kumar/answers/Food', 'http://www.quora.com/Anamika-Kumar/answers/India', 'http://www.quora.com/Anamika-Kumar/answers/Humor', 'http://www.quora.com/Anamika-Kumar/answers/Marriage', 'http://www.quora.com/Anamika-Kumar/answers/Romance-love', 'http://www.quora.com/Anamika-Kumar/answers/Emotions', 'http://www.quora.com/Anamika-Kumar/answers/Women', 'http://www.quora.com/Anamika-Kumar/answers/Happiness', 'http://www.quora.com/Anamika-Kumar/answers/Dating-Advice'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 43], ['Life', 21], ['Dating and Relationships', 18], ['Love', 14], ['Psychology', 10], ['Human Behavior', 9], ['Movies', 8], ['Quora Community', 7], ['Travel', 6], ['Food', 6], ['India', 6], ['Humor', 6], ['Marriage', 5], ['Romance (love)', 4], ['Emotions', 4], ['Women', 4], ['Happiness', 4], ['Dating Advice', 4]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Anamika-Kumar/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

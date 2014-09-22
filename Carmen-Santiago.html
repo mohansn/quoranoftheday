@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +16,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Carmen-Santiago/answers/Life', 'http://www.quora.com/Carmen-Santiago/answers/Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Self-Improvement', 'http://www.quora.com/Carmen-Santiago/answers/Life-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy', 'http://www.quora.com/Carmen-Santiago/answers/Dating-and-Relationships-1', 'http://www.quora.com/Carmen-Santiago/answers/Human-Behavior', 'http://www.quora.com/Carmen-Santiago/answers/Life-Lessons', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Carmen-Santiago/answers/Social-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Social-Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Friendship', 'http://www.quora.com/Carmen-Santiago/answers/Happiness', 'http://www.quora.com/Carmen-Santiago/answers/Career-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Quora', 'http://www.quora.com/Carmen-Santiago/answers/Success', 'http://www.quora.com/Carmen-Santiago/answers/Motivation', 'http://www.quora.com/Carmen-Santiago/answers/Money'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 201], ['Psychology', 162], ['Self-Improvement', 99], ['Life Advice', 97], ['Philosophy', 89], ['Dating and Relationships', 87], ['Human Behavior', 79], ['Life Lessons', 64], ['Philosophy of Everyday Life', 62], ['Social Advice', 40], ['Social Psychology', 38], ['Friendship', 23], ['Happiness', 19], ['Career Advice', 19], ['Quora', 16], ['Success', 15], ['Motivation', 12], ['Money', 11]]);
+          var answer_links = ['http://www.quora.com/Carmen-Santiago/answers/Life', 'http://www.quora.com/Carmen-Santiago/answers/Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Self-Improvement', 'http://www.quora.com/Carmen-Santiago/answers/Life-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Dating-and-Relationships-1', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy', 'http://www.quora.com/Carmen-Santiago/answers/Human-Behavior', 'http://www.quora.com/Carmen-Santiago/answers/Life-Lessons', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Carmen-Santiago/answers/Social-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Social-Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Friendship', 'http://www.quora.com/Carmen-Santiago/answers/Happiness', 'http://www.quora.com/Carmen-Santiago/answers/Career-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Quora', 'http://www.quora.com/Carmen-Santiago/answers/Success', 'http://www.quora.com/Carmen-Santiago/answers/Motivation', 'http://www.quora.com/Carmen-Santiago/answers/Money'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 203], ['Psychology', 164], ['Self-Improvement', 99], ['Life Advice', 99], ['Dating and Relationships', 91], ['Philosophy', 89], ['Human Behavior', 79], ['Life Lessons', 65], ['Philosophy of Everyday Life', 62], ['Social Advice', 40], ['Social Psychology', 38], ['Friendship', 23], ['Happiness', 19], ['Career Advice', 19], ['Quora', 17], ['Success', 17], ['Motivation', 13], ['Money', 11]]);
 
         var options = {
           title: '',
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Carmen-Santiago/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Carmen-Santiago/answers/Life', 'http://www.quora.com/Carmen-Santiago/answers/Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Self-Improvement', 'http://www.quora.com/Carmen-Santiago/answers/Life-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Dating-and-Relationships-1', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy', 'http://www.quora.com/Carmen-Santiago/answers/Human-Behavior', 'http://www.quora.com/Carmen-Santiago/answers/Life-Lessons', 'http://www.quora.com/Carmen-Santiago/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Carmen-Santiago/answers/Social-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Social-Psychology', 'http://www.quora.com/Carmen-Santiago/answers/Friendship', 'http://www.quora.com/Carmen-Santiago/answers/Happiness', 'http://www.quora.com/Carmen-Santiago/answers/Career-Advice', 'http://www.quora.com/Carmen-Santiago/answers/Quora', 'http://www.quora.com/Carmen-Santiago/answers/Success', 'http://www.quora.com/Carmen-Santiago/answers/Motivation', 'http://www.quora.com/Carmen-Santiago/answers/Money'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 206], ['Psychology', 166], ['Self-Improvement', 99], ['Life Advice', 99], ['Dating and Relationships', 90], ['Philosophy', 89], ['Human Behavior', 79], ['Life Lessons', 65], ['Philosophy of Everyday Life', 63], ['Social Advice', 40], ['Social Psychology', 38], ['Friendship', 23], ['Happiness', 19], ['Career Advice', 19], ['Quora', 17], ['Success', 17], ['Motivation', 13], ['Money', 11]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Carmen-Santiago/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

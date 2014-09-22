@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Gail-Noble/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Gail-Noble/answers/Gardening', 'http://www.quora.com/Gail-Noble/answers/Plants', 'http://www.quora.com/Gail-Noble/answers/Trees-plants', 'http://www.quora.com/Gail-Noble/answers/Pest-Control', 'http://www.quora.com/Gail-Noble/answers/Vegetable-Gardens', 'http://www.quora.com/Gail-Noble/answers/Insects', 'http://www.quora.com/Gail-Noble/answers/Urban-Gardening', 'http://www.quora.com/Gail-Noble/answers/House-Plants', 'http://www.quora.com/Gail-Noble/answers/Botany', 'http://www.quora.com/Gail-Noble/answers/Flowers', 'http://www.quora.com/Gail-Noble/answers/Plant-Identification', 'http://www.quora.com/Gail-Noble/answers/Landscaping', 'http://www.quora.com/Gail-Noble/answers/Vegetables', 'http://www.quora.com/Gail-Noble/answers/Lawn-Maintenance', 'http://www.quora.com/Gail-Noble/answers/Animals', 'http://www.quora.com/Gail-Noble/answers/Pets', 'http://www.quora.com/Gail-Noble/answers/Herbs', 'http://www.quora.com/Gail-Noble/answers/Horticulture'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Gardening', 180], ['Plants', 76], ['Trees (plants)', 32], ['Pest Control', 31], ['Vegetable Gardens', 27], ['Insects', 22], ['Urban Gardening', 22], ['House Plants', 21], ['Botany', 18], ['Flowers', 17], ['Plant Identification', 17], ['Landscaping', 15], ['Vegetables', 13], ['Lawn Maintenance', 13], ['Animals', 12], ['Pets', 11], ['Herbs', 11], ['Horticulture', 11]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Gail-Noble/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

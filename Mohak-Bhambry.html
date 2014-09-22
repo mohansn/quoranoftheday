@@ -9,10 +9,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -44,9 +40,50 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Mohak-Bhambry/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Mohak-Bhambry/answers/Physics', 'http://www.quora.com/Mohak-Bhambry/answers/Science', 'http://www.quora.com/Mohak-Bhambry/answers/Astrophysics', 'http://www.quora.com/Mohak-Bhambry/answers/Astronomy', 'http://www.quora.com/Mohak-Bhambry/answers/The-Universe', 'http://www.quora.com/Mohak-Bhambry/answers/Theoretical-Physics', 'http://www.quora.com/Mohak-Bhambry/answers/Mathematics', 'http://www.quora.com/Mohak-Bhambry/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Mohak-Bhambry/answers/Entrepreneurship', 'http://www.quora.com/Mohak-Bhambry/answers/Technology', 'http://www.quora.com/Mohak-Bhambry/answers/Scientific-Research', 'http://www.quora.com/Mohak-Bhambry/answers/Computer-Programming', 'http://www.quora.com/Mohak-Bhambry/answers/Singers-and-Musicians', 'http://www.quora.com/Mohak-Bhambry/answers/Inventions', 'http://www.quora.com/Mohak-Bhambry/answers/Economics', 'http://www.quora.com/Mohak-Bhambry/answers/Outer-Space-1', 'http://www.quora.com/Mohak-Bhambry/answers/Ancient-History', 'http://www.quora.com/Mohak-Bhambry/answers/Python-programming-language-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Physics', 12], ['Science', 11], ['Astrophysics', 9], ['Astronomy', 7], ['The Universe', 7], ['Theoretical Physics', 7], ['Mathematics', 6], ['Startup Advice and Strategy', 4], ['Entrepreneurship', 3], ['Technology', 3], ['Scientific Research', 3], ['Computer Programming', 2], ['Singers and Musicians', 2], ['Inventions', 2], ['Economics', 2], ['Outer Space', 2], ['Ancient History', 2], ['Python (programming language)', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Mohak-Bhambry/topics"> Answers by Topic</a>
+    </h1>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

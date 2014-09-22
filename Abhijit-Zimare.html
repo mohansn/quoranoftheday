@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,10 +10,6 @@
       .title-link {
           text-decoration:none;
       }
-      .h2style {
-          text-align:center;
-          font-family:serif;
-      }           
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -20,8 +17,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Abhijit-Zimare/answers/India', 'http://www.quora.com/Abhijit-Zimare/answers/Life-Lessons', 'http://www.quora.com/Abhijit-Zimare/answers/Movies', 'http://www.quora.com/Abhijit-Zimare/answers/Education', 'http://www.quora.com/Abhijit-Zimare/answers/Indians-8', 'http://www.quora.com/Abhijit-Zimare/answers/Mathematics', 'http://www.quora.com/Abhijit-Zimare/answers/Sardar-Patel-Institute-Of-Technology-Mumbai', 'http://www.quora.com/Abhijit-Zimare/answers/Philosophy', 'http://www.quora.com/Abhijit-Zimare/answers/Quotations', 'http://www.quora.com/Abhijit-Zimare/answers/Computer-Science', 'http://www.quora.com/Abhijit-Zimare/answers/Words', 'http://www.quora.com/Abhijit-Zimare/answers/Movie-Business-and-Industry', 'http://www.quora.com/Abhijit-Zimare/answers/Pokemon', 'http://www.quora.com/Abhijit-Zimare/answers/Social-Psychology', 'http://www.quora.com/Abhijit-Zimare/answers/Quora', 'http://www.quora.com/Abhijit-Zimare/answers/Music', 'http://www.quora.com/Abhijit-Zimare/answers/Science', 'http://www.quora.com/Abhijit-Zimare/answers/Television'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 18], ['Life Lessons', 17], ['Movies', 16], ['Education', 14], ['Indians', 10], ['Mathematics', 6], ['Sardar Patel Institute Of Technology, Mumbai', 5], ['Philosophy', 4], ['Quotations', 4], ['Computer Science', 3], ['Words', 3], ['Movie Business and Industry', 3], ['Pokemon', 3], ['Social Psychology', 3], ['Quora', 2], ['Music', 2], ['Science', 2], ['Television', 2]]);
+          var answer_links = ['http://www.quora.com/Abhijit-Zimare/answers/India', 'http://www.quora.com/Abhijit-Zimare/answers/Movies', 'http://www.quora.com/Abhijit-Zimare/answers/Life-Lessons', 'http://www.quora.com/Abhijit-Zimare/answers/Education', 'http://www.quora.com/Abhijit-Zimare/answers/Indians-8', 'http://www.quora.com/Abhijit-Zimare/answers/Mathematics', 'http://www.quora.com/Abhijit-Zimare/answers/Sardar-Patel-Institute-Of-Technology-Mumbai', 'http://www.quora.com/Abhijit-Zimare/answers/Philosophy', 'http://www.quora.com/Abhijit-Zimare/answers/Quotations', 'http://www.quora.com/Abhijit-Zimare/answers/Computer-Science', 'http://www.quora.com/Abhijit-Zimare/answers/Words', 'http://www.quora.com/Abhijit-Zimare/answers/Movie-Business-and-Industry', u'http://www.quora.com/Abhijit-Zimare/answers/Pokemon', 'http://www.quora.com/Abhijit-Zimare/answers/Social-Psychology', 'http://www.quora.com/Abhijit-Zimare/answers/Quora', 'http://www.quora.com/Abhijit-Zimare/answers/Music', 'http://www.quora.com/Abhijit-Zimare/answers/Science', 'http://www.quora.com/Abhijit-Zimare/answers/Television'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 18], ['Movies', 17], ['Life Lessons', 17], ['Education', 14], ['Indians', 10], ['Mathematics', 6], ['Sardar Patel Institute Of Technology, Mumbai', 5], ['Philosophy', 4], ['Quotations', 4], ['Computer Science', 3], ['Words', 3], ['Movie Business and Industry', 3], ['Pokemon', 3], ['Social Psychology', 3], ['Quora', 2], ['Music', 2], ['Science', 2], ['Television', 2]]);
 
         var options = {
           title: '',
@@ -44,9 +41,6 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Abhijit-Zimare/topics"> Answers by Topic</a>
     </h1>
-    <h2 class="h2style">
-      Click on any pie slice to see answers on that topic
-    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>
