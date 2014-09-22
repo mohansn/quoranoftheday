@@ -6,6 +6,7 @@ user = ''
 part1="""
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -13,6 +14,10 @@ part1="""
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -44,6 +49,9 @@ part2="""
       <a class="title-link" href="http://www.quora.com/"""
 part4="""/topics"> Answers by Topic</a>
     </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>"""
