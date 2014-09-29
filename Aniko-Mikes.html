@@ -1,0 +1,53 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Aniko-Mikes/answers/Music', 'http://www.quora.com/Aniko-Mikes/answers/Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Chemistry', 'http://www.quora.com/Aniko-Mikes/answers/U-S-Politics', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aniko-Mikes/answers/The-High-School-Experience-1', 'http://www.quora.com/Aniko-Mikes/answers/Mathematics', 'http://www.quora.com/Aniko-Mikes/answers/Books', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy', 'http://www.quora.com/Aniko-Mikes/answers/Biology-1', 'http://www.quora.com/Aniko-Mikes/answers/Education', 'http://www.quora.com/Aniko-Mikes/answers/Animals', 'http://www.quora.com/Aniko-Mikes/answers/Alaska-state', 'http://www.quora.com/Aniko-Mikes/answers/Particle-Physics', 'http://www.quora.com/Aniko-Mikes/answers/Social-Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Organic-Chemistry', 'http://www.quora.com/Aniko-Mikes/answers/English-language', 'http://www.quora.com/Aniko-Mikes/answers/Human-Behavior'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Music', 8], ['Psychology', 8], ['Chemistry', 8], ['U.S. Politics', 7], ['Philosophy of Everyday Life', 6], ['The High School Experience', 6], ['Mathematics', 5], ['Books', 4], ['Philosophy', 4], ['Biology', 3], ['Education', 3], ['Animals', 3], ['Alaska (state)', 3], ['Particle Physics', 3], ['Social Psychology', 3], ['Organic Chemistry', 3], ['English (language)', 2], ['Human Behavior', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Aniko-Mikes/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
