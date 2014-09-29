@@ -74,4 +74,9 @@ def get_html (user):
     result = result + part4
     return result
 
-    
+def write_all_output_files ():
+    users = [l.rstrip('\n') for l in open('users.txt', 'r').readlines()]
+    for user in users:
+        print user
+        write_output_file (user)
+
