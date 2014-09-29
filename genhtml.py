@@ -53,7 +53,7 @@ def get_topic_data (user):
 """ Combine data and fixed templates to create output file """
 def write_output_file (user):
     links,topic_data = get_topic_data(user)
-    fp = open (user+'.html','a')
+    fp = open (user+'.html','w')
     if (fp is not None):
         result = part1 + '\n' + 10 * ' ' + 'var answer_links = ' + str(links) + ';\n'
         result = result + 10 * ' ' + 'var data = google.visualization.arrayToDataTable(' + str(topic_data) + ');\n'
