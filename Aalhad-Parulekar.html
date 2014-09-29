@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Aalhad-Parulekar/answers/Chess', 'http://www.quora.com/Aalhad-Parulekar/answers/Psychology', 'http://www.quora.com/Aalhad-Parulekar/answers/Hypothetical-Scenarios', 'http://www.quora.com/Aalhad-Parulekar/answers/Mathematics', 'http://www.quora.com/Aalhad-Parulekar/answers/Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Theoretical-Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing-in-India', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy', 'http://www.quora.com/Aalhad-Parulekar/answers/Probability', 'http://www.quora.com/Aalhad-Parulekar/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing', 'http://www.quora.com/Aalhad-Parulekar/answers/Words', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aalhad-Parulekar/answers/Economics', 'http://www.quora.com/Aalhad-Parulekar/answers/Writing', 'http://www.quora.com/Aalhad-Parulekar/answers/Thinking', 'http://www.quora.com/Aalhad-Parulekar/answers/Academic-Papers', 'http://www.quora.com/Aalhad-Parulekar/answers/Alternate-Histories-Hypothetical-Historical-Scenarios'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Chess', 18], ['Psychology', 13], ['Hypothetical Scenarios', 8], ['Mathematics', 5], ['Physics', 4], ['Theoretical Physics', 4], ['Quizzing in India', 3], ['Philosophy', 2], ['Probability', 2], ['Bengaluru, Karnataka, India', 2], ['Quizzing', 2], ['Words', 1], ['Philosophy of Everyday Life', 1], ['Economics', 1], ['Writing', 1], ['Thinking', 1], ['Academic Papers', 1], ['Alternate Histories (Hypothetical Historical Scenarios)', 1]]);
+          var answer_links = ['http://www.quora.com/Aalhad-Parulekar/answers/Chess', 'http://www.quora.com/Aalhad-Parulekar/answers/Psychology', 'http://www.quora.com/Aalhad-Parulekar/answers/Hypothetical-Scenarios', 'http://www.quora.com/Aalhad-Parulekar/answers/Mathematics', 'http://www.quora.com/Aalhad-Parulekar/answers/Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Theoretical-Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing-in-India', 'http://www.quora.com/Aalhad-Parulekar/answers/Probability', 'http://www.quora.com/Aalhad-Parulekar/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aalhad-Parulekar/answers/Conversations', 'http://www.quora.com/Aalhad-Parulekar/answers/Words', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aalhad-Parulekar/answers/Economics', 'http://www.quora.com/Aalhad-Parulekar/answers/Writing', 'http://www.quora.com/Aalhad-Parulekar/answers/Thinking', 'http://www.quora.com/Aalhad-Parulekar/answers/Academic-Papers'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Chess', 19], ['Psychology', 13], ['Hypothetical Scenarios', 8], ['Mathematics', 5], ['Physics', 4], ['Theoretical Physics', 4], ['Philosophy', 3], ['Quizzing', 3], ['Quizzing in India', 3], ['Probability', 2], ['Bengaluru, Karnataka, India', 2], ['Conversations', 2], ['Words', 1], ['Philosophy of Everyday Life', 1], ['Economics', 1], ['Writing', 1], ['Thinking', 1], ['Academic Papers', 1]]);
 
         var options = {
           title: '',
@@ -40,95 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Aalhad-Parulekar/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 700px;"></div>
-  </body>
-</html>
-
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Aalhad-Parulekar/answers/Chess', 'http://www.quora.com/Aalhad-Parulekar/answers/Psychology', 'http://www.quora.com/Aalhad-Parulekar/answers/Hypothetical-Scenarios', 'http://www.quora.com/Aalhad-Parulekar/answers/Mathematics', 'http://www.quora.com/Aalhad-Parulekar/answers/Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Theoretical-Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing-in-India', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy', 'http://www.quora.com/Aalhad-Parulekar/answers/Probability', 'http://www.quora.com/Aalhad-Parulekar/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aalhad-Parulekar/answers/Conversations', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing', 'http://www.quora.com/Aalhad-Parulekar/answers/Words', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aalhad-Parulekar/answers/Economics', 'http://www.quora.com/Aalhad-Parulekar/answers/Writing', 'http://www.quora.com/Aalhad-Parulekar/answers/Thinking', 'http://www.quora.com/Aalhad-Parulekar/answers/Academic-Papers'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Chess', 18], ['Psychology', 13], ['Hypothetical Scenarios', 8], ['Mathematics', 5], ['Physics', 4], ['Theoretical Physics', 4], ['Quizzing in India', 3], ['Philosophy', 2], ['Probability', 2], ['Bengaluru, Karnataka, India', 2], ['Conversations', 2], ['Quizzing', 2], ['Words', 1], ['Philosophy of Everyday Life', 1], ['Economics', 1], ['Writing', 1], ['Thinking', 1], ['Academic Papers', 1]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Aalhad-Parulekar/topics"> Answers by Topic</a>
-    </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Aalhad-Parulekar/answers/Chess', 'http://www.quora.com/Aalhad-Parulekar/answers/Psychology', 'http://www.quora.com/Aalhad-Parulekar/answers/Hypothetical-Scenarios', 'http://www.quora.com/Aalhad-Parulekar/answers/Mathematics', 'http://www.quora.com/Aalhad-Parulekar/answers/Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Theoretical-Physics', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing-in-India', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy', 'http://www.quora.com/Aalhad-Parulekar/answers/Probability', 'http://www.quora.com/Aalhad-Parulekar/answers/Bengaluru-Karnataka-India-1', 'http://www.quora.com/Aalhad-Parulekar/answers/Conversations', 'http://www.quora.com/Aalhad-Parulekar/answers/Quizzing', 'http://www.quora.com/Aalhad-Parulekar/answers/Words', 'http://www.quora.com/Aalhad-Parulekar/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aalhad-Parulekar/answers/Economics', 'http://www.quora.com/Aalhad-Parulekar/answers/Writing', 'http://www.quora.com/Aalhad-Parulekar/answers/Thinking', 'http://www.quora.com/Aalhad-Parulekar/answers/Academic-Papers'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Chess', 18], ['Psychology', 13], ['Hypothetical Scenarios', 8], ['Mathematics', 5], ['Physics', 4], ['Theoretical Physics', 4], ['Quizzing in India', 3], ['Philosophy', 2], ['Probability', 2], ['Bengaluru, Karnataka, India', 2], ['Conversations', 2], ['Quizzing', 2], ['Words', 1], ['Philosophy of Everyday Life', 1], ['Economics', 1], ['Writing', 1], ['Thinking', 1], ['Academic Papers', 1]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Aalhad-Parulekar/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

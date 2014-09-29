@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Pushkaraj-Karyakarte/answers/Cars-and-Automobiles', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mechanical-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Design', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Life', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Engineering-1', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Logos', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Product-Design-physical-goods', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Manufacturing', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Business', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/History', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Architecture', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Higher-Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Civil-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mercedes-Benz', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Literature', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/The-College-and-University-Experience', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Money'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Cars and Automobiles', 21], ['Mechanical Engineering', 18], ['Design', 14], ['Life', 12], ['Engineering', 12], ['Logos', 7], ['Education', 3], ['Product Design (physical goods)', 3], ['Manufacturing', 3], ['Business', 2], ['History', 2], ['Architecture', 2], ['Higher Education', 2], ['Civil Engineering', 2], ['Mercedes-Benz', 2], ['Literature', 1], ['The College and University Experience', 1], ['Money', 1]]);
+          var answer_links = ['http://www.quora.com/Pushkaraj-Karyakarte/answers/Cars-and-Automobiles', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mechanical-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Design', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Life', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Engineering-1', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Logos', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Product-Design-physical-goods', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Manufacturing', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Business', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/History', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Architecture', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Higher-Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Civil-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Formula-1-1', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mercedes-Benz', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Literature', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/The-College-and-University-Experience'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Cars and Automobiles', 23], ['Mechanical Engineering', 18], ['Design', 14], ['Life', 12], ['Engineering', 12], ['Logos', 7], ['Education', 3], ['Product Design (physical goods)', 3], ['Manufacturing', 3], ['Business', 2], ['History', 2], ['Architecture', 2], ['Higher Education', 2], ['Civil Engineering', 2], ['Formula 1', 2], ['Mercedes-Benz', 2], ['Literature', 2], ['The College and University Experience', 1]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Pushkaraj-Karyakarte/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Pushkaraj-Karyakarte/answers/Cars-and-Automobiles', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mechanical-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Design', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Life', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Engineering-1', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Logos', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Product-Design-physical-goods', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Manufacturing', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Business', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/History', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Architecture', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Higher-Education', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Civil-Engineering', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Mercedes-Benz', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Literature', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/The-College-and-University-Experience', 'http://www.quora.com/Pushkaraj-Karyakarte/answers/Money'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Cars and Automobiles', 21], ['Mechanical Engineering', 18], ['Design', 14], ['Life', 12], ['Engineering', 12], ['Logos', 7], ['Education', 3], ['Product Design (physical goods)', 3], ['Manufacturing', 3], ['Business', 2], ['History', 2], ['Architecture', 2], ['Higher Education', 2], ['Civil Engineering', 2], ['Mercedes-Benz', 2], ['Literature', 1], ['The College and University Experience', 1], ['Money', 1]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Pushkaraj-Karyakarte/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

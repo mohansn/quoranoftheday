@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Shashank-Sharma-34/answers/Space-Exploration-1', 'http://www.quora.com/Shashank-Sharma-34/answers/NASA', 'http://www.quora.com/Shashank-Sharma-34/answers/Science', 'http://www.quora.com/Shashank-Sharma-34/answers/Space-Travel', 'http://www.quora.com/Shashank-Sharma-34/answers/Outer-Space-1', 'http://www.quora.com/Shashank-Sharma-34/answers/Elon-Musk', 'http://www.quora.com/Shashank-Sharma-34/answers/Indian-Space-Research-Organisation-ISRO', 'http://www.quora.com/Shashank-Sharma-34/answers/International-Space-Station', 'http://www.quora.com/Shashank-Sharma-34/answers/Astronauts', 'http://www.quora.com/Shashank-Sharma-34/answers/Quora-product', 'http://www.quora.com/Shashank-Sharma-34/answers/Fitness', 'http://www.quora.com/Shashank-Sharma-34/answers/SpaceX', 'http://www.quora.com/Shashank-Sharma-34/answers/Apollo-Program', 'http://www.quora.com/Shashank-Sharma-34/answers/Computer-Science', 'http://www.quora.com/Shashank-Sharma-34/answers/The-Internet-2', 'http://www.quora.com/Shashank-Sharma-34/answers/Android-OS', 'http://www.quora.com/Shashank-Sharma-34/answers/Wikipedia', 'http://www.quora.com/Shashank-Sharma-34/answers/Badassery'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Space Exploration', 20], ['NASA', 19], ['Science', 13], ['Space Travel', 13], ['Outer Space', 12], ['Elon Musk', 5], ['Indian Space Research Organisation (ISRO)', 5], ['International Space Station', 4], ['Astronauts', 4], ['Quora (product)', 3], ['Fitness', 2], ['SpaceX', 2], ['Apollo Program', 2], ['Computer Science', 1], ['The Internet', 1], ['Android (OS)', 1], ['Wikipedia', 1], ['Badassery', 1]]);
+          var answer_links = ['http://www.quora.com/Shashank-Sharma-34/answers/Space-Exploration-1', 'http://www.quora.com/Shashank-Sharma-34/answers/NASA', 'http://www.quora.com/Shashank-Sharma-34/answers/Outer-Space-1', 'http://www.quora.com/Shashank-Sharma-34/answers/Space-Travel', 'http://www.quora.com/Shashank-Sharma-34/answers/Science', 'http://www.quora.com/Shashank-Sharma-34/answers/Indian-Space-Research-Organisation-ISRO', 'http://www.quora.com/Shashank-Sharma-34/answers/Astronauts', 'http://www.quora.com/Shashank-Sharma-34/answers/International-Space-Station', 'http://www.quora.com/Shashank-Sharma-34/answers/Elon-Musk', 'http://www.quora.com/Shashank-Sharma-34/answers/Quora-product', 'http://www.quora.com/Shashank-Sharma-34/answers/Fitness', 'http://www.quora.com/Shashank-Sharma-34/answers/SpaceX', 'http://www.quora.com/Shashank-Sharma-34/answers/Apollo-Program', 'http://www.quora.com/Shashank-Sharma-34/answers/Computer-Science', 'http://www.quora.com/Shashank-Sharma-34/answers/Batteries', 'http://www.quora.com/Shashank-Sharma-34/answers/The-Internet-2', 'http://www.quora.com/Shashank-Sharma-34/answers/Wikipedia', 'http://www.quora.com/Shashank-Sharma-34/answers/Badassery'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Space Exploration', 31], ['NASA', 28], ['Outer Space', 20], ['Space Travel', 18], ['Science', 15], ['Indian Space Research Organisation (ISRO)', 12], ['Astronauts', 7], ['International Space Station', 6], ['Elon Musk', 5], ['Quora (product)', 4], ['Fitness', 2], ['SpaceX', 2], ['Apollo Program', 2], ['Computer Science', 1], ['Batteries', 1], ['The Internet', 1], ['Wikipedia', 1], ['Badassery', 1]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Shashank-Sharma-34/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Shashank-Sharma-34/answers/Space-Exploration-1', 'http://www.quora.com/Shashank-Sharma-34/answers/NASA', 'http://www.quora.com/Shashank-Sharma-34/answers/Science', 'http://www.quora.com/Shashank-Sharma-34/answers/Space-Travel', 'http://www.quora.com/Shashank-Sharma-34/answers/Outer-Space-1', 'http://www.quora.com/Shashank-Sharma-34/answers/Elon-Musk', 'http://www.quora.com/Shashank-Sharma-34/answers/Indian-Space-Research-Organisation-ISRO', 'http://www.quora.com/Shashank-Sharma-34/answers/International-Space-Station', 'http://www.quora.com/Shashank-Sharma-34/answers/Astronauts', 'http://www.quora.com/Shashank-Sharma-34/answers/Quora-product', 'http://www.quora.com/Shashank-Sharma-34/answers/Fitness', 'http://www.quora.com/Shashank-Sharma-34/answers/SpaceX', 'http://www.quora.com/Shashank-Sharma-34/answers/Apollo-Program', 'http://www.quora.com/Shashank-Sharma-34/answers/Computer-Science', 'http://www.quora.com/Shashank-Sharma-34/answers/The-Internet-2', 'http://www.quora.com/Shashank-Sharma-34/answers/Android-OS', 'http://www.quora.com/Shashank-Sharma-34/answers/Wikipedia', 'http://www.quora.com/Shashank-Sharma-34/answers/Badassery'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Space Exploration', 20], ['NASA', 20], ['Science', 13], ['Space Travel', 13], ['Outer Space', 12], ['Elon Musk', 5], ['Indian Space Research Organisation (ISRO)', 5], ['International Space Station', 4], ['Astronauts', 4], ['Quora (product)', 3], ['Fitness', 2], ['SpaceX', 2], ['Apollo Program', 2], ['Computer Science', 1], ['The Internet', 1], ['Android (OS)', 1], ['Wikipedia', 1], ['Badassery', 1]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Shashank-Sharma-34/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

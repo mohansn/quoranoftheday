@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Sriram-Ilango/answers/Football-Soccer-2', 'http://www.quora.com/Sriram-Ilango/answers/Premier-League', 'http://www.quora.com/Sriram-Ilango/answers/Manchester-United', 'http://www.quora.com/Sriram-Ilango/answers/Roger-Federer', 'http://www.quora.com/Sriram-Ilango/answers/Wimbledon-Championships', 'http://www.quora.com/Sriram-Ilango/answers/A-Song-of-Ice-and-Fire-book-series', 'http://www.quora.com/Sriram-Ilango/answers/Real-Madrid-C-F', 'http://www.quora.com/Sriram-Ilango/answers/Friends-TV-series', 'http://www.quora.com/Sriram-Ilango/answers/Pondicherry-India-1', 'http://www.quora.com/Sriram-Ilango/answers/Chetan-Bhagat-1', 'http://www.quora.com/Sriram-Ilango/answers/Harry-Potter-books-movies-and-creative-franchise', 'http://www.quora.com/Sriram-Ilango/answers/How-I-Met-Your-Mother-TV-series'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Football (Soccer)', 10], ['Premier League', 5], ['Manchester United', 4], ['Roger Federer', 4], ['Wimbledon Championships', 3], ['A Song of Ice and Fire (book series)', 3], ['Real Madrid C.F.', 2], ['Friends (TV series)', 2], ['Pondicherry, India', 2], ['Chetan Bhagat', 2], ['Harry Potter (books, movies and creative franchise)', 1], ['How I Met Your Mother (TV series)', 1]]);
+          var answer_links = ['http://www.quora.com/Sriram-Ilango/answers/Football-Soccer-2', 'http://www.quora.com/Sriram-Ilango/answers/Premier-League', 'http://www.quora.com/Sriram-Ilango/answers/Manchester-United', 'http://www.quora.com/Sriram-Ilango/answers/Roger-Federer', 'http://www.quora.com/Sriram-Ilango/answers/Wimbledon-Championships', 'http://www.quora.com/Sriram-Ilango/answers/A-Song-of-Ice-and-Fire-book-series', 'http://www.quora.com/Sriram-Ilango/answers/Real-Madrid-C-F', 'http://www.quora.com/Sriram-Ilango/answers/Pondicherry-India-1', 'http://www.quora.com/Sriram-Ilango/answers/Chetan-Bhagat-1', 'http://www.quora.com/Sriram-Ilango/answers/Harry-Potter-books-movies-and-creative-franchise'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Football (Soccer)', 10], ['Premier League', 5], ['Manchester United', 4], ['Roger Federer', 4], ['Wimbledon Championships', 3], ['A Song of Ice and Fire (book series)', 3], ['Real Madrid C.F.', 2], ['Pondicherry, India', 2], ['Chetan Bhagat', 2], ['Harry Potter (books, movies and creative franchise)', 1]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Sriram-Ilango/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Sriram-Ilango/answers/Football-Soccer-2', 'http://www.quora.com/Sriram-Ilango/answers/Premier-League', 'http://www.quora.com/Sriram-Ilango/answers/Manchester-United', 'http://www.quora.com/Sriram-Ilango/answers/Roger-Federer', 'http://www.quora.com/Sriram-Ilango/answers/Wimbledon-Championships', 'http://www.quora.com/Sriram-Ilango/answers/A-Song-of-Ice-and-Fire-book-series', 'http://www.quora.com/Sriram-Ilango/answers/Real-Madrid-C-F', 'http://www.quora.com/Sriram-Ilango/answers/Friends-TV-series', 'http://www.quora.com/Sriram-Ilango/answers/Pondicherry-India-1', 'http://www.quora.com/Sriram-Ilango/answers/Chetan-Bhagat-1', 'http://www.quora.com/Sriram-Ilango/answers/Harry-Potter-books-movies-and-creative-franchise', 'http://www.quora.com/Sriram-Ilango/answers/How-I-Met-Your-Mother-TV-series'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Football (Soccer)', 10], ['Premier League', 5], ['Manchester United', 4], ['Roger Federer', 4], ['Wimbledon Championships', 3], ['A Song of Ice and Fire (book series)', 3], ['Real Madrid C.F.', 2], ['Friends (TV series)', 2], ['Pondicherry, India', 2], ['Chetan Bhagat', 2], ['Harry Potter (books, movies and creative franchise)', 1], ['How I Met Your Mother (TV series)', 1]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Sriram-Ilango/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

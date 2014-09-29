@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -8,6 +9,10 @@
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Allen-Barnett/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Allen-Barnett/answers/Survey-Questions', 'http://www.quora.com/Allen-Barnett/answers/Cars-and-Automobiles', 'http://www.quora.com/Allen-Barnett/answers/Humor', 'http://www.quora.com/Allen-Barnett/answers/Best-of-X', 'http://www.quora.com/Allen-Barnett/answers/Questions-That-Contain-Assumptions', 'http://www.quora.com/Allen-Barnett/answers/Music', 'http://www.quora.com/Allen-Barnett/answers/iPhone', 'http://www.quora.com/Allen-Barnett/answers/Movies', 'http://www.quora.com/Allen-Barnett/answers/Books', 'http://www.quora.com/Allen-Barnett/answers/Religion', 'http://www.quora.com/Allen-Barnett/answers/Quora-Community', 'http://www.quora.com/Allen-Barnett/answers/U-S-Politics', 'http://www.quora.com/Allen-Barnett/answers/Politics', 'http://www.quora.com/Allen-Barnett/answers/Harry-Potter-books-movies-and-creative-franchise', 'http://www.quora.com/Allen-Barnett/answers/Book-Recommendations', 'http://www.quora.com/Allen-Barnett/answers/BMW-automobile', 'http://www.quora.com/Allen-Barnett/answers/Olympic-Games', 'http://www.quora.com/Allen-Barnett/answers/Wealth'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 11], ['Cars and Automobiles', 5], ['Humor', 5], ['Best of X', 4], ['Questions That Contain Assumptions', 4], ['Music', 3], ['iPhone', 3], ['Movies', 3], ['Books', 3], ['Religion', 3], ['Quora Community', 3], ['U.S. Politics', 3], ['Politics', 2], ['Harry Potter (books, movies and creative franchise)', 2], ['Book Recommendations', 2], ['BMW (automobile)', 2], ['Olympic Games', 2], ['Wealth', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Allen-Barnett/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

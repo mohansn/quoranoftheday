@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Simon-Crump/answers/Economics', 'http://www.quora.com/Simon-Crump/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Simon-Crump/answers/Snowboarding', 'http://www.quora.com/Simon-Crump/answers/Libertarianism', 'http://www.quora.com/Simon-Crump/answers/International-Relations-3', 'http://www.quora.com/Simon-Crump/answers/International-Travel', 'http://www.quora.com/Simon-Crump/answers/Ayn-Rand', 'http://www.quora.com/Simon-Crump/answers/Countries', 'http://www.quora.com/Simon-Crump/answers/Bass-Guitar', 'http://www.quora.com/Simon-Crump/answers/Israel-Palestine-Conflict-2', 'http://www.quora.com/Simon-Crump/answers/Computer-Programming', 'http://www.quora.com/Simon-Crump/answers/Hair', 'http://www.quora.com/Simon-Crump/answers/Objectivism', 'http://www.quora.com/Simon-Crump/answers/2014-Winter-Olympics-in-Sochi', 'http://www.quora.com/Simon-Crump/answers/Mountain-Bikes', 'http://www.quora.com/Simon-Crump/answers/Manchester-UK', 'http://www.quora.com/Simon-Crump/answers/Mountain-Biking', 'http://www.quora.com/Simon-Crump/answers/Queen-band-1'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Economics', 166], ['Philosophy of Everyday Life', 35], ['Snowboarding', 28], ['Libertarianism', 21], ['International Relations', 13], ['International Travel', 11], ['Ayn Rand', 8], ['Countries', 7], ['Bass Guitar', 7], ['Israel-Palestine Conflict', 7], ['Computer Programming', 6], ['Hair', 5], ['Objectivism', 5], ['2014 Winter Olympics in Sochi', 5], ['Mountain Bikes', 2], ['Manchester, UK', 2], ['Mountain Biking', 2], ['Queen (band)', 2]]);
+          var answer_links = ['http://www.quora.com/Simon-Crump/answers/Economics', 'http://www.quora.com/Simon-Crump/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Simon-Crump/answers/Snowboarding', 'http://www.quora.com/Simon-Crump/answers/Libertarianism', 'http://www.quora.com/Simon-Crump/answers/International-Relations-3', 'http://www.quora.com/Simon-Crump/answers/International-Travel', 'http://www.quora.com/Simon-Crump/answers/Ayn-Rand', 'http://www.quora.com/Simon-Crump/answers/Israel-Palestine-Conflict-2', 'http://www.quora.com/Simon-Crump/answers/Countries', 'http://www.quora.com/Simon-Crump/answers/Bass-Guitar', 'http://www.quora.com/Simon-Crump/answers/Computer-Programming', 'http://www.quora.com/Simon-Crump/answers/Hair', 'http://www.quora.com/Simon-Crump/answers/Objectivism', 'http://www.quora.com/Simon-Crump/answers/2014-Winter-Olympics-in-Sochi', 'http://www.quora.com/Simon-Crump/answers/Mountain-Bikes', 'http://www.quora.com/Simon-Crump/answers/Manchester-UK', 'http://www.quora.com/Simon-Crump/answers/Mountain-Biking', 'http://www.quora.com/Simon-Crump/answers/Queen-band-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Economics', 168], ['Philosophy of Everyday Life', 35], ['Snowboarding', 28], ['Libertarianism', 22], ['International Relations', 13], ['International Travel', 11], ['Ayn Rand', 8], ['Israel-Palestine Conflict', 8], ['Countries', 7], ['Bass Guitar', 7], ['Computer Programming', 6], ['Hair', 5], ['Objectivism', 5], ['2014 Winter Olympics in Sochi', 5], ['Mountain Bikes', 2], ['Manchester, UK', 2], ['Mountain Biking', 2], ['Queen (band)', 2]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Simon-Crump/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Simon-Crump/answers/Economics', 'http://www.quora.com/Simon-Crump/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Simon-Crump/answers/Snowboarding', 'http://www.quora.com/Simon-Crump/answers/Libertarianism', 'http://www.quora.com/Simon-Crump/answers/International-Relations-3', 'http://www.quora.com/Simon-Crump/answers/International-Travel', 'http://www.quora.com/Simon-Crump/answers/Ayn-Rand', 'http://www.quora.com/Simon-Crump/answers/Countries', 'http://www.quora.com/Simon-Crump/answers/Bass-Guitar', 'http://www.quora.com/Simon-Crump/answers/Israel-Palestine-Conflict-2', 'http://www.quora.com/Simon-Crump/answers/Computer-Programming', 'http://www.quora.com/Simon-Crump/answers/Hair', 'http://www.quora.com/Simon-Crump/answers/Objectivism', 'http://www.quora.com/Simon-Crump/answers/2014-Winter-Olympics-in-Sochi', 'http://www.quora.com/Simon-Crump/answers/Mountain-Bikes', 'http://www.quora.com/Simon-Crump/answers/Manchester-UK', 'http://www.quora.com/Simon-Crump/answers/Mountain-Biking', 'http://www.quora.com/Simon-Crump/answers/Queen-band-1'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Economics', 166], ['Philosophy of Everyday Life', 35], ['Snowboarding', 28], ['Libertarianism', 21], ['International Relations', 13], ['International Travel', 11], ['Ayn Rand', 8], ['Countries', 7], ['Bass Guitar', 7], ['Israel-Palestine Conflict', 7], ['Computer Programming', 6], ['Hair', 5], ['Objectivism', 5], ['2014 Winter Olympics in Sochi', 5], ['Mountain Bikes', 2], ['Manchester, UK', 2], ['Mountain Biking', 2], ['Queen (band)', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Simon-Crump/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

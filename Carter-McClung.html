@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Carter-McClung/answers/Mathematics', 'http://www.quora.com/Carter-McClung/answers/Economics', 'http://www.quora.com/Carter-McClung/answers/Algebra', 'http://www.quora.com/Carter-McClung/answers/Education', 'http://www.quora.com/Carter-McClung/answers/Probability', 'http://www.quora.com/Carter-McClung/answers/Statistics-academic-discipline', 'http://www.quora.com/Carter-McClung/answers/U-S-Politics', 'http://www.quora.com/Carter-McClung/answers/Macroeconomics', 'http://www.quora.com/Carter-McClung/answers/Geometry', 'http://www.quora.com/Carter-McClung/answers/Government', 'http://www.quora.com/Carter-McClung/answers/Teaching', 'http://www.quora.com/Carter-McClung/answers/K-12-Education', 'http://www.quora.com/Carter-McClung/answers/Psychology', 'http://www.quora.com/Carter-McClung/answers/Homework-Problems-Questions', 'http://www.quora.com/Carter-McClung/answers/International-Economics', 'http://www.quora.com/Carter-McClung/answers/Social-Psychology', 'http://www.quora.com/Carter-McClung/answers/Politics', 'http://www.quora.com/Carter-McClung/answers/Music'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Mathematics', 84], ['Economics', 42], ['Algebra', 33], ['Education', 25], ['Probability', 25], ['Statistics (academic discipline)', 17], ['U.S. Politics', 17], ['Macroeconomics', 17], ['Geometry', 12], ['Government', 10], ['Teaching', 10], ['K-12 Education', 9], ['Psychology', 8], ['Homework Problems & Questions', 8], ['International Economics', 7], ['Social Psychology', 7], ['Politics', 6], ['Music', 5]]);
+          var answer_links = ['http://www.quora.com/Carter-McClung/answers/Mathematics', 'http://www.quora.com/Carter-McClung/answers/Economics', 'http://www.quora.com/Carter-McClung/answers/Algebra', 'http://www.quora.com/Carter-McClung/answers/Education', 'http://www.quora.com/Carter-McClung/answers/Probability', 'http://www.quora.com/Carter-McClung/answers/Statistics-academic-discipline', 'http://www.quora.com/Carter-McClung/answers/U-S-Politics', 'http://www.quora.com/Carter-McClung/answers/Macroeconomics', 'http://www.quora.com/Carter-McClung/answers/Government', 'http://www.quora.com/Carter-McClung/answers/Geometry', 'http://www.quora.com/Carter-McClung/answers/Teaching', 'http://www.quora.com/Carter-McClung/answers/Homework-Problems-Questions', 'http://www.quora.com/Carter-McClung/answers/K-12-Education', 'http://www.quora.com/Carter-McClung/answers/Psychology', 'http://www.quora.com/Carter-McClung/answers/International-Economics', 'http://www.quora.com/Carter-McClung/answers/Social-Psychology', 'http://www.quora.com/Carter-McClung/answers/Politics', 'http://www.quora.com/Carter-McClung/answers/Music'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Mathematics', 93], ['Economics', 43], ['Algebra', 36], ['Education', 29], ['Probability', 26], ['Statistics (academic discipline)', 19], ['U.S. Politics', 19], ['Macroeconomics', 17], ['Government', 12], ['Geometry', 12], ['Teaching', 12], ['Homework Problems & Questions', 10], ['K-12 Education', 9], ['Psychology', 8], ['International Economics', 8], ['Social Psychology', 8], ['Politics', 7], ['Music', 6]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Carter-McClung/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Carter-McClung/answers/Mathematics', 'http://www.quora.com/Carter-McClung/answers/Economics', 'http://www.quora.com/Carter-McClung/answers/Algebra', 'http://www.quora.com/Carter-McClung/answers/Education', 'http://www.quora.com/Carter-McClung/answers/Probability', 'http://www.quora.com/Carter-McClung/answers/U-S-Politics', 'http://www.quora.com/Carter-McClung/answers/Statistics-academic-discipline', 'http://www.quora.com/Carter-McClung/answers/Macroeconomics', 'http://www.quora.com/Carter-McClung/answers/Geometry', 'http://www.quora.com/Carter-McClung/answers/Government', 'http://www.quora.com/Carter-McClung/answers/Teaching', 'http://www.quora.com/Carter-McClung/answers/K-12-Education', 'http://www.quora.com/Carter-McClung/answers/Psychology', 'http://www.quora.com/Carter-McClung/answers/International-Economics', 'http://www.quora.com/Carter-McClung/answers/Social-Psychology', 'http://www.quora.com/Carter-McClung/answers/Homework-Problems-Questions', 'http://www.quora.com/Carter-McClung/answers/Politics', 'http://www.quora.com/Carter-McClung/answers/Music'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Mathematics', 84], ['Economics', 43], ['Algebra', 33], ['Education', 25], ['Probability', 25], ['U.S. Politics', 18], ['Statistics (academic discipline)', 17], ['Macroeconomics', 17], ['Geometry', 12], ['Government', 10], ['Teaching', 10], ['K-12 Education', 9], ['Psychology', 8], ['International Economics', 8], ['Social Psychology', 8], ['Homework Problems & Questions', 8], ['Politics', 6], ['Music', 5]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Carter-McClung/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

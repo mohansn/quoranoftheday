@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Rakesh-Iyer/answers/India', 'http://www.quora.com/Rakesh-Iyer/answers/Politics-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Survey-Questions', 'http://www.quora.com/Rakesh-Iyer/answers/Politics', 'http://www.quora.com/Rakesh-Iyer/answers/Life', 'http://www.quora.com/Rakesh-Iyer/answers/Indians-8', 'http://www.quora.com/Rakesh-Iyer/answers/Life-Lessons', 'http://www.quora.com/Rakesh-Iyer/answers/2014-India-General-Elections', 'http://www.quora.com/Rakesh-Iyer/answers/History-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Government-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Questions-That-Contain-Assumptions', 'http://www.quora.com/Rakesh-Iyer/answers/Economy-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Culture-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Movies', 'http://www.quora.com/Rakesh-Iyer/answers/Economics', 'http://www.quora.com/Rakesh-Iyer/answers/History', 'http://www.quora.com/Rakesh-Iyer/answers/Cricket-sport', 'http://www.quora.com/Rakesh-Iyer/answers/Philosophy'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 133], ['Politics of India', 108], ['Survey Questions', 50], ['Politics', 38], ['Life', 25], ['Indians', 20], ['Life Lessons', 14], ['2014 India General Elections', 12], ['History of India', 11], ['Government of India', 10], ['Questions That Contain Assumptions', 10], ['Economy of India', 10], ['Culture of India', 9], ['Movies', 8], ['Economics', 8], ['History', 7], ['Cricket (sport)', 7], ['Philosophy', 7]]);
+          var answer_links = ['http://www.quora.com/Rakesh-Iyer/answers/India', 'http://www.quora.com/Rakesh-Iyer/answers/Politics-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Survey-Questions', 'http://www.quora.com/Rakesh-Iyer/answers/Politics', 'http://www.quora.com/Rakesh-Iyer/answers/Life', 'http://www.quora.com/Rakesh-Iyer/answers/Indians-8', 'http://www.quora.com/Rakesh-Iyer/answers/Life-Lessons', 'http://www.quora.com/Rakesh-Iyer/answers/2014-India-General-Elections', 'http://www.quora.com/Rakesh-Iyer/answers/History-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Questions-That-Contain-Assumptions', 'http://www.quora.com/Rakesh-Iyer/answers/Economy-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Government-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Culture-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Movies', 'http://www.quora.com/Rakesh-Iyer/answers/Economics', 'http://www.quora.com/Rakesh-Iyer/answers/Democracy-1', 'http://www.quora.com/Rakesh-Iyer/answers/History', 'http://www.quora.com/Rakesh-Iyer/answers/Cricket-sport'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 133], ['Politics of India', 107], ['Survey Questions', 50], ['Politics', 37], ['Life', 25], ['Indians', 21], ['Life Lessons', 14], ['2014 India General Elections', 12], ['History of India', 11], ['Questions That Contain Assumptions', 10], ['Economy of India', 10], ['Government of India', 9], ['Culture of India', 9], ['Movies', 8], ['Economics', 8], ['Democracy', 8], ['History', 7], ['Cricket (sport)', 7]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Rakesh-Iyer/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Rakesh-Iyer/answers/India', 'http://www.quora.com/Rakesh-Iyer/answers/Politics-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Survey-Questions', 'http://www.quora.com/Rakesh-Iyer/answers/Politics', 'http://www.quora.com/Rakesh-Iyer/answers/Life', 'http://www.quora.com/Rakesh-Iyer/answers/Indians-8', 'http://www.quora.com/Rakesh-Iyer/answers/Life-Lessons', 'http://www.quora.com/Rakesh-Iyer/answers/2014-India-General-Elections', 'http://www.quora.com/Rakesh-Iyer/answers/History-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Government-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Questions-That-Contain-Assumptions', 'http://www.quora.com/Rakesh-Iyer/answers/Economy-of-India', 'http://www.quora.com/Rakesh-Iyer/answers/Culture-of-India-1', 'http://www.quora.com/Rakesh-Iyer/answers/Movies', 'http://www.quora.com/Rakesh-Iyer/answers/Economics', 'http://www.quora.com/Rakesh-Iyer/answers/History', 'http://www.quora.com/Rakesh-Iyer/answers/Cricket-sport', 'http://www.quora.com/Rakesh-Iyer/answers/Philosophy'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['India', 133], ['Politics of India', 108], ['Survey Questions', 50], ['Politics', 38], ['Life', 25], ['Indians', 20], ['Life Lessons', 14], ['2014 India General Elections', 12], ['History of India', 11], ['Government of India', 10], ['Questions That Contain Assumptions', 10], ['Economy of India', 10], ['Culture of India', 9], ['Movies', 8], ['Economics', 8], ['History', 7], ['Cricket (sport)', 7], ['Philosophy', 7]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Rakesh-Iyer/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

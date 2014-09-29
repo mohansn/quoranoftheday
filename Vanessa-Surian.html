@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Vanessa-Surian/answers/Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Social-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Vanessa-Surian/answers/Mental-Health', 'http://www.quora.com/Vanessa-Surian/answers/Cognitive-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Food', 'http://www.quora.com/Vanessa-Surian/answers/Books', 'http://www.quora.com/Vanessa-Surian/answers/Self-Awareness', 'http://www.quora.com/Vanessa-Surian/answers/Ethics', 'http://www.quora.com/Vanessa-Surian/answers/Book-Recommendations', 'http://www.quora.com/Vanessa-Surian/answers/Writing', 'http://www.quora.com/Vanessa-Surian/answers/Creative-Writing', 'http://www.quora.com/Vanessa-Surian/answers/Reading-1', 'http://www.quora.com/Vanessa-Surian/answers/Music', 'http://www.quora.com/Vanessa-Surian/answers/Medicine-and-Healthcare', 'http://www.quora.com/Vanessa-Surian/answers/Science', 'http://www.quora.com/Vanessa-Surian/answers/Biology-1'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Psychology', 46], ['Social Psychology', 19], ['Philosophy', 15], ['Philosophy of Everyday Life', 9], ['Mental Health', 6], ['Cognitive Psychology', 6], ['Food', 5], ['Books', 5], ['Self-Awareness', 4], ['Ethics', 3], ['Book Recommendations', 3], ['Writing', 3], ['Creative Writing', 3], ['Reading', 3], ['Music', 2], ['Medicine and Healthcare', 2], ['Science', 2], ['Biology', 2]]);
+          var answer_links = ['http://www.quora.com/Vanessa-Surian/answers/Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Social-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Vanessa-Surian/answers/Mental-Health', 'http://www.quora.com/Vanessa-Surian/answers/Cognitive-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Food', 'http://www.quora.com/Vanessa-Surian/answers/Books', 'http://www.quora.com/Vanessa-Surian/answers/Writing', 'http://www.quora.com/Vanessa-Surian/answers/Creative-Writing', 'http://www.quora.com/Vanessa-Surian/answers/Self-Awareness', 'http://www.quora.com/Vanessa-Surian/answers/Medicine-and-Healthcare', 'http://www.quora.com/Vanessa-Surian/answers/Ethics', 'http://www.quora.com/Vanessa-Surian/answers/Book-Recommendations', 'http://www.quora.com/Vanessa-Surian/answers/Reading-1', 'http://www.quora.com/Vanessa-Surian/answers/Music', 'http://www.quora.com/Vanessa-Surian/answers/Science', 'http://www.quora.com/Vanessa-Surian/answers/Biology-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Psychology', 47], ['Social Psychology', 20], ['Philosophy', 16], ['Philosophy of Everyday Life', 10], ['Mental Health', 6], ['Cognitive Psychology', 6], ['Food', 5], ['Books', 5], ['Writing', 4], ['Creative Writing', 4], ['Self-Awareness', 4], ['Medicine and Healthcare', 3], ['Ethics', 3], ['Book Recommendations', 3], ['Reading', 3], ['Music', 2], ['Science', 2], ['Biology', 2]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Vanessa-Surian/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Vanessa-Surian/answers/Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Social-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy', 'http://www.quora.com/Vanessa-Surian/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Vanessa-Surian/answers/Mental-Health', 'http://www.quora.com/Vanessa-Surian/answers/Cognitive-Psychology', 'http://www.quora.com/Vanessa-Surian/answers/Food', 'http://www.quora.com/Vanessa-Surian/answers/Books', 'http://www.quora.com/Vanessa-Surian/answers/Self-Awareness', 'http://www.quora.com/Vanessa-Surian/answers/Ethics', 'http://www.quora.com/Vanessa-Surian/answers/Book-Recommendations', 'http://www.quora.com/Vanessa-Surian/answers/Writing', 'http://www.quora.com/Vanessa-Surian/answers/Creative-Writing', 'http://www.quora.com/Vanessa-Surian/answers/Reading-1', 'http://www.quora.com/Vanessa-Surian/answers/Music', 'http://www.quora.com/Vanessa-Surian/answers/Medicine-and-Healthcare', 'http://www.quora.com/Vanessa-Surian/answers/Science', 'http://www.quora.com/Vanessa-Surian/answers/Biology-1'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Psychology', 46], ['Social Psychology', 19], ['Philosophy', 15], ['Philosophy of Everyday Life', 9], ['Mental Health', 6], ['Cognitive Psychology', 6], ['Food', 5], ['Books', 5], ['Self-Awareness', 4], ['Ethics', 3], ['Book Recommendations', 3], ['Writing', 3], ['Creative Writing', 3], ['Reading', 3], ['Music', 2], ['Medicine and Healthcare', 2], ['Science', 2], ['Biology', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Vanessa-Surian/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

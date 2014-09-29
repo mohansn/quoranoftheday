@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/William-Hardaway/answers/Education', 'http://www.quora.com/William-Hardaway/answers/Google', 'http://www.quora.com/William-Hardaway/answers/Design', 'http://www.quora.com/William-Hardaway/answers/Philosophy', 'http://www.quora.com/William-Hardaway/answers/Psychology', 'http://www.quora.com/William-Hardaway/answers/Movies', 'http://www.quora.com/William-Hardaway/answers/DC-Comics', 'http://www.quora.com/William-Hardaway/answers/Product-Design-physical-goods', 'http://www.quora.com/William-Hardaway/answers/Comedy', 'http://www.quora.com/William-Hardaway/answers/Batman-comics-movie-and-creative-franchise', 'http://www.quora.com/William-Hardaway/answers/Research', 'http://www.quora.com/William-Hardaway/answers/Comics-narrative-art-form', 'http://www.quora.com/William-Hardaway/answers/Marvel-Comics', 'http://www.quora.com/William-Hardaway/answers/Archaeology', 'http://www.quora.com/William-Hardaway/answers/Marketing', 'http://www.quora.com/William-Hardaway/answers/Superman-comics-movie-and-creative-franchise', 'http://www.quora.com/William-Hardaway/answers/Writing', 'http://www.quora.com/William-Hardaway/answers/Iron-Man-Marvel-character'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Education', 15], ['Google', 8], ['Design', 6], ['Philosophy', 6], ['Psychology', 6], ['Movies', 5], ['DC Comics', 5], ['Product Design (physical goods)', 4], ['Comedy', 4], ['Batman (comics, movie and creative franchise)', 4], ['Research', 3], ['Comics (narrative art form)', 3], ['Marvel Comics', 3], ['Archaeology', 3], ['Marketing', 2], ['Superman (comics, movie, and creative franchise)', 2], ['Writing', 2], ['Iron Man (Marvel character)', 2]]);
+          var answer_links = ['http://www.quora.com/William-Hardaway/answers/Education', 'http://www.quora.com/William-Hardaway/answers/Google', 'http://www.quora.com/William-Hardaway/answers/Learning', 'http://www.quora.com/William-Hardaway/answers/Design', 'http://www.quora.com/William-Hardaway/answers/Philosophy', 'http://www.quora.com/William-Hardaway/answers/Psychology', 'http://www.quora.com/William-Hardaway/answers/Movies', 'http://www.quora.com/William-Hardaway/answers/DC-Comics', 'http://www.quora.com/William-Hardaway/answers/Product-Design-physical-goods', 'http://www.quora.com/William-Hardaway/answers/Comedy', 'http://www.quora.com/William-Hardaway/answers/Batman-comics-movie-and-creative-franchise', 'http://www.quora.com/William-Hardaway/answers/Research', 'http://www.quora.com/William-Hardaway/answers/Comics-narrative-art-form', 'http://www.quora.com/William-Hardaway/answers/Marvel-Comics', 'http://www.quora.com/William-Hardaway/answers/Archaeology', 'http://www.quora.com/William-Hardaway/answers/Marketing'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Education', 15], ['Google', 8], ['Learning', 8], ['Design', 6], ['Philosophy', 6], ['Psychology', 6], ['Movies', 5], ['DC Comics', 5], ['Product Design (physical goods)', 4], ['Comedy', 4], ['Batman (comics, movie and creative franchise)', 4], ['Research', 3], ['Comics (narrative art form)', 3], ['Marvel Comics', 3], ['Archaeology', 3], ['Marketing', 2]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/William-Hardaway/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/William-Hardaway/answers/Education', 'http://www.quora.com/William-Hardaway/answers/Google', 'http://www.quora.com/William-Hardaway/answers/Design', 'http://www.quora.com/William-Hardaway/answers/Philosophy', 'http://www.quora.com/William-Hardaway/answers/Psychology', 'http://www.quora.com/William-Hardaway/answers/Movies', 'http://www.quora.com/William-Hardaway/answers/DC-Comics', 'http://www.quora.com/William-Hardaway/answers/Product-Design-physical-goods', 'http://www.quora.com/William-Hardaway/answers/Comedy', 'http://www.quora.com/William-Hardaway/answers/Batman-comics-movie-and-creative-franchise', 'http://www.quora.com/William-Hardaway/answers/Research', 'http://www.quora.com/William-Hardaway/answers/Comics-narrative-art-form', 'http://www.quora.com/William-Hardaway/answers/Marvel-Comics', 'http://www.quora.com/William-Hardaway/answers/Archaeology', 'http://www.quora.com/William-Hardaway/answers/Marketing', 'http://www.quora.com/William-Hardaway/answers/Superman-comics-movie-and-creative-franchise', 'http://www.quora.com/William-Hardaway/answers/Writing', 'http://www.quora.com/William-Hardaway/answers/Iron-Man-Marvel-character'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Education', 15], ['Google', 8], ['Design', 6], ['Philosophy', 6], ['Psychology', 6], ['Movies', 5], ['DC Comics', 5], ['Product Design (physical goods)', 4], ['Comedy', 4], ['Batman (comics, movie and creative franchise)', 4], ['Research', 3], ['Comics (narrative art form)', 3], ['Marvel Comics', 3], ['Archaeology', 3], ['Marketing', 2], ['Superman (comics, movie, and creative franchise)', 2], ['Writing', 2], ['Iron Man (Marvel character)', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/William-Hardaway/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -8,6 +9,10 @@
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Navin-Rai-3/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Navin-Rai-3/answers/Quora', 'http://www.quora.com/Navin-Rai-3/answers/Quora-product', 'http://www.quora.com/Navin-Rai-3/answers/Questions-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Quora-User-Feedback', 'http://www.quora.com/Navin-Rai-3/answers/Anonymity-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Quora-Feature-Requests', 'http://www.quora.com/Navin-Rai-3/answers/Quora-Policies-and-Guidelines', 'http://www.quora.com/Navin-Rai-3/answers/Topics-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Answers-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Upvoting-and-Downvoting-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Quora-Community', 'http://www.quora.com/Navin-Rai-3/answers/Feed-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Quora-User-FAQs', 'http://www.quora.com/Navin-Rai-3/answers/Quora-company', 'http://www.quora.com/Navin-Rai-3/answers/Following-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Getting-Started-on-Quora', 'http://www.quora.com/Navin-Rai-3/answers/Credits-Quora-feature', 'http://www.quora.com/Navin-Rai-3/answers/Quora-Usage-Data-and-Analysis'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Quora', 87], ['Quora (product)', 73], ['Questions (Quora feature)', 29], ['Quora User Feedback', 18], ['Anonymity (Quora feature)', 12], ['Quora Feature Requests', 12], ['Quora Policies and Guidelines', 11], ['Topics (Quora feature)', 9], ['Answers (Quora feature)', 9], ['Upvoting and Downvoting (Quora feature)', 8], ['Quora Community', 7], ['Feed (Quora feature)', 6], ['Quora User FAQs', 6], ['Quora (company)', 5], ['Following (Quora feature)', 5], ['Getting Started on Quora', 5], ['Credits (Quora feature)', 5], ['Quora Usage Data and Analysis', 4]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Navin-Rai-3/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

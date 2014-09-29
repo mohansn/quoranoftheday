@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -8,6 +9,10 @@
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Nilesh-Rajput-1/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Nilesh-Rajput-1/answers/Movies', 'http://www.quora.com/Nilesh-Rajput-1/answers/Life', 'http://www.quora.com/Nilesh-Rajput-1/answers/Movie-Production-1', 'http://www.quora.com/Nilesh-Rajput-1/answers/Hollywood', 'http://www.quora.com/Nilesh-Rajput-1/answers/Disney-Pixar-Animation-Studios', 'http://www.quora.com/Nilesh-Rajput-1/answers/Animation', 'http://www.quora.com/Nilesh-Rajput-1/answers/Quora-Community', 'http://www.quora.com/Nilesh-Rajput-1/answers/Atheism', 'http://www.quora.com/Nilesh-Rajput-1/answers/CGI-computer-generated-effects-in-movies', 'http://www.quora.com/Nilesh-Rajput-1/answers/Science-Fiction-genre', 'http://www.quora.com/Nilesh-Rajput-1/answers/Avatar-movie-franchise', 'http://www.quora.com/Nilesh-Rajput-1/answers/James-Cameron', 'http://www.quora.com/Nilesh-Rajput-1/answers/Pixar-Movies', 'http://www.quora.com/Nilesh-Rajput-1/answers/Quora', 'http://www.quora.com/Nilesh-Rajput-1/answers/Computer-Animation', 'http://www.quora.com/Nilesh-Rajput-1/answers/Atheists', 'http://www.quora.com/Nilesh-Rajput-1/answers/Movie-Business-and-Industry', 'http://www.quora.com/Nilesh-Rajput-1/answers/Special-Effects'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 88], ['Life', 27], ['Movie Production', 19], ['Hollywood', 16], ['Disney Pixar Animation Studios', 14], ['Animation', 12], ['Quora Community', 11], ['Atheism', 11], ['CGI (computer-generated effects in movies)', 10], ['Science Fiction (genre)', 8], ['Avatar (movie franchise)', 7], ['James Cameron', 7], ['Pixar Movies', 7], ['Quora', 6], ['Computer Animation', 6], ['Atheists', 6], ['Movie Business and Industry', 5], ['Special Effects', 5]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Nilesh-Rajput-1/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -8,6 +9,10 @@
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -17,7 +22,7 @@
 
       function drawChart() {
           var answer_links = ['http://www.quora.com/Karen-B-Shackelford/answers/Medicine-and-Healthcare', 'http://www.quora.com/Karen-B-Shackelford/answers/Psychology', 'http://www.quora.com/Karen-B-Shackelford/answers/Doctors', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-and-Relationships-1', 'http://www.quora.com/Karen-B-Shackelford/answers/Parenting', 'http://www.quora.com/Karen-B-Shackelford/answers/Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Love', 'http://www.quora.com/Karen-B-Shackelford/answers/Life-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Illness', 'http://www.quora.com/Karen-B-Shackelford/answers/Medical-School', 'http://www.quora.com/Karen-B-Shackelford/answers/Social-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Children', 'http://www.quora.com/Karen-B-Shackelford/answers/Emergency-Medicine', 'http://www.quora.com/Karen-B-Shackelford/answers/Interpersonal-Interaction', 'http://www.quora.com/Karen-B-Shackelford/answers/Friendship', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Startups'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Medicine and Healthcare', 185], ['Psychology', 131], ['Doctors', 92], ['Mental Health', 84], ['Dating and Relationships', 76], ['Parenting', 54], ['Health', 53], ['Love', 45], ['Life Advice', 44], ['Mental Illness', 44], ['Medical School', 37], ['Social Advice', 32], ['Children', 31], ['Emergency Medicine', 27], ['Interpersonal Interaction', 27], ['Friendship', 27], ['Dating Advice', 23], ['Startups', 13]]);
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Medicine and Healthcare', 185], ['Psychology', 131], ['Doctors', 92], ['Mental Health', 84], ['Dating and Relationships', 76], ['Parenting', 54], ['Health', 53], ['Love', 45], ['Life Advice', 44], ['Mental Illness', 45], ['Medical School', 37], ['Social Advice', 32], ['Children', 31], ['Emergency Medicine', 27], ['Interpersonal Interaction', 27], ['Friendship', 27], ['Dating Advice', 23], ['Startups', 13]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Karen-B-Shackelford/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Karen-B-Shackelford/answers/Medicine-and-Healthcare', 'http://www.quora.com/Karen-B-Shackelford/answers/Psychology', 'http://www.quora.com/Karen-B-Shackelford/answers/Doctors', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-and-Relationships-1', 'http://www.quora.com/Karen-B-Shackelford/answers/Parenting', 'http://www.quora.com/Karen-B-Shackelford/answers/Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Love', 'http://www.quora.com/Karen-B-Shackelford/answers/Life-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Illness', 'http://www.quora.com/Karen-B-Shackelford/answers/Medical-School', 'http://www.quora.com/Karen-B-Shackelford/answers/Social-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Children', 'http://www.quora.com/Karen-B-Shackelford/answers/Emergency-Medicine', 'http://www.quora.com/Karen-B-Shackelford/answers/Interpersonal-Interaction', 'http://www.quora.com/Karen-B-Shackelford/answers/Friendship', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Startups'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Medicine and Healthcare', 185], ['Psychology', 131], ['Doctors', 92], ['Mental Health', 84], ['Dating and Relationships', 76], ['Parenting', 54], ['Health', 53], ['Love', 45], ['Life Advice', 44], ['Mental Illness', 44], ['Medical School', 37], ['Social Advice', 32], ['Children', 31], ['Emergency Medicine', 27], ['Interpersonal Interaction', 27], ['Friendship', 27], ['Dating Advice', 23], ['Startups', 13]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Karen-B-Shackelford/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

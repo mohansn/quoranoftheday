@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Joel-Postma/answers/Dating-and-Relationships-1', 'http://www.quora.com/Joel-Postma/answers/Military', 'http://www.quora.com/Joel-Postma/answers/Energy', 'http://www.quora.com/Joel-Postma/answers/Philosophy', 'http://www.quora.com/Joel-Postma/answers/Politics', 'http://www.quora.com/Joel-Postma/answers/Military-History-and-Wars-1', 'http://www.quora.com/Joel-Postma/answers/Travel', 'http://www.quora.com/Joel-Postma/answers/Science', 'http://www.quora.com/Joel-Postma/answers/Career-Advice', 'http://www.quora.com/Joel-Postma/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/Marriage', 'http://www.quora.com/Joel-Postma/answers/Morals-and-Morality-1', 'http://www.quora.com/Joel-Postma/answers/Alternative-Energy', 'http://www.quora.com/Joel-Postma/answers/History', 'http://www.quora.com/Joel-Postma/answers/Books', 'http://www.quora.com/Joel-Postma/answers/Photography', 'http://www.quora.com/Joel-Postma/answers/Writing', 'http://www.quora.com/Joel-Postma/answers/Technology'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 51], ['Military', 24], ['Energy', 16], ['Philosophy', 12], ['Politics', 9], ['Military History and Wars', 9], ['Travel', 7], ['Science', 7], ['Career Advice', 7], ['Philosophy of Everyday Life', 6], ['Marriage', 6], ['Morals and Morality', 6], ['Alternative Energy', 6], ['History', 3], ['Books', 2], ['Photography', 2], ['Writing', 2], ['Technology', 2]]);
+          var answer_links = ['http://www.quora.com/Joel-Postma/answers/Dating-and-Relationships-1', 'http://www.quora.com/Joel-Postma/answers/Military', 'http://www.quora.com/Joel-Postma/answers/Energy', 'http://www.quora.com/Joel-Postma/answers/Philosophy', 'http://www.quora.com/Joel-Postma/answers/Career-Advice', 'http://www.quora.com/Joel-Postma/answers/Politics', 'http://www.quora.com/Joel-Postma/answers/Military-History-and-Wars-1', 'http://www.quora.com/Joel-Postma/answers/Travel', 'http://www.quora.com/Joel-Postma/answers/Science', 'http://www.quora.com/Joel-Postma/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/Alternative-Energy', 'http://www.quora.com/Joel-Postma/answers/Marriage', 'http://www.quora.com/Joel-Postma/answers/Morals-and-Morality-1', 'http://www.quora.com/Joel-Postma/answers/History', 'http://www.quora.com/Joel-Postma/answers/Books', 'http://www.quora.com/Joel-Postma/answers/Photography', 'http://www.quora.com/Joel-Postma/answers/Writing', 'http://www.quora.com/Joel-Postma/answers/Engineering-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 51], ['Military', 26], ['Energy', 17], ['Philosophy', 12], ['Career Advice', 10], ['Politics', 9], ['Military History and Wars', 9], ['Travel', 7], ['Science', 7], ['Philosophy of Everyday Life', 7], ['Alternative Energy', 7], ['Marriage', 6], ['Morals and Morality', 6], ['History', 3], ['Books', 2], ['Photography', 2], ['Writing', 2], ['Engineering', 2]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Joel-Postma/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Joel-Postma/answers/Dating-and-Relationships-1', 'http://www.quora.com/Joel-Postma/answers/Military', 'http://www.quora.com/Joel-Postma/answers/Energy', 'http://www.quora.com/Joel-Postma/answers/Philosophy', 'http://www.quora.com/Joel-Postma/answers/Politics', 'http://www.quora.com/Joel-Postma/answers/Military-History-and-Wars-1', 'http://www.quora.com/Joel-Postma/answers/Career-Advice', 'http://www.quora.com/Joel-Postma/answers/Travel', 'http://www.quora.com/Joel-Postma/answers/Science', 'http://www.quora.com/Joel-Postma/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/Marriage', 'http://www.quora.com/Joel-Postma/answers/Morals-and-Morality-1', 'http://www.quora.com/Joel-Postma/answers/Alternative-Energy', 'http://www.quora.com/Joel-Postma/answers/History', 'http://www.quora.com/Joel-Postma/answers/Books', 'http://www.quora.com/Joel-Postma/answers/Photography', 'http://www.quora.com/Joel-Postma/answers/Writing', 'http://www.quora.com/Joel-Postma/answers/Technology'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 51], ['Military', 26], ['Energy', 16], ['Philosophy', 12], ['Politics', 9], ['Military History and Wars', 9], ['Career Advice', 8], ['Travel', 7], ['Science', 7], ['Philosophy of Everyday Life', 6], ['Marriage', 6], ['Morals and Morality', 6], ['Alternative Energy', 6], ['History', 3], ['Books', 2], ['Photography', 2], ['Writing', 2], ['Technology', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Joel-Postma/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

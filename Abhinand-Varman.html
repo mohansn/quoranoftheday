@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -8,6 +9,10 @@
       }
       .title-link {
           text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Abhinand-Varman/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Abhinand-Varman/answers/Dating-and-Relationships-1', 'http://www.quora.com/Abhinand-Varman/answers/Evolutionary-Biology', 'http://www.quora.com/Abhinand-Varman/answers/Dating-Advice', 'http://www.quora.com/Abhinand-Varman/answers/India', 'http://www.quora.com/Abhinand-Varman/answers/Survey-Questions', 'http://www.quora.com/Abhinand-Varman/answers/Molecular-Biology', 'http://www.quora.com/Abhinand-Varman/answers/Genetics-and-Heredity', 'http://www.quora.com/Abhinand-Varman/answers/Medicine-and-Healthcare', 'http://www.quora.com/Abhinand-Varman/answers/Indians-8', 'http://www.quora.com/Abhinand-Varman/answers/Cricket-sport', 'http://www.quora.com/Abhinand-Varman/answers/Travel', 'http://www.quora.com/Abhinand-Varman/answers/Science', 'http://www.quora.com/Abhinand-Varman/answers/Genomics', 'http://www.quora.com/Abhinand-Varman/answers/Disability-and-Disabilities', 'http://www.quora.com/Abhinand-Varman/answers/Wheelchairs', 'http://www.quora.com/Abhinand-Varman/answers/Health', 'http://www.quora.com/Abhinand-Varman/answers/Mahabharata', 'http://www.quora.com/Abhinand-Varman/answers/Books'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 34], ['Evolutionary Biology', 21], ['Dating Advice', 21], ['India', 16], ['Survey Questions', 15], ['Molecular Biology', 12], ['Genetics and Heredity', 10], ['Medicine and Healthcare', 7], ['Indians', 6], ['Cricket (sport)', 5], ['Travel', 4], ['Science', 4], ['Genomics', 4], ['Disability and Disabilities', 4], ['Wheelchairs', 4], ['Health', 3], [' Mahabharata', 3], ['Books', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Abhinand-Varman/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>

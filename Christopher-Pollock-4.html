@@ -1,6 +1,7 @@
 
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
       .title {
           text-align:center;
@@ -9,6 +10,10 @@
       .title-link {
           text-decoration:none;
       }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -16,8 +21,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Christopher-Pollock-4/answers/Movies', 'http://www.quora.com/Christopher-Pollock-4/answers/Life', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Business-and-Industry', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Production-1', 'http://www.quora.com/Christopher-Pollock-4/answers/Personal-Finance', 'http://www.quora.com/Christopher-Pollock-4/answers/Hollywood', 'http://www.quora.com/Christopher-Pollock-4/answers/Money', 'http://www.quora.com/Christopher-Pollock-4/answers/Investing', 'http://www.quora.com/Christopher-Pollock-4/answers/Los-Angeles', 'http://www.quora.com/Christopher-Pollock-4/answers/The-Future', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Directors', 'http://www.quora.com/Christopher-Pollock-4/answers/Nutrition', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Business-Strategy', 'http://www.quora.com/Christopher-Pollock-4/answers/People-Skills', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Living', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Production-and-Distribution', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Direction'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 42], ['Life', 17], ['Movie Business and Industry', 17], ['Movie Production', 15], ['Personal Finance', 11], ['Hollywood', 9], ['Money', 7], ['Investing', 4], ['Los Angeles', 4], ['The Future', 3], ['Movie Directors', 3], ['Nutrition', 2], ['Healthy Eating', 2], ['Business Strategy', 2], ['People Skills', 2], ['Healthy Living', 2], ['Film Production and Distribution', 2], ['Film Direction', 2]]);
+          var answer_links = ['http://www.quora.com/Christopher-Pollock-4/answers/Movies', 'http://www.quora.com/Christopher-Pollock-4/answers/Life', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Business-and-Industry', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Production-1', 'http://www.quora.com/Christopher-Pollock-4/answers/Personal-Finance', 'http://www.quora.com/Christopher-Pollock-4/answers/Hollywood', 'http://www.quora.com/Christopher-Pollock-4/answers/Money', 'http://www.quora.com/Christopher-Pollock-4/answers/Investing', 'http://www.quora.com/Christopher-Pollock-4/answers/Los-Angeles', 'http://www.quora.com/Christopher-Pollock-4/answers/The-Future', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Directors', 'http://www.quora.com/Christopher-Pollock-4/answers/Nutrition', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Entrepreneurship', 'http://www.quora.com/Christopher-Pollock-4/answers/Business-Strategy', 'http://www.quora.com/Christopher-Pollock-4/answers/People-Skills', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Living', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Production-and-Distribution'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 42], ['Life', 19], ['Movie Business and Industry', 17], ['Movie Production', 15], ['Personal Finance', 11], ['Hollywood', 9], ['Money', 8], ['Investing', 4], ['Los Angeles', 4], ['The Future', 3], ['Movie Directors', 3], ['Nutrition', 2], ['Healthy Eating', 2], ['Entrepreneurship', 2], ['Business Strategy', 2], ['People Skills', 2], ['Healthy Living', 2], ['Film Production and Distribution', 2]]);
 
         var options = {
           title: '',
@@ -40,50 +45,9 @@
     <h1 class="title">
       <a class="title-link" href="http://www.quora.com/Christopher-Pollock-4/topics"> Answers by Topic</a>
     </h1>
-    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
-  </body>
-</html>
-<html>
-  <head>
-    <style>
-      .title {
-          text-align:center;
-          font-family:sans-serif;
-      }
-      .title-link {
-          text-decoration:none;
-      }
-    </style>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-          var answer_links = ['http://www.quora.com/Christopher-Pollock-4/answers/Movies', 'http://www.quora.com/Christopher-Pollock-4/answers/Life', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Business-and-Industry', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Production-1', 'http://www.quora.com/Christopher-Pollock-4/answers/Personal-Finance', 'http://www.quora.com/Christopher-Pollock-4/answers/Hollywood', 'http://www.quora.com/Christopher-Pollock-4/answers/Money', 'http://www.quora.com/Christopher-Pollock-4/answers/Investing', 'http://www.quora.com/Christopher-Pollock-4/answers/Los-Angeles', 'http://www.quora.com/Christopher-Pollock-4/answers/The-Future', 'http://www.quora.com/Christopher-Pollock-4/answers/Movie-Directors', 'http://www.quora.com/Christopher-Pollock-4/answers/Nutrition', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Eating', 'http://www.quora.com/Christopher-Pollock-4/answers/Business-Strategy', 'http://www.quora.com/Christopher-Pollock-4/answers/People-Skills', 'http://www.quora.com/Christopher-Pollock-4/answers/Healthy-Living', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Production-and-Distribution', 'http://www.quora.com/Christopher-Pollock-4/answers/Film-Direction'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Movies', 42], ['Life', 17], ['Movie Business and Industry', 17], ['Movie Production', 15], ['Personal Finance', 11], ['Hollywood', 9], ['Money', 7], ['Investing', 4], ['Los Angeles', 4], ['The Future', 3], ['Movie Directors', 3], ['Nutrition', 2], ['Healthy Eating', 2], ['Business Strategy', 2], ['People Skills', 2], ['Healthy Living', 2], ['Film Production and Distribution', 2], ['Film Direction', 2]]);
-
-        var options = {
-          title: '',
-          is3D: true
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        function selectHandler () {
-              var selectedRow = chart.getSelection()[0];
-              if (selectedRow) {
-		  window.open(answer_links[selectedRow.row])
-              }
-        }
-        google.visualization.events.addListener (chart, 'select', selectHandler);
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <h1 class="title">
-      <a class="title-link" href="http://www.quora.com/Christopher-Pollock-4/topics"> Answers by Topic</a>
-    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
     <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
   </body>
 </html>
