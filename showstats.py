@@ -1,7 +1,7 @@
 from google.appengine.api import users
 import webapp2
 import cgi
-from genhtml import get_html
+from genhtml import get_html, get_topic_data
 
 names = [l.rstrip("\n") for l in open('usernames.txt','r').readlines()]
 usernames = [l.rstrip("\n") for l in open('users.txt','r').readlines()]
@@ -65,9 +65,22 @@ class ShowStats(webapp2.RequestHandler):
         else:
             self.response.write(get_html(namedict[name]))
         
+class GetMyStats (webapp2.RequestHandler):
+    def get (self):
+        try:
+            with open ('getdata.html', 'r') as fp:
+                self.response.write (fp.read())
+	except:
+            self.response.write ('<html><body><h1>File not Found!</h1></body></html>')
 
+class MyData (webapp2.RequestHandler):
+    def post (self):
+        profile = cgi.escape (self.request.get('textinput')).split('com/')[1]
+        self.response.write (get_html(profile))
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/datavis', ShowStats),
+    ('/getmystats', GetMyStats),
+    ('/mydata', MyData)
 ], debug=True)
