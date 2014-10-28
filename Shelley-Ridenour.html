@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Shelley-Ridenour/answers/Dating-and-Relationships-1', 'http://www.quora.com/Shelley-Ridenour/answers/Life', 'http://www.quora.com/Shelley-Ridenour/answers/Psychology', 'http://www.quora.com/Shelley-Ridenour/answers/Love', 'http://www.quora.com/Shelley-Ridenour/answers/Marriage', 'http://www.quora.com/Shelley-Ridenour/answers/Interpersonal-Interaction', 'http://www.quora.com/Shelley-Ridenour/answers/Human-Behavior', 'http://www.quora.com/Shelley-Ridenour/answers/Social-Psychology', 'http://www.quora.com/Shelley-Ridenour/answers/Humor', 'http://www.quora.com/Shelley-Ridenour/answers/Mental-Health', 'http://www.quora.com/Shelley-Ridenour/answers/Parenting', 'http://www.quora.com/Shelley-Ridenour/answers/God', 'http://www.quora.com/Shelley-Ridenour/answers/Family', 'http://www.quora.com/Shelley-Ridenour/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Shelley-Ridenour/answers/Food', 'http://www.quora.com/Shelley-Ridenour/answers/Television', 'http://www.quora.com/Shelley-Ridenour/answers/Science', 'http://www.quora.com/Shelley-Ridenour/answers/U-S-Politics'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 59], ['Life', 59], ['Psychology', 46], ['Love', 33], ['Marriage', 17], ['Interpersonal Interaction', 16], ['Human Behavior', 10], ['Social Psychology', 6], ['Humor', 4], ['Mental Health', 4], ['Parenting', 4], ['God', 4], ['Family', 4], ['Philosophy of Everyday Life', 5], ['Food', 3], ['Television', 3], ['Science', 2], ['U.S. Politics', 2]]);
+          var answer_links = ['http://www.quora.com/Shelley-Ridenour/answers/Dating-and-Relationships-1', 'http://www.quora.com/Shelley-Ridenour/answers/Life', 'http://www.quora.com/Shelley-Ridenour/answers/Psychology', 'http://www.quora.com/Shelley-Ridenour/answers/Love', 'http://www.quora.com/Shelley-Ridenour/answers/Marriage', 'http://www.quora.com/Shelley-Ridenour/answers/Interpersonal-Interaction', 'http://www.quora.com/Shelley-Ridenour/answers/Human-Behavior', 'http://www.quora.com/Shelley-Ridenour/answers/Social-Psychology', 'http://www.quora.com/Shelley-Ridenour/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Shelley-Ridenour/answers/Television', 'http://www.quora.com/Shelley-Ridenour/answers/Humor', 'http://www.quora.com/Shelley-Ridenour/answers/Mental-Health', 'http://www.quora.com/Shelley-Ridenour/answers/Careers-2', 'http://www.quora.com/Shelley-Ridenour/answers/Parenting', 'http://www.quora.com/Shelley-Ridenour/answers/God', 'http://www.quora.com/Shelley-Ridenour/answers/Family', 'http://www.quora.com/Shelley-Ridenour/answers/Psychology-of-Everyday-Life', 'http://www.quora.com/Shelley-Ridenour/answers/Food'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 67], ['Life', 61], ['Psychology', 47], ['Love', 39], ['Marriage', 18], ['Interpersonal Interaction', 17], ['Human Behavior', 11], ['Social Psychology', 8], ['Philosophy of Everyday Life', 5], ['Television', 4], ['Humor', 4], ['Mental Health', 4], ['Careers', 4], ['Parenting', 4], ['God', 4], ['Family', 4], ['Psychology of Everyday Life', 4], ['Food', 3]]);
 
         var options = {
           title: '',

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Alex-Wilson-16/answers/Music', 'http://www.quora.com/Alex-Wilson-16/answers/Philosophy', 'http://www.quora.com/Alex-Wilson-16/answers/Music-Industry', 'http://www.quora.com/Alex-Wilson-16/answers/Psychology', 'http://www.quora.com/Alex-Wilson-16/answers/Singers-and-Musicians', 'http://www.quora.com/Alex-Wilson-16/answers/Men', 'http://www.quora.com/Alex-Wilson-16/answers/Literature', 'http://www.quora.com/Alex-Wilson-16/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Alex-Wilson-16/answers/Life', 'http://www.quora.com/Alex-Wilson-16/answers/Feminism', 'http://www.quora.com/Alex-Wilson-16/answers/Songs', 'http://www.quora.com/Alex-Wilson-16/answers/Independent-Music', 'http://www.quora.com/Alex-Wilson-16/answers/Books', 'http://www.quora.com/Alex-Wilson-16/answers/Politics', 'http://www.quora.com/Alex-Wilson-16/answers/Australia', 'http://www.quora.com/Alex-Wilson-16/answers/Women', 'http://www.quora.com/Alex-Wilson-16/answers/Live-Music', 'http://www.quora.com/Alex-Wilson-16/answers/Gender-Differences'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Music', 12], ['Philosophy', 12], ['Music Industry', 7], ['Psychology', 6], ['Singers and Musicians', 5], ['Men', 4], ['Literature', 3], ['Philosophy of Everyday Life', 3], ['Life', 3], ['Feminism', 3], ['Songs', 3], ['Independent Music', 3], ['Books', 2], ['Politics', 2], ['Australia', 2], ['Women', 2], ['Live Music', 2], ['Gender Differences', 2]]);
+          var answer_links = ['http://www.quora.com/Alex-Wilson-16/answers/Philosophy', 'http://www.quora.com/Alex-Wilson-16/answers/Music', 'http://www.quora.com/Alex-Wilson-16/answers/Music-Industry', 'http://www.quora.com/Alex-Wilson-16/answers/Psychology', 'http://www.quora.com/Alex-Wilson-16/answers/Singers-and-Musicians', 'http://www.quora.com/Alex-Wilson-16/answers/Men', 'http://www.quora.com/Alex-Wilson-16/answers/Life', 'http://www.quora.com/Alex-Wilson-16/answers/Literature', 'http://www.quora.com/Alex-Wilson-16/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Alex-Wilson-16/answers/Feminism', 'http://www.quora.com/Alex-Wilson-16/answers/Songs', 'http://www.quora.com/Alex-Wilson-16/answers/Independent-Music', 'http://www.quora.com/Alex-Wilson-16/answers/Live-Music', 'http://www.quora.com/Alex-Wilson-16/answers/Beards', 'http://www.quora.com/Alex-Wilson-16/answers/Books', 'http://www.quora.com/Alex-Wilson-16/answers/Politics', 'http://www.quora.com/Alex-Wilson-16/answers/Australia', 'http://www.quora.com/Alex-Wilson-16/answers/Women'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Philosophy', 14], ['Music', 12], ['Music Industry', 7], ['Psychology', 6], ['Singers and Musicians', 5], ['Men', 5], ['Life', 4], ['Literature', 3], ['Philosophy of Everyday Life', 3], ['Feminism', 3], ['Songs', 3], ['Independent Music', 3], ['Live Music', 3], ['Beards', 3], ['Books', 2], ['Politics', 2], ['Australia', 2], ['Women', 2]]);
 
         var options = {
           title: '',

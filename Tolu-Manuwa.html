@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Tolu-Manuwa/answers/Survey-Questions', 'http://www.quora.com/Tolu-Manuwa/answers/Life', 'http://www.quora.com/Tolu-Manuwa/answers/Quora-product', 'http://www.quora.com/Tolu-Manuwa/answers/Quora', 'http://www.quora.com/Tolu-Manuwa/answers/Movies', 'http://www.quora.com/Tolu-Manuwa/answers/Jokes', 'http://www.quora.com/Tolu-Manuwa/answers/Philosophy', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Body-2', 'http://www.quora.com/Tolu-Manuwa/answers/Hypothetical-Scenarios', 'http://www.quora.com/Tolu-Manuwa/answers/Humor', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Biology', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Physiology', 'http://www.quora.com/Tolu-Manuwa/answers/Best-Photographs-of-X', 'http://www.quora.com/Tolu-Manuwa/answers/Startups', 'http://www.quora.com/Tolu-Manuwa/answers/Music', 'http://www.quora.com/Tolu-Manuwa/answers/Medicine-and-Healthcare', 'http://www.quora.com/Tolu-Manuwa/answers/Design', 'http://www.quora.com/Tolu-Manuwa/answers/Poetry'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 20], ['Life', 7], ['Quora (product)', 4], ['Quora', 3], ['Movies', 3], ['Jokes', 3], ['Philosophy', 3], ['Human Body', 3], ['Hypothetical Scenarios', 3], ['Humor', 2], ['Human Biology', 2], ['Human Physiology', 2], ['Best Photographs of X', 2], ['Startups', 1], ['Music', 1], ['Medicine and Healthcare', 1], ['Design', 1], ['Poetry', 1]]);
+          var answer_links = ['http://www.quora.com/Tolu-Manuwa/answers/Survey-Questions', 'http://www.quora.com/Tolu-Manuwa/answers/Life', 'http://www.quora.com/Tolu-Manuwa/answers/Quora-product', 'http://www.quora.com/Tolu-Manuwa/answers/Quora', 'http://www.quora.com/Tolu-Manuwa/answers/Movies', 'http://www.quora.com/Tolu-Manuwa/answers/Jokes', 'http://www.quora.com/Tolu-Manuwa/answers/Philosophy', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Body-2', 'http://www.quora.com/Tolu-Manuwa/answers/Hypothetical-Scenarios', 'http://www.quora.com/Tolu-Manuwa/answers/Humor', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Biology', 'http://www.quora.com/Tolu-Manuwa/answers/Human-Physiology', 'http://www.quora.com/Tolu-Manuwa/answers/What-Are-The-Best-Photographs-of-X', 'http://www.quora.com/Tolu-Manuwa/answers/Startups', 'http://www.quora.com/Tolu-Manuwa/answers/Music', 'http://www.quora.com/Tolu-Manuwa/answers/Medicine-and-Healthcare', 'http://www.quora.com/Tolu-Manuwa/answers/Design', 'http://www.quora.com/Tolu-Manuwa/answers/Poetry'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 20], ['Life', 7], ['Quora (product)', 4], ['Quora', 3], ['Movies', 3], ['Jokes', 3], ['Philosophy', 3], ['Human Body', 3], ['Hypothetical Scenarios', 3], ['Humor', 2], ['Human Biology', 2], ['Human Physiology', 2], ['What Are The Best Photographs of X?', 2], ['Startups', 1], ['Music', 1], ['Medicine and Healthcare', 1], ['Design', 1], ['Poetry', 1]]);
 
         var options = {
           title: '',

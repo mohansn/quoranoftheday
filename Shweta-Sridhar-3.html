@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Shweta-Sridhar-3/answers/Survey-Questions', 'http://www.quora.com/Shweta-Sridhar-3/answers/Life', 'http://www.quora.com/Shweta-Sridhar-3/answers/Humor', 'http://www.quora.com/Shweta-Sridhar-3/answers/Physics', 'http://www.quora.com/Shweta-Sridhar-3/answers/Psychology', 'http://www.quora.com/Shweta-Sridhar-3/answers/Book-Recommendations', 'http://www.quora.com/Shweta-Sridhar-3/answers/Hypothetical-Scenarios', 'http://www.quora.com/Shweta-Sridhar-3/answers/Books', 'http://www.quora.com/Shweta-Sridhar-3/answers/English-language', 'http://www.quora.com/Shweta-Sridhar-3/answers/Physicists', 'http://www.quora.com/Shweta-Sridhar-3/answers/Jokes', 'http://www.quora.com/Shweta-Sridhar-3/answers/Graduate-School', 'http://www.quora.com/Shweta-Sridhar-3/answers/Education', 'http://www.quora.com/Shweta-Sridhar-3/answers/The-College-and-University-Experience', 'http://www.quora.com/Shweta-Sridhar-3/answers/Ethics', 'http://www.quora.com/Shweta-Sridhar-3/answers/Colleges-and-Universities', 'http://www.quora.com/Shweta-Sridhar-3/answers/Social-Psychology', 'http://www.quora.com/Shweta-Sridhar-3/answers/Human-Behavior'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 24], ['Life', 9], ['Humor', 7], ['Physics', 6], ['Psychology', 4], ['Book Recommendations', 4], ['Hypothetical Scenarios', 4], ['Books', 3], ['English (language)', 3], ['Physicists', 3], ['Jokes', 2], ['Graduate School', 2], ['Education', 2], ['The College and University Experience', 2], ['Ethics', 2], ['Colleges and Universities', 2], ['Social Psychology', 2], ['Human Behavior', 2]]);
+          var answer_links = ['http://www.quora.com/Shweta-Sridhar-3/answers/Survey-Questions', 'http://www.quora.com/Shweta-Sridhar-3/answers/Life', 'http://www.quora.com/Shweta-Sridhar-3/answers/Humor', 'http://www.quora.com/Shweta-Sridhar-3/answers/Physics', 'http://www.quora.com/Shweta-Sridhar-3/answers/Book-Recommendations', 'http://www.quora.com/Shweta-Sridhar-3/answers/Hypothetical-Scenarios', 'http://www.quora.com/Shweta-Sridhar-3/answers/Books', 'http://www.quora.com/Shweta-Sridhar-3/answers/English-language', 'http://www.quora.com/Shweta-Sridhar-3/answers/Psychology', 'http://www.quora.com/Shweta-Sridhar-3/answers/Physicists', 'http://www.quora.com/Shweta-Sridhar-3/answers/Jokes', 'http://www.quora.com/Shweta-Sridhar-3/answers/Graduate-School', 'http://www.quora.com/Shweta-Sridhar-3/answers/Education', 'http://www.quora.com/Shweta-Sridhar-3/answers/The-College-and-University-Experience', 'http://www.quora.com/Shweta-Sridhar-3/answers/Ethics', 'http://www.quora.com/Shweta-Sridhar-3/answers/Religion', 'http://www.quora.com/Shweta-Sridhar-3/answers/Colleges-and-Universities', 'http://www.quora.com/Shweta-Sridhar-3/answers/Social-Psychology'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 25], ['Life', 8], ['Humor', 7], ['Physics', 6], ['Book Recommendations', 4], ['Hypothetical Scenarios', 4], ['Books', 3], ['English (language)', 3], ['Psychology', 3], ['Physicists', 3], ['Jokes', 2], ['Graduate School', 2], ['Education', 2], ['The College and University Experience', 2], ['Ethics', 2], ['Religion', 2], ['Colleges and Universities', 2], ['Social Psychology', 2]]);
 
         var options = {
           title: '',

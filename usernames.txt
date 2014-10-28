@@ -7,6 +7,7 @@ Abraham J. Layon
 Adam Sterling
 Adelain Ounn
 Akshay Sankar
+Alex Guerra
 Alex Hebert
 Alex Wilson
 Allen Barnett
@@ -32,6 +33,7 @@ Daniel Prince
 Dave Hines
 Diane Meriwether
 Dixon Wragg
+Fred Watts
 Gail Noble
 Jacob Dorn
 Jay Schryer
@@ -42,6 +44,7 @@ Josh Stein
 Jude David Russo
 Karen B. Shackelford
 Katrin-Susanne Richter
+Logan Forbes
 Luke Nathaniel Sims
 Madan Mohan
 Mary Lucas
@@ -65,9 +68,11 @@ Pushkaraj Karyakarte
 Rachit Goel
 Rahul Keerthi
 Rakesh Iyer
+Ramamurthy Guruvayurappan
 Reuben Smith
 Rohan Nag
 Ryan Fox Squire
+Sahil Juneja
 Sandeep Patankar
 Sarah Chalek
 Seth Pace
@@ -78,11 +83,14 @@ Shubham Chaturvedi
 Shweta Sridhar
 Simon Crump
 Somesh Sharma
+Soumadeep Mazumdar
 Sriram Ilango
 Stephanie Caridad
+Sunny Mewati
 Tegan Medico
 Tolu Manuwa
 Tom Gillis
 Vanessa Surian
 Vishnu Mishra
+Wang Di
 William Hardaway

@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Wang-Di-8/answers/China', 'http://www.quora.com/Wang-Di-8/answers/Chinese-Culture', 'http://www.quora.com/Wang-Di-8/answers/Chinese-language', 'http://www.quora.com/Wang-Di-8/answers/Chinese-People', 'http://www.quora.com/Wang-Di-8/answers/History-of-China', 'http://www.quora.com/Wang-Di-8/answers/Politics-of-China', 'http://www.quora.com/Wang-Di-8/answers/History', 'http://www.quora.com/Wang-Di-8/answers/English-language', 'http://www.quora.com/Wang-Di-8/answers/The-United-States-of-America', 'http://www.quora.com/Wang-Di-8/answers/Mandarin-Chinese-language', 'http://www.quora.com/Wang-Di-8/answers/Quora', 'http://www.quora.com/Wang-Di-8/answers/Countries', 'http://www.quora.com/Wang-Di-8/answers/Communist-Party-of-China', 'http://www.quora.com/Wang-Di-8/answers/Learning-Languages', 'http://www.quora.com/Wang-Di-8/answers/Hong-Kong', 'http://www.quora.com/Wang-Di-8/answers/Politics', 'http://www.quora.com/Wang-Di-8/answers/Atheism', 'http://www.quora.com/Wang-Di-8/answers/Beijing'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['China', 124], ['Chinese Culture', 35], ['Chinese (language)', 30], ['Chinese People', 26], ['History of China', 16], ['Politics of China', 15], ['History', 14], ['English (language)', 12], ['The United States of America', 11], ['Mandarin Chinese (language)', 11], ['Quora', 10], ['Countries', 10], ['Communist Party of China', 10], ['Learning Languages', 9], ['Hong Kong', 8], ['Politics', 7], ['Atheism', 7], ['Beijing', 7]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Wang-Di-8/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

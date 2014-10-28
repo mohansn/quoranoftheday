@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Penkey-Suresh/answers/Philosophy', 'http://www.quora.com/Penkey-Suresh/answers/Psychology', 'http://www.quora.com/Penkey-Suresh/answers/Animals', 'http://www.quora.com/Penkey-Suresh/answers/U-S-Politics', 'http://www.quora.com/Penkey-Suresh/answers/History', 'http://www.quora.com/Penkey-Suresh/answers/Life-Advice', 'http://www.quora.com/Penkey-Suresh/answers/Science', 'http://www.quora.com/Penkey-Suresh/answers/Food', 'http://www.quora.com/Penkey-Suresh/answers/Manners-and-Etiquette'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Philosophy', 5], ['Psychology', 5], ['Animals', 4], ['U.S. Politics', 4], ['History', 3], ['Life Advice', 3], ['Science', 2], ['Food', 2], ['Manners and Etiquette', 1]]);
+          var answer_links = ['http://www.quora.com/Penkey-Suresh/answers/Philosophy', 'http://www.quora.com/Penkey-Suresh/answers/Psychology', 'http://www.quora.com/Penkey-Suresh/answers/Animals', 'http://www.quora.com/Penkey-Suresh/answers/U-S-Politics', 'http://www.quora.com/Penkey-Suresh/answers/History', 'http://www.quora.com/Penkey-Suresh/answers/Life-Advice', 'http://www.quora.com/Penkey-Suresh/answers/Science', 'http://www.quora.com/Penkey-Suresh/answers/Food', 'http://www.quora.com/Penkey-Suresh/answers/Technology', 'http://www.quora.com/Penkey-Suresh/answers/Music', 'http://www.quora.com/Penkey-Suresh/answers/Manners-and-Etiquette'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Philosophy', 5], ['Psychology', 5], ['Animals', 4], ['U.S. Politics', 4], ['History', 3], ['Life Advice', 3], ['Science', 2], ['Food', 2], ['Technology', 2], ['Music', 1], ['Manners and Etiquette', 1]]);
 
         var options = {
           title: '',

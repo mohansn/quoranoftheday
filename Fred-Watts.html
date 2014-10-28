@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Fred-Watts/answers/History', 'http://www.quora.com/Fred-Watts/answers/The-United-States-of-America', 'http://www.quora.com/Fred-Watts/answers/U-S-Politics', 'http://www.quora.com/Fred-Watts/answers/Politics', 'http://www.quora.com/Fred-Watts/answers/Writing', 'http://www.quora.com/Fred-Watts/answers/International-Relations-3', 'http://www.quora.com/Fred-Watts/answers/Literature', 'http://www.quora.com/Fred-Watts/answers/History-of-the-United-States-1', 'http://www.quora.com/Fred-Watts/answers/Health', 'http://www.quora.com/Fred-Watts/answers/Economics', 'http://www.quora.com/Fred-Watts/answers/Fiction', 'http://www.quora.com/Fred-Watts/answers/Investing', 'http://www.quora.com/Fred-Watts/answers/Mathematics', 'http://www.quora.com/Fred-Watts/answers/Business', 'http://www.quora.com/Fred-Watts/answers/Authors-5', 'http://www.quora.com/Fred-Watts/answers/Stock-Market', 'http://www.quora.com/Fred-Watts/answers/Foreign-Policy', 'http://www.quora.com/Fred-Watts/answers/Nutrition'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['History', 24], ['The United States of America', 23], ['U.S. Politics', 12], ['Politics', 10], ['Writing', 10], ['International Relations', 10], ['Literature', 9], ['History of the United States', 8], ['Health', 7], ['Economics', 6], ['Fiction', 4], ['Investing', 3], ['Mathematics', 3], ['Business', 2], ['Authors', 2], ['Stock Market', 2], ['Foreign Policy', 2], ['Nutrition', 1]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Fred-Watts/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

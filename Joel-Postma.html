@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Joel-Postma/answers/Dating-and-Relationships-1', 'http://www.quora.com/Joel-Postma/answers/Military', 'http://www.quora.com/Joel-Postma/answers/Energy', 'http://www.quora.com/Joel-Postma/answers/Career-Advice', 'http://www.quora.com/Joel-Postma/answers/Philosophy', 'http://www.quora.com/Joel-Postma/answers/Politics', 'http://www.quora.com/Joel-Postma/answers/Military-History-and-Wars-1', 'http://www.quora.com/Joel-Postma/answers/Travel', 'http://www.quora.com/Joel-Postma/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/Science', 'http://www.quora.com/Joel-Postma/answers/Alternative-Energy', 'http://www.quora.com/Joel-Postma/answers/Marriage', 'http://www.quora.com/Joel-Postma/answers/Morals-and-Morality-1', 'http://www.quora.com/Joel-Postma/answers/History', 'http://www.quora.com/Joel-Postma/answers/Engineering-1', 'http://www.quora.com/Joel-Postma/answers/Books', 'http://www.quora.com/Joel-Postma/answers/Photography', 'http://www.quora.com/Joel-Postma/answers/Writing'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 51], ['Military', 26], ['Energy', 17], ['Career Advice', 13], ['Philosophy', 12], ['Politics', 9], ['Military History and Wars', 9], ['Travel', 8], ['Philosophy of Everyday Life', 8], ['Science', 7], ['Alternative Energy', 7], ['Marriage', 6], ['Morals and Morality', 6], ['History', 3], ['Engineering', 3], ['Books', 2], ['Photography', 2], ['Writing', 2]]);
+          var answer_links = ['http://www.quora.com/Joel-Postma/answers/Dating-and-Relationships-1', 'http://www.quora.com/Joel-Postma/answers/Military', 'http://www.quora.com/Joel-Postma/answers/Energy-physics', 'http://www.quora.com/Joel-Postma/answers/Career-Advice', 'http://www.quora.com/Joel-Postma/answers/Philosophy', 'http://www.quora.com/Joel-Postma/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/Politics', 'http://www.quora.com/Joel-Postma/answers/Marriage', 'http://www.quora.com/Joel-Postma/answers/Travel', 'http://www.quora.com/Joel-Postma/answers/Military-History-and-Wars-1', 'http://www.quora.com/Joel-Postma/answers/Morals-and-Morality-1', 'http://www.quora.com/Joel-Postma/answers/Alternative-Energy', 'http://www.quora.com/Joel-Postma/answers/Science', 'http://www.quora.com/Joel-Postma/answers/Tips-and-Hacks-for-Everyday-Life', 'http://www.quora.com/Joel-Postma/answers/History', 'http://www.quora.com/Joel-Postma/answers/Engineering-1', 'http://www.quora.com/Joel-Postma/answers/Books', 'http://www.quora.com/Joel-Postma/answers/Photography'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Dating and Relationships', 61], ['Military', 25], ['Energy (physics)', 19], ['Career Advice', 15], ['Philosophy', 12], ['Philosophy of Everyday Life', 11], ['Politics', 9], ['Marriage', 9], ['Travel', 8], ['Military History and Wars', 8], ['Morals and Morality', 8], ['Alternative Energy', 8], ['Science', 7], ['Tips and Hacks for Everyday Life', 4], ['History', 3], ['Engineering', 3], ['Books', 2], ['Photography', 2]]);
 
         var options = {
           title: '',

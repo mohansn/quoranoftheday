@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Sunny-Mewati/answers/China', 'http://www.quora.com/Sunny-Mewati/answers/India', 'http://www.quora.com/Sunny-Mewati/answers/Quora', 'http://www.quora.com/Sunny-Mewati/answers/Quora-product', 'http://www.quora.com/Sunny-Mewati/answers/International-Relations-3', 'http://www.quora.com/Sunny-Mewati/answers/Quora-Community', 'http://www.quora.com/Sunny-Mewati/answers/Economics', 'http://www.quora.com/Sunny-Mewati/answers/History', 'http://www.quora.com/Sunny-Mewati/answers/Questions-Quora-feature', 'http://www.quora.com/Sunny-Mewati/answers/Politics', 'http://www.quora.com/Sunny-Mewati/answers/World-History', 'http://www.quora.com/Sunny-Mewati/answers/Israel', 'http://www.quora.com/Sunny-Mewati/answers/United-Nations', 'http://www.quora.com/Sunny-Mewati/answers/Israel-Palestine-Conflict-2', 'http://www.quora.com/Sunny-Mewati/answers/Hong-Kong', 'http://www.quora.com/Sunny-Mewati/answers/Quora-Policies-and-Guidelines', 'http://www.quora.com/Sunny-Mewati/answers/Military-History-and-Wars-1', 'http://www.quora.com/Sunny-Mewati/answers/Economy-of-China'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['China', 48], ['India', 35], ['Quora', 29], ['Quora (product)', 20], ['International Relations', 19], ['Quora Community', 18], ['Economics', 16], ['History', 15], ['Questions (Quora feature)', 15], ['Politics', 14], ['World History', 9], ['Israel', 8], ['United Nations', 7], ['Israel-Palestine Conflict', 7], ['Hong Kong', 5], ['Quora Policies and Guidelines', 5], ['Military History and Wars', 5], ['Economy of China', 5]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Sunny-Mewati/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Ryan-Fox-Squire/answers/Neuroscience-1', 'http://www.quora.com/Ryan-Fox-Squire/answers/Psychology', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Science', 'http://www.quora.com/Ryan-Fox-Squire/answers/Startups', 'http://www.quora.com/Ryan-Fox-Squire/answers/Big-Data', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analysis', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Mining', 'http://www.quora.com/Ryan-Fox-Squire/answers/Cognitive-Neuroscience', 'http://www.quora.com/Ryan-Fox-Squire/answers/Statistics-academic-discipline', 'http://www.quora.com/Ryan-Fox-Squire/answers/Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Entrepreneurship', 'http://www.quora.com/Ryan-Fox-Squire/answers/Machine-Learning', 'http://www.quora.com/Ryan-Fox-Squire/answers/Mathematics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Venture-Capital', 'http://www.quora.com/Ryan-Fox-Squire/answers/Psychiatry', 'http://www.quora.com/Ryan-Fox-Squire/answers/Web-Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Neuroscience', 16], ['Psychology', 10], ['Data Science', 6], ['Startups', 5], ['Big Data', 5], ['Data Analysis', 5], ['Data Mining', 5], ['Cognitive Neuroscience', 5], ['Statistics (academic discipline)', 4], ['Analytics', 4], ['Data Analytics', 4], ['Entrepreneurship', 3], ['Machine Learning', 2], ['Mathematics', 2], ['Venture Capital', 2], ['Psychiatry', 2], ['Web Analytics', 2], ['Data', 2]]);
+          var answer_links = ['http://www.quora.com/Ryan-Fox-Squire/answers/Neuroscience-1', 'http://www.quora.com/Ryan-Fox-Squire/answers/Psychology', 'http://www.quora.com/Ryan-Fox-Squire/answers/Startups', 'http://www.quora.com/Ryan-Fox-Squire/answers/Entrepreneurship', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Science', 'http://www.quora.com/Ryan-Fox-Squire/answers/Big-Data', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analysis', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Mining', 'http://www.quora.com/Ryan-Fox-Squire/answers/Cognitive-Neuroscience', 'http://www.quora.com/Ryan-Fox-Squire/answers/Statistics-academic-discipline', 'http://www.quora.com/Ryan-Fox-Squire/answers/Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Data-Analytics', 'http://www.quora.com/Ryan-Fox-Squire/answers/San-Francisco', 'http://www.quora.com/Ryan-Fox-Squire/answers/San-Francisco-Bay-Area', 'http://www.quora.com/Ryan-Fox-Squire/answers/Computer-Programming', 'http://www.quora.com/Ryan-Fox-Squire/answers/Machine-Learning', 'http://www.quora.com/Ryan-Fox-Squire/answers/Mathematics', 'http://www.quora.com/Ryan-Fox-Squire/answers/Venture-Capital'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Neuroscience', 16], ['Psychology', 10], ['Startups', 6], ['Entrepreneurship', 6], ['Data Science', 6], ['Big Data', 5], ['Data Analysis', 5], ['Data Mining', 5], ['Cognitive Neuroscience', 5], ['Statistics (academic discipline)', 4], ['Analytics', 4], ['Data Analytics', 4], ['San Francisco', 3], ['San Francisco Bay Area', 3], ['Computer Programming', 2], ['Machine Learning', 2], ['Mathematics', 2], ['Venture Capital', 2]]);
 
         var options = {
           title: '',

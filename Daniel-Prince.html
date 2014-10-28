@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
       .title {
           text-align:center;
@@ -21,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Daniel-Prince/answers/Law', 'http://www.quora.com/Daniel-Prince/answers/Legal-Issues-and-Law-in-Everyday-Life', 'http://www.quora.com/Daniel-Prince/answers/Attorneys', 'http://www.quora.com/Daniel-Prince/answers/National-Security-Agency', 'http://www.quora.com/Daniel-Prince/answers/Trademark-Law', 'http://www.quora.com/Daniel-Prince/answers/Intellectual-Property-Law', 'http://www.quora.com/Daniel-Prince/answers/Trademarks', 'http://www.quora.com/Daniel-Prince/answers/Social-Psychology', 'http://www.quora.com/Daniel-Prince/answers/Politics', 'http://www.quora.com/Daniel-Prince/answers/Psychology', 'http://www.quora.com/Daniel-Prince/answers/Legal-Ethics', 'http://www.quora.com/Daniel-Prince/answers/International-Relations-3', 'http://www.quora.com/Daniel-Prince/answers/International-Law-and-Legal-Institutions', 'http://www.quora.com/Daniel-Prince/answers/Fine-Art', 'http://www.quora.com/Daniel-Prince/answers/Learning-Languages'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Law', 28], ['Legal Issues and Law in Everyday Life', 15], ['Attorneys', 9], ['National Security Agency', 6], ['Trademark Law', 4], ['Intellectual Property Law', 3], ['Trademarks', 3], ['Social Psychology', 2], ['Politics', 1], ['Psychology', 1], ['Legal Ethics', 1], ['International Relations', 1], ['International Law and Legal Institutions', 1], ['Fine Art', 1], ['Learning Languages', 1]]);
+          var answer_links = ['http://www.quora.com/Daniel-Prince/answers/Law', 'http://www.quora.com/Daniel-Prince/answers/Legal-Issues-and-Law-in-Everyday-Life', 'http://www.quora.com/Daniel-Prince/answers/Attorneys', 'http://www.quora.com/Daniel-Prince/answers/National-Security-Agency', 'http://www.quora.com/Daniel-Prince/answers/Trademark-Law', 'http://www.quora.com/Daniel-Prince/answers/Intellectual-Property-Law', 'http://www.quora.com/Daniel-Prince/answers/Trademarks', 'http://www.quora.com/Daniel-Prince/answers/Social-Psychology', 'http://www.quora.com/Daniel-Prince/answers/International-Relations-3', 'http://www.quora.com/Daniel-Prince/answers/Business', 'http://www.quora.com/Daniel-Prince/answers/Politics', 'http://www.quora.com/Daniel-Prince/answers/Economics', 'http://www.quora.com/Daniel-Prince/answers/Psychology', 'http://www.quora.com/Daniel-Prince/answers/Legal-Ethics', 'http://www.quora.com/Daniel-Prince/answers/Vietnam', 'http://www.quora.com/Daniel-Prince/answers/International-Law-and-Legal-Institutions', 'http://www.quora.com/Daniel-Prince/answers/Fine-Art', 'http://www.quora.com/Daniel-Prince/answers/Learning-Languages'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Law', 29], ['Legal Issues and Law in Everyday Life', 16], ['Attorneys', 11], ['National Security Agency', 6], ['Trademark Law', 4], ['Intellectual Property Law', 3], ['Trademarks', 3], ['Social Psychology', 2], ['International Relations', 2], ['Business', 1], ['Politics', 1], ['Economics', 1], ['Psychology', 1], ['Legal Ethics', 1], ['Vietnam', 1], ['International Law and Legal Institutions', 1], ['Fine Art', 1], ['Learning Languages', 1]]);
 
         var options = {
           title: '',
