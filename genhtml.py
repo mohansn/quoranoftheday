@@ -50,6 +50,29 @@ def get_topic_data (user):
             topic_data.append([topic_names.text.encode('utf-8'), answer_count[0]])
     return (links,topic_data)
 
+def get_topic_data_json (user):
+    topics_path = qurl + user + '/topics'
+    r = requests.get(topics_path, cookies = qcookies)
+    if (r.status_code != 200):
+        r.raise_for_status()
+    soup = BeautifulSoup(r.text)
+    boxes = soup.find_all(class_="ObjectCard UserTopicPagedListItem PagedListItem")
+    topic_data = [['Topics','Answers']]
+
+    for box in boxes:
+        topic_names = box.find(class_="TopicName")
+        box = box.find(class_="ObjectCard-body")
+        answer_count = None
+        if (box.find('a') is not None):
+            answer_count = box.find('a').text 
+        if (answer_count):
+            answer_count = [int (s) for s in answer_count.split() if s.isdigit()]
+            topic_data.append([topic_names.text.encode('utf-8'), answer_count[0]])
+    import json
+    return json.dumps ([{"label":x,"value":y} for [x,y] in topic_data[1:]])
+
+
+
 """ Combine data and fixed templates to create output file """
 def write_output_file (user):
     links,topic_data = get_topic_data(user)
