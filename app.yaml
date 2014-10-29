@@ -10,6 +10,8 @@ handlers:
   upload: static/images/favicon\.ico
 - url: /stylesheets
   static_dir: stylesheets
+- url: /js
+  static_dir: js
 - url: /.*
   script: showstats.application
 
