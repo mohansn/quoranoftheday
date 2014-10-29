@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Ivan-Gautama/answers/Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jakarta', 'http://www.quora.com/Ivan-Gautama/answers/Life-Lessons', 'http://www.quora.com/Ivan-Gautama/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Ivan-Gautama/answers/Economics', 'http://www.quora.com/Ivan-Gautama/answers/Politics-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jokowi', 'http://www.quora.com/Ivan-Gautama/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Ivan-Gautama/answers/Startups-in-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Economy-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/History', 'http://www.quora.com/Ivan-Gautama/answers/Writing', 'http://www.quora.com/Ivan-Gautama/answers/Social-Psychology', 'http://www.quora.com/Ivan-Gautama/answers/Future-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Fiction', 'http://www.quora.com/Ivan-Gautama/answers/Finance', 'http://www.quora.com/Ivan-Gautama/answers/Indonesian-language', 'http://www.quora.com/Ivan-Gautama/answers/Computer-Programming'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Indonesia', 94], ['Jakarta', 22], ['Life Lessons', 15], ['Philosophy of Everyday Life', 10], ['Economics', 7], ['Politics of Indonesia', 7], ['Jokowi', 7], ['Startup Advice and Strategy', 6], ['Startups in Indonesia', 6], ['Economy of Indonesia', 5], ['History', 4], ['Writing', 4], ['Social Psychology', 4], ['Future of Indonesia', 4], ['Fiction', 3], ['Finance', 3], ['Indonesian (language)', 3], ['Computer Programming', 2]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Ivan-Gautama/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>
