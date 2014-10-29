@@ -15,7 +15,7 @@ MAIN_PAGE_HTML = """
        h1 {
          color:blue;
          background-color:#E9BEF5;
-         font-family:garamond,serif;
+         font-family:helvetica,arial,sans-serif;
          text-align:center;
          border:solid 2px;
          border-radius:10px;
