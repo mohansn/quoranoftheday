@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Tolkiens-Middle-Earth-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Books', 'http://www.quora.com/Akshay-Sankar/answers/Television', 'http://www.quora.com/Akshay-Sankar/answers/Video-Games', 'http://www.quora.com/Akshay-Sankar/answers/Creative-Writing', 'http://www.quora.com/Akshay-Sankar/answers/Game-of-Thrones-TV-series', 'http://www.quora.com/Akshay-Sankar/answers/Humor', 'http://www.quora.com/Akshay-Sankar/answers/Television-Series', 'http://www.quora.com/Akshay-Sankar/answers/J-R-R-Tolkien', 'http://www.quora.com/Akshay-Sankar/answers/Movies', 'http://www.quora.com/Akshay-Sankar/answers/Life', 'http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-movie-series', 'http://www.quora.com/Akshay-Sankar/answers/Fiction', 'http://www.quora.com/Akshay-Sankar/answers/Book-Recommendations', 'http://www.quora.com/Akshay-Sankar/answers/Writing', 'http://www.quora.com/Akshay-Sankar/answers/People', 'http://www.quora.com/Akshay-Sankar/answers/PC-Gaming'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['The Lord of the Rings (books, movies and creative franchise)', 12], ["Tolkien's Middle Earth (books, movies and creative franchise)", 9], ['Books', 6], ['Television', 5], ['Video Games', 5], ['Creative Writing', 5], ['Game of Thrones (TV series)', 5], ['Humor', 4], ['Television Series', 4], ['J. R. R. Tolkien', 4], ['Movies', 3], ['Life', 3], ['The Lord of the Rings (movie series)', 3], ['Fiction', 2], ['Book Recommendations', 2], ['Writing', 2], ['People', 2], ['PC Gaming', 2]]);
+          var answer_links = ['http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Tolkiens-Middle-Earth-books-movies-and-creative-franchise', 'http://www.quora.com/Akshay-Sankar/answers/Books', 'http://www.quora.com/Akshay-Sankar/answers/Television', 'http://www.quora.com/Akshay-Sankar/answers/Video-Games', 'http://www.quora.com/Akshay-Sankar/answers/Creative-Writing', 'http://www.quora.com/Akshay-Sankar/answers/Game-of-Thrones-TV-series', 'http://www.quora.com/Akshay-Sankar/answers/Humor', 'http://www.quora.com/Akshay-Sankar/answers/Television-Series', 'http://www.quora.com/Akshay-Sankar/answers/J-R-R-Tolkien', 'http://www.quora.com/Akshay-Sankar/answers/Movies', 'http://www.quora.com/Akshay-Sankar/answers/Life', 'http://www.quora.com/Akshay-Sankar/answers/The-Lord-of-the-Rings-movie-series', 'http://www.quora.com/Akshay-Sankar/answers/Food', 'http://www.quora.com/Akshay-Sankar/answers/Fiction', 'http://www.quora.com/Akshay-Sankar/answers/Book-Recommendations', 'http://www.quora.com/Akshay-Sankar/answers/Writing', 'http://www.quora.com/Akshay-Sankar/answers/People'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['The Lord of the Rings (books, movies, and creative franchise)', 12], ["Tolkien's Middle Earth (books, movies, and creative franchise)", 9], ['Books', 6], ['Television', 5], ['Video Games', 5], ['Creative Writing', 5], ['Game of Thrones (TV series)', 5], ['Humor', 4], ['Television Series', 4], ['J. R. R. Tolkien', 4], ['Movies', 3], ['Life', 3], ['The Lord of the Rings (movie series)', 3], ['Food', 2], ['Fiction', 2], ['Book Recommendations', 2], ['Writing', 2], ['People', 2]]);
 
         var options = {
           title: '',

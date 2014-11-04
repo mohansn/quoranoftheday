@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Meggie-Sutherland-Cutter/answers/Life', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Dating-and-Relationships-1', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Psychology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Music', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Women', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Philosophy', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Men', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Human-Behavior', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Love', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Marriage', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Movies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Religion', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Sex', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Horses', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Babies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Astrology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Childbirth', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/New-York-City'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 68], ['Dating and Relationships', 59], ['Psychology', 56], ['Music', 41], ['Women', 28], ['Philosophy', 26], ['Men', 22], ['Human Behavior', 21], ['Love', 18], ['Marriage', 16], ['Movies', 16], ['Religion', 14], ['Sex', 13], ['Horses', 7], ['Babies', 6], ['Astrology', 5], ['Childbirth', 5], ['New York City', 4]]);
+          var answer_links = ['http://www.quora.com/Meggie-Sutherland-Cutter/answers/Life', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Dating-and-Relationships-1', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Psychology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Music', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Women', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Philosophy', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Human-Behavior', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Men', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Love', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Marriage', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Movies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Religion', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Sex', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Horses', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Babies', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Astrology', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/Childbirth', 'http://www.quora.com/Meggie-Sutherland-Cutter/answers/New-York-City'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Life', 68], ['Dating and Relationships', 59], ['Psychology', 56], ['Music', 41], ['Women', 27], ['Philosophy', 25], ['Human Behavior', 21], ['Men', 21], ['Love', 18], ['Marriage', 16], ['Movies', 16], ['Religion', 14], ['Sex', 13], ['Horses', 7], ['Babies', 6], ['Astrology', 5], ['Childbirth', 5], ['New York City', 4]]);
 
         var options = {
           title: '',

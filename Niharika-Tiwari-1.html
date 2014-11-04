@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Niharika-Tiwari-1/answers/Survey-Questions', 'http://www.quora.com/Niharika-Tiwari-1/answers/Dating-and-Relationships-1', 'http://www.quora.com/Niharika-Tiwari-1/answers/India', 'http://www.quora.com/Niharika-Tiwari-1/answers/Exercise', 'http://www.quora.com/Niharika-Tiwari-1/answers/Health', 'http://www.quora.com/Niharika-Tiwari-1/answers/Medicine-and-Healthcare', 'http://www.quora.com/Niharika-Tiwari-1/answers/Manners-and-Etiquette', 'http://www.quora.com/Niharika-Tiwari-1/answers/Life', 'http://www.quora.com/Niharika-Tiwari-1/answers/Working-Out', 'http://www.quora.com/Niharika-Tiwari-1/answers/Healthy-Eating', 'http://www.quora.com/Niharika-Tiwari-1/answers/Dating-Advice', 'http://www.quora.com/Niharika-Tiwari-1/answers/Disability-and-Disabilities', 'http://www.quora.com/Niharika-Tiwari-1/answers/Psychology', 'http://www.quora.com/Niharika-Tiwari-1/answers/Strength-Training-and-Weightlifting', 'http://www.quora.com/Niharika-Tiwari-1/answers/Healthy-Living', 'http://www.quora.com/Niharika-Tiwari-1/answers/Non-Governmental-Organizations-NGOs', 'http://www.quora.com/Niharika-Tiwari-1/answers/Human-Behavior', 'http://www.quora.com/Niharika-Tiwari-1/answers/Life-Lessons'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 26], ['Dating and Relationships', 23], ['India', 21], ['Exercise', 19], ['Health', 18], ['Medicine and Healthcare', 12], ['Manners and Etiquette', 11], ['Life', 11], ['Working Out', 11], ['Healthy Eating', 9], ['Dating Advice', 9], ['Disability and Disabilities', 9], ['Psychology', 9], ['Strength Training and Weightlifting', 8], ['Healthy Living', 7], ['Non-Governmental Organizations (NGOs)', 6], ['Human Behavior', 6], ['Life Lessons', 6]]);
+          var answer_links = ['http://www.quora.com/Niharika-Tiwari-1/answers/Survey-Questions', 'http://www.quora.com/Niharika-Tiwari-1/answers/Dating-and-Relationships-1', 'http://www.quora.com/Niharika-Tiwari-1/answers/India', 'http://www.quora.com/Niharika-Tiwari-1/answers/Health', 'http://www.quora.com/Niharika-Tiwari-1/answers/Exercise', 'http://www.quora.com/Niharika-Tiwari-1/answers/Medicine-and-Healthcare', 'http://www.quora.com/Niharika-Tiwari-1/answers/Manners-and-Etiquette', 'http://www.quora.com/Niharika-Tiwari-1/answers/Life', 'http://www.quora.com/Niharika-Tiwari-1/answers/Working-Out', 'http://www.quora.com/Niharika-Tiwari-1/answers/Dating-Advice', 'http://www.quora.com/Niharika-Tiwari-1/answers/Healthy-Eating', 'http://www.quora.com/Niharika-Tiwari-1/answers/Disability-and-Disabilities', 'http://www.quora.com/Niharika-Tiwari-1/answers/Psychology', 'http://www.quora.com/Niharika-Tiwari-1/answers/Healthy-Living', 'http://www.quora.com/Niharika-Tiwari-1/answers/Strength-Training-and-Weightlifting', 'http://www.quora.com/Niharika-Tiwari-1/answers/Non-Governmental-Organizations-NGOs', 'http://www.quora.com/Niharika-Tiwari-1/answers/Human-Behavior', 'http://www.quora.com/Niharika-Tiwari-1/answers/Life-Lessons'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 26], ['Dating and Relationships', 24], ['India', 21], ['Health', 20], ['Exercise', 20], ['Medicine and Healthcare', 13], ['Manners and Etiquette', 11], ['Life', 11], ['Working Out', 11], ['Dating Advice', 10], ['Healthy Eating', 9], ['Disability and Disabilities', 9], ['Psychology', 9], ['Healthy Living', 8], ['Strength Training and Weightlifting', 8], ['Non-Governmental Organizations (NGOs)', 6], ['Human Behavior', 6], ['Life Lessons', 6]]);
 
         var options = {
           title: '',

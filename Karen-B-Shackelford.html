@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Karen-B-Shackelford/answers/Medicine-and-Healthcare', 'http://www.quora.com/Karen-B-Shackelford/answers/Psychology', 'http://www.quora.com/Karen-B-Shackelford/answers/Doctors', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-and-Relationships-1', 'http://www.quora.com/Karen-B-Shackelford/answers/Parenting', 'http://www.quora.com/Karen-B-Shackelford/answers/Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Love', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Illness', 'http://www.quora.com/Karen-B-Shackelford/answers/Life-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Medical-School', 'http://www.quora.com/Karen-B-Shackelford/answers/Children', 'http://www.quora.com/Karen-B-Shackelford/answers/Emergency-Medicine', 'http://www.quora.com/Karen-B-Shackelford/answers/Interpersonal-Interaction', 'http://www.quora.com/Karen-B-Shackelford/answers/Friendship', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Startups', 'http://www.quora.com/Karen-B-Shackelford/answers/Food'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Medicine and Healthcare', 187], ['Psychology', 130], ['Doctors', 94], ['Mental Health', 85], ['Dating and Relationships', 77], ['Parenting', 56], ['Health', 53], ['Love', 45], ['Mental Illness', 45], ['Life Advice', 44], ['Medical School', 37], ['Children', 31], ['Emergency Medicine', 27], ['Interpersonal Interaction', 27], ['Friendship', 27], ['Dating Advice', 23], ['Startups', 14], ['Food', 11]]);
+          var answer_links = ['http://www.quora.com/Karen-B-Shackelford/answers/Medicine-and-Healthcare', 'http://www.quora.com/Karen-B-Shackelford/answers/Psychology', 'http://www.quora.com/Karen-B-Shackelford/answers/Doctors', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-and-Relationships-1', 'http://www.quora.com/Karen-B-Shackelford/answers/Parenting', 'http://www.quora.com/Karen-B-Shackelford/answers/Health', 'http://www.quora.com/Karen-B-Shackelford/answers/Mental-Illness', 'http://www.quora.com/Karen-B-Shackelford/answers/Love', 'http://www.quora.com/Karen-B-Shackelford/answers/Life-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Medical-School', 'http://www.quora.com/Karen-B-Shackelford/answers/Social-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Children', 'http://www.quora.com/Karen-B-Shackelford/answers/Emergency-Medicine', 'http://www.quora.com/Karen-B-Shackelford/answers/Interpersonal-Interaction', 'http://www.quora.com/Karen-B-Shackelford/answers/Friendship', 'http://www.quora.com/Karen-B-Shackelford/answers/Dating-Advice', 'http://www.quora.com/Karen-B-Shackelford/answers/Startups'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Medicine and Healthcare', 190], ['Psychology', 133], ['Doctors', 94], ['Mental Health', 91], ['Dating and Relationships', 78], ['Parenting', 56], ['Health', 53], ['Mental Illness', 49], ['Love', 46], ['Life Advice', 44], ['Medical School', 37], ['Social Advice', 32], ['Children', 31], ['Emergency Medicine', 27], ['Interpersonal Interaction', 27], ['Friendship', 27], ['Dating Advice', 23], ['Startups', 14]]);
 
         var options = {
           title: '',

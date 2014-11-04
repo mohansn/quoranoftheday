@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Aniko-Mikes/answers/Music', 'http://www.quora.com/Aniko-Mikes/answers/The-High-School-Experience-1', 'http://www.quora.com/Aniko-Mikes/answers/Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Chemistry', 'http://www.quora.com/Aniko-Mikes/answers/U-S-Politics', 'http://www.quora.com/Aniko-Mikes/answers/Dating-and-Relationships-1', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aniko-Mikes/answers/Mathematics', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy', 'http://www.quora.com/Aniko-Mikes/answers/Social-Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Books', 'http://www.quora.com/Aniko-Mikes/answers/Human-Behavior', 'http://www.quora.com/Aniko-Mikes/answers/Psychology-of-Everyday-Life', 'http://www.quora.com/Aniko-Mikes/answers/Biology-1', 'http://www.quora.com/Aniko-Mikes/answers/Education', 'http://www.quora.com/Aniko-Mikes/answers/English-language', 'http://www.quora.com/Aniko-Mikes/answers/Animals', 'http://www.quora.com/Aniko-Mikes/answers/Alaska-state'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Music', 10], ['The High School Experience', 10], ['Psychology', 9], ['Chemistry', 9], ['U.S. Politics', 8], ['Dating and Relationships', 7], ['Philosophy of Everyday Life', 6], ['Mathematics', 5], ['Philosophy', 5], ['Social Psychology', 5], ['Books', 4], ['Human Behavior', 4], ['Psychology of Everyday Life', 4], ['Biology', 3], ['Education', 3], ['English (language)', 3], ['Animals', 3], ['Alaska (state)', 3]]);
+          var answer_links = ['http://www.quora.com/Aniko-Mikes/answers/Music', 'http://www.quora.com/Aniko-Mikes/answers/The-High-School-Experience-1', 'http://www.quora.com/Aniko-Mikes/answers/Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Chemistry', 'http://www.quora.com/Aniko-Mikes/answers/U-S-Politics', 'http://www.quora.com/Aniko-Mikes/answers/Dating-and-Relationships-1', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Aniko-Mikes/answers/Mathematics', 'http://www.quora.com/Aniko-Mikes/answers/Philosophy', 'http://www.quora.com/Aniko-Mikes/answers/Social-Psychology', 'http://www.quora.com/Aniko-Mikes/answers/Psychology-of-Everyday-Life', 'http://www.quora.com/Aniko-Mikes/answers/Books', 'http://www.quora.com/Aniko-Mikes/answers/Human-Behavior', 'http://www.quora.com/Aniko-Mikes/answers/Biology-1', 'http://www.quora.com/Aniko-Mikes/answers/Education', 'http://www.quora.com/Aniko-Mikes/answers/English-language', 'http://www.quora.com/Aniko-Mikes/answers/Animals', 'http://www.quora.com/Aniko-Mikes/answers/Alaska-state'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Music', 10], ['The High School Experience', 10], ['Psychology', 9], ['Chemistry', 9], ['U.S. Politics', 8], ['Dating and Relationships', 7], ['Philosophy of Everyday Life', 6], ['Mathematics', 5], ['Philosophy', 5], ['Social Psychology', 5], ['Psychology of Everyday Life', 5], ['Books', 4], ['Human Behavior', 4], ['Biology', 3], ['Education', 3], ['English (language)', 3], ['Animals', 3], ['Alaska (state)', 3]]);
 
         var options = {
           title: '',

@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Ivan-Gautama/answers/Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jakarta', 'http://www.quora.com/Ivan-Gautama/answers/Life-Lessons', 'http://www.quora.com/Ivan-Gautama/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Ivan-Gautama/answers/Economics', 'http://www.quora.com/Ivan-Gautama/answers/Politics-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jokowi', 'http://www.quora.com/Ivan-Gautama/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Ivan-Gautama/answers/Startups-in-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Economy-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/History', 'http://www.quora.com/Ivan-Gautama/answers/Writing', 'http://www.quora.com/Ivan-Gautama/answers/Social-Psychology', 'http://www.quora.com/Ivan-Gautama/answers/Future-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Fiction', 'http://www.quora.com/Ivan-Gautama/answers/Finance', 'http://www.quora.com/Ivan-Gautama/answers/Indonesian-language', 'http://www.quora.com/Ivan-Gautama/answers/Computer-Programming'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Indonesia', 94], ['Jakarta', 22], ['Life Lessons', 15], ['Philosophy of Everyday Life', 10], ['Economics', 7], ['Politics of Indonesia', 7], ['Jokowi', 7], ['Startup Advice and Strategy', 6], ['Startups in Indonesia', 6], ['Economy of Indonesia', 5], ['History', 4], ['Writing', 4], ['Social Psychology', 4], ['Future of Indonesia', 4], ['Fiction', 3], ['Finance', 3], ['Indonesian (language)', 3], ['Computer Programming', 2]]);
+          var answer_links = ['http://www.quora.com/Ivan-Gautama/answers/Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jakarta', 'http://www.quora.com/Ivan-Gautama/answers/Life-Lessons', 'http://www.quora.com/Ivan-Gautama/answers/Philosophy-of-Everyday-Life', 'http://www.quora.com/Ivan-Gautama/answers/Economics', 'http://www.quora.com/Ivan-Gautama/answers/Politics-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Jokowi', 'http://www.quora.com/Ivan-Gautama/answers/Startup-Advice-and-Strategy', 'http://www.quora.com/Ivan-Gautama/answers/Startups-in-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Economy-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/History', 'http://www.quora.com/Ivan-Gautama/answers/Social-Psychology', 'http://www.quora.com/Ivan-Gautama/answers/Future-of-Indonesia', 'http://www.quora.com/Ivan-Gautama/answers/Fiction', 'http://www.quora.com/Ivan-Gautama/answers/Finance', 'http://www.quora.com/Ivan-Gautama/answers/Writing', 'http://www.quora.com/Ivan-Gautama/answers/Indonesian-language', 'http://www.quora.com/Ivan-Gautama/answers/Computer-Programming'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Indonesia', 97], ['Jakarta', 22], ['Life Lessons', 15], ['Philosophy of Everyday Life', 12], ['Economics', 7], ['Politics of Indonesia', 7], ['Jokowi', 7], ['Startup Advice and Strategy', 6], ['Startups in Indonesia', 6], ['Economy of Indonesia', 5], ['History', 4], ['Social Psychology', 4], ['Future of Indonesia', 4], ['Fiction', 3], ['Finance', 3], ['Writing', 3], ['Indonesian (language)', 3], ['Computer Programming', 2]]);
 
         var options = {
           title: '',

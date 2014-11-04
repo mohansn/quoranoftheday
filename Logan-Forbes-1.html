@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Logan-Forbes-1/answers/Animals', 'http://www.quora.com/Logan-Forbes-1/answers/Cats-pets', 'http://www.quora.com/Logan-Forbes-1/answers/Dogs-pets-1', 'http://www.quora.com/Logan-Forbes-1/answers/Animal-Behavior', 'http://www.quora.com/Logan-Forbes-1/answers/Wildlife', 'http://www.quora.com/Logan-Forbes-1/answers/Zoology', 'http://www.quora.com/Logan-Forbes-1/answers/Quora', 'http://www.quora.com/Logan-Forbes-1/answers/Veterinary-Medicine', 'http://www.quora.com/Logan-Forbes-1/answers/Nature', 'http://www.quora.com/Logan-Forbes-1/answers/Wild-Animals', 'http://www.quora.com/Logan-Forbes-1/answers/Child-Custody', 'http://www.quora.com/Logan-Forbes-1/answers/Raccoons', 'http://www.quora.com/Logan-Forbes-1/answers/Ambidexterity', 'http://www.quora.com/Logan-Forbes-1/answers/Pianos', 'http://www.quora.com/Logan-Forbes-1/answers/Health', 'http://www.quora.com/Logan-Forbes-1/answers/Gardening', 'http://www.quora.com/Logan-Forbes-1/answers/Left-handedness', 'http://www.quora.com/Logan-Forbes-1/answers/Specific-Quora-Users'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Animals', 39], ['Cats (pets)', 30], ['Dogs (pets)', 19], ['Animal Behavior', 19], ['Wildlife', 16], ['Zoology', 7], ['Quora', 5], ['Veterinary Medicine', 4], ['Nature', 3], ['Wild Animals', 3], ['Child Custody', 3], ['Raccoons', 2], ['Ambidexterity', 2], ['Pianos', 1], ['Health', 1], ['Gardening', 1], ['Left-handedness', 1], ['Specific Quora Users', 1]]);
+          var answer_links = ['http://www.quora.com/Logan-Forbes-1/answers/Animals', 'http://www.quora.com/Logan-Forbes-1/answers/Cats-pets', 'http://www.quora.com/Logan-Forbes-1/answers/Animal-Behavior', 'http://www.quora.com/Logan-Forbes-1/answers/Dogs-pets-1', 'http://www.quora.com/Logan-Forbes-1/answers/Wildlife', 'http://www.quora.com/Logan-Forbes-1/answers/Birds', 'http://www.quora.com/Logan-Forbes-1/answers/Zoology', 'http://www.quora.com/Logan-Forbes-1/answers/Quora', 'http://www.quora.com/Logan-Forbes-1/answers/Veterinary-Medicine', 'http://www.quora.com/Logan-Forbes-1/answers/Owls', 'http://www.quora.com/Logan-Forbes-1/answers/Nature', 'http://www.quora.com/Logan-Forbes-1/answers/Wild-Animals', 'http://www.quora.com/Logan-Forbes-1/answers/Child-Custody', 'http://www.quora.com/Logan-Forbes-1/answers/Raccoons', 'http://www.quora.com/Logan-Forbes-1/answers/Ambidexterity', 'http://www.quora.com/Logan-Forbes-1/answers/Pianos', 'http://www.quora.com/Logan-Forbes-1/answers/Halloween', 'http://www.quora.com/Logan-Forbes-1/answers/Health'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Animals', 41], ['Cats (pets)', 30], ['Animal Behavior', 22], ['Dogs (pets)', 20], ['Wildlife', 17], ['Birds', 8], ['Zoology', 7], ['Quora', 5], ['Veterinary Medicine', 4], ['Owls', 4], ['Nature', 3], ['Wild Animals', 3], ['Child Custody', 3], ['Raccoons', 2], ['Ambidexterity', 2], ['Pianos', 1], ['Halloween', 1], ['Health', 1]]);
 
         var options = {
           title: '',

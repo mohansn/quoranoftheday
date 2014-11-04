@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <style>
+      .title {
+          text-align:center;
+          font-family:sans-serif;
+      }
+      .title-link {
+          text-decoration:none;
+      }
+      h2  {
+          text-align:center;
+          font-family:helvetica,arial,sans-serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var answer_links = ['http://www.quora.com/Amogh-Talpallikar/answers/Computer-Programming', 'http://www.quora.com/Amogh-Talpallikar/answers/Movies', 'http://www.quora.com/Amogh-Talpallikar/answers/Life', 'http://www.quora.com/Amogh-Talpallikar/answers/Cricket-sport', 'http://www.quora.com/Amogh-Talpallikar/answers/Humor', 'http://www.quora.com/Amogh-Talpallikar/answers/Psychology', 'http://www.quora.com/Amogh-Talpallikar/answers/Cricket-in-India', 'http://www.quora.com/Amogh-Talpallikar/answers/Quora', 'http://www.quora.com/Amogh-Talpallikar/answers/Naruto-Manga-TV-Movies-and-Creative-Franchise', 'http://www.quora.com/Amogh-Talpallikar/answers/Comics-narrative-art-form', 'http://www.quora.com/Amogh-Talpallikar/answers/Superheroes', 'http://www.quora.com/Amogh-Talpallikar/answers/Mahabharata', 'http://www.quora.com/Amogh-Talpallikar/answers/Google', 'http://www.quora.com/Amogh-Talpallikar/answers/DC-Comics', 'http://www.quora.com/Amogh-Talpallikar/answers/Computer-Science', 'http://www.quora.com/Amogh-Talpallikar/answers/Manga', 'http://www.quora.com/Amogh-Talpallikar/answers/Jokes', 'http://www.quora.com/Amogh-Talpallikar/answers/JavaScript-programming-language'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Computer Programming', 36], ['Movies', 35], ['Life', 32], ['Cricket (sport)', 28], ['Humor', 25], ['Psychology', 22], ['Cricket in India', 20], ['Quora', 19], ['Naruto (Manga, TV, Movies and Creative Franchise)', 19], ['Comics (narrative art form)', 18], ['Superheroes', 15], [' Mahabharata', 13], ['Google', 13], ['DC Comics', 13], ['Computer Science', 12], ['Manga', 12], ['Jokes', 11], ['JavaScript (programming language)', 9]]);
+
+        var options = {
+          title: '',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        function selectHandler () {
+              var selectedRow = chart.getSelection()[0];
+              if (selectedRow) {
+		  window.open(answer_links[selectedRow.row])
+              }
+        }
+        google.visualization.events.addListener (chart, 'select', selectHandler);
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="title">
+      <a class="title-link" href="http://www.quora.com/Amogh-Talpallikar/topics"> Answers by Topic</a>
+    </h1>
+    <h2>
+      Click on any pie slice to see answers on that topic
+    </h2>
+    <div id="piechart_3d" style="width: 1400px; height: 800px;"></div>
+  </body>
+</html>

@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Gail-Noble/answers/Gardening', 'http://www.quora.com/Gail-Noble/answers/Plants', 'http://www.quora.com/Gail-Noble/answers/Pest-Control', 'http://www.quora.com/Gail-Noble/answers/Trees-plants', 'http://www.quora.com/Gail-Noble/answers/Insects', 'http://www.quora.com/Gail-Noble/answers/Vegetable-Gardens', 'http://www.quora.com/Gail-Noble/answers/House-Plants', 'http://www.quora.com/Gail-Noble/answers/Urban-Gardening', 'http://www.quora.com/Gail-Noble/answers/Botany', 'http://www.quora.com/Gail-Noble/answers/Plant-Identification', 'http://www.quora.com/Gail-Noble/answers/Flowers', 'http://www.quora.com/Gail-Noble/answers/Landscaping', 'http://www.quora.com/Gail-Noble/answers/Animals', 'http://www.quora.com/Gail-Noble/answers/Lawn-Maintenance', 'http://www.quora.com/Gail-Noble/answers/Vegetables', 'http://www.quora.com/Gail-Noble/answers/Pets', 'http://www.quora.com/Gail-Noble/answers/Entomology', 'http://www.quora.com/Gail-Noble/answers/Herbs'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Gardening', 187], ['Plants', 79], ['Pest Control', 36], ['Trees (plants)', 34], ['Insects', 31], ['Vegetable Gardens', 27], ['House Plants', 23], ['Urban Gardening', 22], ['Botany', 21], ['Plant Identification', 20], ['Flowers', 17], ['Landscaping', 16], ['Animals', 15], ['Lawn Maintenance', 15], ['Vegetables', 14], ['Pets', 12], ['Entomology', 12], ['Herbs', 11]]);
+          var answer_links = ['http://www.quora.com/Gail-Noble/answers/Gardening', 'http://www.quora.com/Gail-Noble/answers/Plants', 'http://www.quora.com/Gail-Noble/answers/Pest-Control', 'http://www.quora.com/Gail-Noble/answers/Trees-plants', 'http://www.quora.com/Gail-Noble/answers/Insects', 'http://www.quora.com/Gail-Noble/answers/Vegetable-Gardens', 'http://www.quora.com/Gail-Noble/answers/House-Plants', 'http://www.quora.com/Gail-Noble/answers/Urban-Gardening', 'http://www.quora.com/Gail-Noble/answers/Botany', 'http://www.quora.com/Gail-Noble/answers/Plant-Identification', 'http://www.quora.com/Gail-Noble/answers/Flowers', 'http://www.quora.com/Gail-Noble/answers/Landscaping', 'http://www.quora.com/Gail-Noble/answers/Lawn-Maintenance', 'http://www.quora.com/Gail-Noble/answers/Animals', 'http://www.quora.com/Gail-Noble/answers/Vegetables', 'http://www.quora.com/Gail-Noble/answers/Entomology', 'http://www.quora.com/Gail-Noble/answers/Pets', 'http://www.quora.com/Gail-Noble/answers/Horticulture'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Gardening', 190], ['Plants', 79], ['Pest Control', 38], ['Trees (plants)', 35], ['Insects', 32], ['Vegetable Gardens', 27], ['House Plants', 23], ['Urban Gardening', 23], ['Botany', 21], ['Plant Identification', 20], ['Flowers', 17], ['Landscaping', 16], ['Lawn Maintenance', 16], ['Animals', 15], ['Vegetables', 14], ['Entomology', 14], ['Pets', 13], ['Horticulture', 12]]);
 
         var options = {
           title: '',

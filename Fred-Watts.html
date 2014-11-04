@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Fred-Watts/answers/History', 'http://www.quora.com/Fred-Watts/answers/The-United-States-of-America', 'http://www.quora.com/Fred-Watts/answers/U-S-Politics', 'http://www.quora.com/Fred-Watts/answers/Politics', 'http://www.quora.com/Fred-Watts/answers/Writing', 'http://www.quora.com/Fred-Watts/answers/International-Relations-3', 'http://www.quora.com/Fred-Watts/answers/Literature', 'http://www.quora.com/Fred-Watts/answers/History-of-the-United-States-1', 'http://www.quora.com/Fred-Watts/answers/Health', 'http://www.quora.com/Fred-Watts/answers/Economics', 'http://www.quora.com/Fred-Watts/answers/Fiction', 'http://www.quora.com/Fred-Watts/answers/Investing', 'http://www.quora.com/Fred-Watts/answers/Mathematics', 'http://www.quora.com/Fred-Watts/answers/Business', 'http://www.quora.com/Fred-Watts/answers/Authors-5', 'http://www.quora.com/Fred-Watts/answers/Stock-Market', 'http://www.quora.com/Fred-Watts/answers/Foreign-Policy', 'http://www.quora.com/Fred-Watts/answers/Nutrition'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['History', 24], ['The United States of America', 23], ['U.S. Politics', 12], ['Politics', 10], ['Writing', 10], ['International Relations', 10], ['Literature', 9], ['History of the United States', 8], ['Health', 7], ['Economics', 6], ['Fiction', 4], ['Investing', 3], ['Mathematics', 3], ['Business', 2], ['Authors', 2], ['Stock Market', 2], ['Foreign Policy', 2], ['Nutrition', 1]]);
+          var answer_links = ['http://www.quora.com/Fred-Watts/answers/History', 'http://www.quora.com/Fred-Watts/answers/The-United-States-of-America', 'http://www.quora.com/Fred-Watts/answers/U-S-Politics', 'http://www.quora.com/Fred-Watts/answers/Politics', 'http://www.quora.com/Fred-Watts/answers/Writing', 'http://www.quora.com/Fred-Watts/answers/International-Relations-3', 'http://www.quora.com/Fred-Watts/answers/Literature', 'http://www.quora.com/Fred-Watts/answers/History-of-the-United-States-1', 'http://www.quora.com/Fred-Watts/answers/Health', 'http://www.quora.com/Fred-Watts/answers/Economics', 'http://www.quora.com/Fred-Watts/answers/Business', 'http://www.quora.com/Fred-Watts/answers/Fiction', 'http://www.quora.com/Fred-Watts/answers/Investing', 'http://www.quora.com/Fred-Watts/answers/Mathematics', 'http://www.quora.com/Fred-Watts/answers/Authors-5', 'http://www.quora.com/Fred-Watts/answers/Stock-Market', 'http://www.quora.com/Fred-Watts/answers/Foreign-Policy', 'http://www.quora.com/Fred-Watts/answers/Nutrition'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['History', 24], ['The United States of America', 24], ['U.S. Politics', 12], ['Politics', 10], ['Writing', 10], ['International Relations', 10], ['Literature', 9], ['History of the United States', 8], ['Health', 7], ['Economics', 6], ['Business', 4], ['Fiction', 4], ['Investing', 3], ['Mathematics', 3], ['Authors', 2], ['Stock Market', 2], ['Foreign Policy', 2], ['Nutrition', 1]]);
 
         var options = {
           title: '',

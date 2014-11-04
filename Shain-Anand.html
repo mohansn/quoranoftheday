@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Shain-Anand/answers/Survey-Questions', 'http://www.quora.com/Shain-Anand/answers/India', 'http://www.quora.com/Shain-Anand/answers/Humor', 'http://www.quora.com/Shain-Anand/answers/Jokes', 'http://www.quora.com/Shain-Anand/answers/Indians-8', 'http://www.quora.com/Shain-Anand/answers/Quora', 'http://www.quora.com/Shain-Anand/answers/Life', 'http://www.quora.com/Shain-Anand/answers/What-Are-The-Best-Photographs-of-X', 'http://www.quora.com/Shain-Anand/answers/Best-of-X', 'http://www.quora.com/Shain-Anand/answers/Photographs', 'http://www.quora.com/Shain-Anand/answers/English-language', 'http://www.quora.com/Shain-Anand/answers/Advertising-and-Advertisements', 'http://www.quora.com/Shain-Anand/answers/Memes', 'http://www.quora.com/Shain-Anand/answers/Iconic-Images', 'http://www.quora.com/Shain-Anand/answers/Comedy', 'http://www.quora.com/Shain-Anand/answers/Inspiration', 'http://www.quora.com/Shain-Anand/answers/Cultures-of-India', 'http://www.quora.com/Shain-Anand/answers/Facts-and-Trivia'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 33], ['India', 22], ['Humor', 13], ['Jokes', 8], ['Indians', 7], ['Quora', 6], ['Life', 6], ['What Are The Best Photographs of X?', 6], ['Best of X', 5], ['Photographs', 5], ['English (language)', 4], ['Advertising and Advertisements', 4], ['Memes', 4], ['Iconic Images', 4], ['Comedy', 3], ['Inspiration', 3], ['Cultures of India', 3], ['Facts and Trivia', 4]]);
+          var answer_links = ['http://www.quora.com/Shain-Anand/answers/Survey-Questions', 'http://www.quora.com/Shain-Anand/answers/India', 'http://www.quora.com/Shain-Anand/answers/Humor', 'http://www.quora.com/Shain-Anand/answers/Jokes', 'http://www.quora.com/Shain-Anand/answers/Indians-8', 'http://www.quora.com/Shain-Anand/answers/Quora', 'http://www.quora.com/Shain-Anand/answers/Life', 'http://www.quora.com/Shain-Anand/answers/What-Are-The-Best-Photographs-of-X', 'http://www.quora.com/Shain-Anand/answers/Best-of-X', 'http://www.quora.com/Shain-Anand/answers/Photographs', 'http://www.quora.com/Shain-Anand/answers/English-language', 'http://www.quora.com/Shain-Anand/answers/Advertising-and-Advertisements', 'http://www.quora.com/Shain-Anand/answers/Memes', 'http://www.quora.com/Shain-Anand/answers/Iconic-Images', 'http://www.quora.com/Shain-Anand/answers/Facts-and-Trivia', 'http://www.quora.com/Shain-Anand/answers/Comedy', 'http://www.quora.com/Shain-Anand/answers/Inspiration', 'http://www.quora.com/Shain-Anand/answers/Cultures-of-India'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Survey Questions', 33], ['India', 22], ['Humor', 13], ['Jokes', 8], ['Indians', 7], ['Quora', 6], ['Life', 6], ['What Are The Best Photographs of X?', 6], ['Best of X', 5], ['Photographs', 5], ['English (language)', 4], ['Advertising and Advertisements', 4], ['Memes', 4], ['Iconic Images', 4], ['Facts and Trivia', 4], ['Comedy', 3], ['Inspiration', 3], ['Cultures of India', 3]]);
 
         var options = {
           title: '',

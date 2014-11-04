@@ -13,7 +13,7 @@
       }
       h2  {
           text-align:center;
-          font-family:serif;
+          font-family:helvetica,arial,sans-serif;
       }
     </style>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -22,8 +22,8 @@
       google.setOnLoadCallback(drawChart);
 
       function drawChart() {
-          var answer_links = ['http://www.quora.com/Mat-Kyne/answers/Parenting', 'http://www.quora.com/Mat-Kyne/answers/Children', 'http://www.quora.com/Mat-Kyne/answers/Education', 'http://www.quora.com/Mat-Kyne/answers/Dating-and-Relationships-1', 'http://www.quora.com/Mat-Kyne/answers/Medicine-and-Healthcare', 'http://www.quora.com/Mat-Kyne/answers/Psychology', 'http://www.quora.com/Mat-Kyne/answers/Higher-Education', 'http://www.quora.com/Mat-Kyne/answers/Writing', 'http://www.quora.com/Mat-Kyne/answers/Physics', 'http://www.quora.com/Mat-Kyne/answers/Technology', 'http://www.quora.com/Mat-Kyne/answers/Men', 'http://www.quora.com/Mat-Kyne/answers/Science', 'http://www.quora.com/Mat-Kyne/answers/Engineering-1', 'http://www.quora.com/Mat-Kyne/answers/People-Skills', 'http://www.quora.com/Mat-Kyne/answers/Literary-Fiction', 'http://www.quora.com/Mat-Kyne/answers/Martial-Arts', 'http://www.quora.com/Mat-Kyne/answers/Texas-state-1', 'http://www.quora.com/Mat-Kyne/answers/Emotions'];
-          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Parenting', 68], ['Children', 63], ['Education', 33], ['Dating and Relationships', 25], ['Medicine and Healthcare', 23], ['Psychology', 22], ['Higher Education', 19], ['Writing', 15], ['Physics', 12], ['Technology', 12], ['Men', 12], ['Science', 8], ['Engineering', 5], ['People Skills', 3], ['Literary Fiction', 2], ['Martial Arts', 2], ['Texas (state)', 2], ['Emotions', 2]]);
+          var answer_links = ['http://www.quora.com/Mat-Kyne/answers/Parenting', 'http://www.quora.com/Mat-Kyne/answers/Children', 'http://www.quora.com/Mat-Kyne/answers/Education', 'http://www.quora.com/Mat-Kyne/answers/Dating-and-Relationships-1', 'http://www.quora.com/Mat-Kyne/answers/Medicine-and-Healthcare', 'http://www.quora.com/Mat-Kyne/answers/Psychology', 'http://www.quora.com/Mat-Kyne/answers/Higher-Education', 'http://www.quora.com/Mat-Kyne/answers/Men', 'http://www.quora.com/Mat-Kyne/answers/Writing', 'http://www.quora.com/Mat-Kyne/answers/Technology', 'http://www.quora.com/Mat-Kyne/answers/Physics', 'http://www.quora.com/Mat-Kyne/answers/Science', 'http://www.quora.com/Mat-Kyne/answers/Engineering-1', 'http://www.quora.com/Mat-Kyne/answers/Social-Advice', 'http://www.quora.com/Mat-Kyne/answers/People-Skills', 'http://www.quora.com/Mat-Kyne/answers/Literary-Fiction', 'http://www.quora.com/Mat-Kyne/answers/Martial-Arts', 'http://www.quora.com/Mat-Kyne/answers/Texas-state-1'];
+          var data = google.visualization.arrayToDataTable([['Topics', 'Answers'], ['Parenting', 69], ['Children', 64], ['Education', 35], ['Dating and Relationships', 28], ['Medicine and Healthcare', 23], ['Psychology', 23], ['Higher Education', 19], ['Men', 16], ['Writing', 15], ['Technology', 13], ['Physics', 12], ['Science', 8], ['Engineering', 5], ['Social Advice', 3], ['People Skills', 3], ['Literary Fiction', 2], ['Martial Arts', 2], ['Texas (state)', 2]]);
 
         var options = {
           title: '',
