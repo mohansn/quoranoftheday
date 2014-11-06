@@ -7,6 +7,7 @@ names = [l.rstrip("\n") for l in open('usernames.txt','r').readlines()]
 usernames = [l.rstrip("\n") for l in open('users.txt','r').readlines()]
 
 namedict = dict (zip (names, usernames))
+datadir = "data/"
 MAIN_PAGE_HTML = """
 <html>
    <head>
@@ -56,7 +57,7 @@ class ShowStats(webapp2.RequestHandler):
     def post(self):
         name = cgi.escape(self.request.get('nameselect'))
         if (cgi.escape(self.request.get('datakind')) == "static"):
-            statfile = open(namedict[name]+'.html', 'r')
+            statfile = open(datadir + namedict[name]+'.html', 'r')
             if (statfile is not None):
                 self.response.write (statfile.read())
                 statfile.close ()
