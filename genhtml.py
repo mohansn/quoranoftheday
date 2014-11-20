@@ -30,7 +30,12 @@ def get_quora_cookies_doesnt_work ():
 
 
 def get_topic_data (user):
-    topics_path = qurl + user + '/topics'
+    topics_path = ''
+    if qurl in user:
+        topics_path = user + '/topics' # If user provides the whole user profile link
+    else:
+        topics_path = qurl + user + '/topics'
+
     r = requests.get(topics_path, cookies = qcookies)
     if (r.status_code != 200):
         r.raise_for_status()
@@ -51,7 +56,12 @@ def get_topic_data (user):
     return (links,topic_data)
 
 def get_topic_data_json (user):
-    topics_path = qurl + user + '/topics'
+    topics_path = ''
+    if qurl in user:
+        topics_path = user + '/topics' # If user provides the whole user profile link
+    else:
+        topics_path = qurl + user + '/topics'
+
     r = requests.get(topics_path, cookies = qcookies)
     if (r.status_code != 200):
         r.raise_for_status()
