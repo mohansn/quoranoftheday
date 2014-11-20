@@ -1,0 +1,13 @@
+.headerdiv {
+    display:inline-block;
+    float:center;
+    font-family: arial,sans-serif;
+}
+
+#nameselect, #nameinput {
+    margin : 2px;
+}
+
+body {
+    margin-left: 20px;
+}

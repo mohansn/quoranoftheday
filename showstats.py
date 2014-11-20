@@ -13,17 +13,11 @@ MAIN_PAGE_HTML = """
    <head>
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
      <link rel="stylesheet" type="text/css" href="stylesheets/chart.css">
+     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-readable.min.css">
+     <link rel="stylesheet" type="text/css" href="stylesheets/mainpage.css">
      <script src="js/jquery-2.1.1.min.js"></script>
      <script src="js/d3.min.js" charset="utf-8"></script>
      <script src="js/nv.d3.min.js" charset="utf-8"></script>
-     <style>
-       
-       .headerdiv {
-         display:inline-block;
-         float:center;
-         font-family: arial,sans-serif;
-       }
-     </style>
    </head>
     <body>
     <script src="js/d3pie.min.js"></script>
@@ -53,7 +47,6 @@ class MainPage(webapp2.RequestHandler):
 class GetData(webapp2.RequestHandler):
     def get (self):
         name = cgi.escape(self.request.get('user'))
-        print "hahahahaaaa!! " + name + " HAHAHAHAHAAA!!!"
         return self.response.write(get_topic_data_json(namedict[name]))
 
 
