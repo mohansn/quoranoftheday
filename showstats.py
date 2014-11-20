@@ -12,27 +12,23 @@ MAIN_PAGE_HTML = """
 <html>
    <head>
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+     <link rel="stylesheet" type="text/css" href="stylesheets/chart.css">
      <script src="js/jquery-2.1.1.min.js"></script>
-     <script src="js/main.js"></script>
+     <script src="js/d3.min.js" charset="utf-8"></script>
+     <script src="js/nv.d3.min.js" charset="utf-8"></script>
      <style>
-       h1 {
-         color:blue;
-         background-color:#E9BEF5;
-         font-family:garamond,serif;
-         text-align:center;
-         border:solid 2px;
-         border-radius:10px;
-       }
+       
        .headerdiv {
          display:inline-block;
-         float:center
-       }
-       .datachoice {
-         display:none
+         float:center;
+         font-family: arial,sans-serif;
        }
      </style>
    </head>
     <body>
+    <script src="js/d3pie.min.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/main.js"></script>
     <div class="headerdiv">
       <h1>
         Stats on Quorans of the Day!
@@ -48,31 +44,7 @@ for name in names:
     MAIN_PAGE_HTML = MAIN_PAGE_HTML + "<option value=\"" + name + "\"> " + name + "</option>"
 
 MAIN_PAGE_HTML = MAIN_PAGE_HTML + "</select></div>"
-MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input id="nameinput" type="submit" value="Get Stats"></div></form>
-
-<script>
-// Prevent the form from submitting
-$( "form" ).submit(function( event ) {
-    alert($("#nameselect").val());
-   console.log($("#nameselect").val());
-    $.ajax({
-        url:"/getdata",
-        type: 'get',
-        data: {
-            'user': $("#nameselect").val(),
-            async:false
-        },
-        success: function (data) {
-            alert ("Got data");
-            console.log (data);
-        }
-    });
-    event.preventDefault();
-});
-
-</script>
-
-</body> </html>"""
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input id="nameinput" type="submit" value="Get Stats"></div></form> </body> </html>"""
 
 class MainPage(webapp2.RequestHandler):
     def get(self):

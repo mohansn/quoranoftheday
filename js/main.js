@@ -1,7 +1,5 @@
 $(document).ready(function () {
     $( "form" ).submit(function( event ) {
-        alert($("#nameselect").val());
-        console.log($("#nameselect").val());
         $.ajax({
             url:"/getdata",
             type: 'get',
@@ -10,10 +8,16 @@ $(document).ready(function () {
                 async:false
             },
             success: function (data) {
+                $('body').empty();
+                $('body').html("<div id=\"chart\"></div>");
                 // Send to D3 for plot
-                alert ("Got data");
-                console.log (data);
+                drawPieChart (JSON.parse(data));
+            },
+            error: function (data) {
+                // TODO: Failback using local HTML files
+                alert ("data load failed");
             }
+
         });
         event.preventDefault();
     });
