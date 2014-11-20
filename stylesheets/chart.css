@@ -1,0 +1,8 @@
+#chart {
+  height: 800px;
+  width: 800px;
+}
+#chart.svg {
+    margin:50px;
+    float:center;
+}

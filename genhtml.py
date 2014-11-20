@@ -30,7 +30,12 @@ def get_quora_cookies_doesnt_work ():
 
 
 def get_topic_data (user):
-    topics_path = qurl + user + '/topics'
+    topics_path = ''
+    if qurl in user:
+        topics_path = user + '/topics' # If user provides the whole user profile link
+    else:
+        topics_path = qurl + user + '/topics'
+
     r = requests.get(topics_path, cookies = qcookies)
     if (r.status_code != 200):
         r.raise_for_status()
@@ -49,6 +54,41 @@ def get_topic_data (user):
             answer_count = [int (s) for s in answer_count.split() if s.isdigit()]
             topic_data.append([topic_names.text.encode('utf-8'), answer_count[0]])
     return (links,topic_data)
+
+def get_topic_data_json (user):
+    topics_path = ''
+    if qurl in user:
+        topics_path = user + '/topics' # If user provides the whole user profile link
+    else:
+        topics_path = qurl + user + '/topics'
+
+    r = requests.get(topics_path, cookies = qcookies)
+    if (r.status_code != 200):
+        r.raise_for_status()
+    soup = BeautifulSoup(r.text)
+    boxes = soup.find_all(class_="ObjectCard UserTopicPagedListItem PagedListItem")
+    topic_data = [['Topics','Answers']]
+
+    links = ['http://www.quora.com' + t.find('a').attrs['href'] for t in soup.find_all (class_="ObjectCard-body") if t.find('a') is not None]
+    for box in boxes:
+        topic_names = box.find(class_="TopicName")
+        box = box.find(class_="ObjectCard-body")
+        answer_count = None
+        if (box.find('a') is not None):
+            answer_count = box.find('a').text 
+        if (answer_count):
+            answer_count = [int (s) for s in answer_count.split() if s.isdigit()]
+            topic_data.append([topic_names.text.encode('utf-8'), answer_count[0]])
+    import json
+    json_data = []
+    for i in range(len(links)):
+        x = topic_data[i+1][0]
+        y = topic_data[i+1][1]
+        link = links[i]
+        json_data.append ({"label":x,"value":y, "link":link})
+    
+    return json.dumps (json_data)
+
 
 """ Combine data and fixed templates to create output file """
 def write_output_file (user):
