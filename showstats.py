@@ -12,6 +12,7 @@ datadir = "data/"
 MAIN_PAGE_HTML = """
 <html>
    <head>
+     <title> Quoran Of The Day </title>
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
      <link rel="stylesheet" type="text/css" href="stylesheets/chart.css">
      <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-readable.min.css">
