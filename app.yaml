@@ -8,10 +8,13 @@ handlers:
 - url: /favicon\.ico
   static_files: static/images/favicon.ico
   upload: static/images/favicon\.ico
+
 - url: /stylesheets
   static_dir: stylesheets
+  expiration: "10m"
 - url: /js
   static_dir: js
+  expiration: "10m"
 - url: /.*
   script: showstats.application
 

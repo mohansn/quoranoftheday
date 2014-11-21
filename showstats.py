@@ -12,6 +12,7 @@ datadir = "data/"
 MAIN_PAGE_HTML = """
 <html>
    <head>
+     <meta name=viewport content="width=device-width, initial-scale=1">
      <title> Quoran Of The Day </title>
      <script src="js/jquery-2.1.1.min.js"></script>
 
@@ -27,10 +28,9 @@ MAIN_PAGE_HTML = """
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
      <link rel="stylesheet" type="text/css" href="stylesheets/chart.css">
      <link rel="stylesheet" type="text/css" href="stylesheets/mainpage.css">
-
-     <script src="js/d3.min.js" charset="utf-8"></script>
    </head>
     <body>
+    <script src="js/d3.min.js" charset="utf-8"></script>
     <script src="js/d3pie.min.js"></script>
     <script src="js/pie.js"></script>
     <script src="js/main.js"></script>
