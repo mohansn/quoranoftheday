@@ -13,13 +13,22 @@ MAIN_PAGE_HTML = """
 <html>
    <head>
      <title> Quoran Of The Day </title>
+     <script src="js/jquery-2.1.1.min.js"></script>
+
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+     <!-- Optional theme -->
+     <link rel="stylesheet" href="stylesheets/bootstrap-theme.min.css">
+
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="js/bootstrap.min.js"></script>
+
      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
      <link rel="stylesheet" type="text/css" href="stylesheets/chart.css">
-     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-readable.min.css">
      <link rel="stylesheet" type="text/css" href="stylesheets/mainpage.css">
-     <script src="js/jquery-2.1.1.min.js"></script>
+
      <script src="js/d3.min.js" charset="utf-8"></script>
-     <script src="js/nv.d3.min.js" charset="utf-8"></script>
    </head>
     <body>
     <script src="js/d3pie.min.js"></script>
@@ -30,17 +39,39 @@ MAIN_PAGE_HTML = """
         Stats on Quorans of the Day!
       </h1>
     </div>
-      <form>
-        <div>
-            <select id="nameselect" name="nameselect">
-"""
+      <form class="form-horizontal">
+        <fieldset>
 
+          <!-- Form Name -->
+          <legend>Quoran Of The Day</legend>
+
+          <!-- Select Basic -->
+          <div class="control-group">
+            <label class="control-label" for="selectbasic">Who?</label>
+            <div class="controls">
+              <select id="nameselect" name="nameselect" class="input-xlarge">
+"""
 """ FIXME: Convert to use of jinja2 or other template system """
 for name in names:
     MAIN_PAGE_HTML = MAIN_PAGE_HTML + "<option value=\"" + name + "\"> " + name + "</option>"
 
-MAIN_PAGE_HTML = MAIN_PAGE_HTML + "</select></div>"
-MAIN_PAGE_HTML = MAIN_PAGE_HTML + """<div><input id="nameinput" type="submit" value="Get Stats"></div></form> </body> </html>"""
+MAIN_PAGE_HTML = MAIN_PAGE_HTML + """
+              </select>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="control-group">
+            <label class="control-label" for="singlebutton"></label>
+            <div class="controls">
+              <button id="nameinput" name="nameinput" class="btn btn-success">Get me some pie!</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </body>
+  </html>
+"""
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
